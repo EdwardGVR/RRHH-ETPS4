@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRHH.PL;
 
 namespace RRHH.PL
 {
@@ -20,7 +21,6 @@ namespace RRHH.PL
         private void Main_Load(object sender, EventArgs e)
         {
             abrirFormEnPanel(new Login());
-            Console.WriteLine("lodsfs");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -30,13 +30,13 @@ namespace RRHH.PL
 
         private void abrirFormEnPanel(object formChild)
         {
-            if (this.pnlMain.Controls.Count > 0)
-                this.pnlMain.Controls.RemoveAt(0);
+            if (pnlMain.Controls.Count > 0)
+                pnlMain.Controls.RemoveAt(0);
             Form fc = formChild as Form;
             fc.TopLevel = false;
             fc.Dock = DockStyle.Fill;
-            this.pnlMain.Controls.Add(fc);
-            this.pnlMain.Tag = fc;
+            pnlMain.Controls.Add(fc);
+            pnlMain.Tag = fc;
             fc.Show();
         }
     }
