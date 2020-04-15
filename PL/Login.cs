@@ -16,5 +16,15 @@ namespace RRHH.PL
         {
             InitializeComponent();
         }
+
+        private void Login_Resize(object sender, EventArgs e)
+        {
+            ControlUtils.centrar(pnlLogin, gbLogin);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(new Main(), new Home());
+        }
     }
 }
