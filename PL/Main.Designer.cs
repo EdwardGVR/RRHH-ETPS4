@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlMain);
             this.Name = "Main";
+            this.Tag = "Principal";
             this.Text = "RRHH ETPS4";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);

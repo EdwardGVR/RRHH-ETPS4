@@ -24,9 +24,10 @@ namespace RRHH.PL
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Main main = new Main();
+            Control container = main.Controls.Find("pnlMain", true)[0];
             Close();
-            Home home = new Home();
-            home.Show();
+            ControlUtils.abrirFormEnPanel(container, new Home());
         }
     }
 }
