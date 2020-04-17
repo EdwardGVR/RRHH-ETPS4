@@ -29,28 +29,16 @@
         private void InitializeComponent()
         {
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlMain.Controls.Add(this.label1);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(800, 450);
             this.pnlMain.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(379, 223);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Panel contenedor";
             // 
             // Main
             // 
@@ -61,15 +49,12 @@
             this.Name = "Main";
             this.Text = "RRHH ETPS4";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.pnlMain.ResumeLayout(false);
-            this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Panel pnlMain;
     }
 }

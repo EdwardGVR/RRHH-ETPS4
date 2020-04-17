@@ -24,7 +24,9 @@ namespace RRHH.PL
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ControlUtils.abrirFormEnPanel(new Main(), new Home());
+            Close();
+            Home home = new Home();
+            home.Show();
         }
     }
 }

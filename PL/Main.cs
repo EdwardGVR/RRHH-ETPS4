@@ -8,12 +8,12 @@ namespace RRHH.PL
         public Main()
         {
             InitializeComponent();
-            ControlUtils.abrirFormEnPanel(pnlMain, new Login());
-            Console.WriteLine("sdfds");
+            Console.WriteLine("Constructor del Form Main");
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
+            ControlUtils.abrirFormEnPanel(pnlMain, new Login());
         }
 
         public Control getContainer()
