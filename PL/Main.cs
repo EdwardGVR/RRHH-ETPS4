@@ -8,12 +8,15 @@ namespace RRHH.PL
         public Main()
         {
             InitializeComponent();
-            ControlUtils.abrirFormEnPanel(pnlMain, new Login());
             Console.WriteLine("Constructor del Form Main");
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-        } 
+            Login login = new Login();
+            login.MdiParent = this;
+            login.Dock = DockStyle.Fill;
+            login.Show();
+        }
     }
 }

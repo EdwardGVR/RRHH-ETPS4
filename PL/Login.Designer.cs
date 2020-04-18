@@ -122,6 +122,7 @@
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Tag = "Login";
             this.Text = "Login";
             this.Resize += new System.EventHandler(this.Login_Resize);
