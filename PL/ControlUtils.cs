@@ -22,6 +22,13 @@ namespace RRHH.PL
             Console.WriteLine(fc.Tag);
         }
 
+        public static void openMdi(Form container, Form cForm)
+        {
+            cForm.MdiParent = container;
+            cForm.Dock = DockStyle.Fill;
+            cForm.Show();
+        }
+
         public static void centrar(Control padre, Control hijo)
         {
             int x = 0;
