@@ -28,23 +28,18 @@ namespace RRHH.PL
         {
             string user = txtUsuario.Text;
             string clave = txtClave.Text;
+
             LoginBLL oLoginBLL = new LoginBLL();
-            oLoginBLL.validar(user, clave);
-
-            //ControlUtils.openMdi(ParentForm, new Home());
-            //Close();
-        }
-
-        private void recuperarInfo()
-        {
-            string user = txtUsuario.Text;
-            string clave = txtClave.Text;
-            LoginBLL oLogin = new LoginBLL();
-            oLogin.user = user;
-            oLogin.clave = clave;
-
-            MessageBox.Show(oLogin.user);
-            MessageBox.Show(oLogin.clave);
+            if (oLoginBLL.validar(user, clave))
+            {
+                ControlUtils.openMdi(ParentForm, new Home());
+                Close();
+            }
+            else {
+                txtUsuario.Text = "";
+                txtClave.Text = "";
+                txtUsuario.Focus();
+            }
         }
     }
 }

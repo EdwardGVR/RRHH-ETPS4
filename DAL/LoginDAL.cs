@@ -30,13 +30,14 @@ namespace RRHH.DAL
             if (queryResult.Read())
             {
                 Console.WriteLine("Encontrado");
+                conexion.cerrar();
                 return true;
             } else
             {
                 Console.WriteLine("No encontrado");
+                conexion.cerrar();
                 return false;
             }
-            conexion.cerrar();
 
         }
     }

@@ -15,6 +15,12 @@ namespace RRHH.PL
         public Home()
         {
             InitializeComponent();
+            ControlUtils.centrar(pnlTitulo, lblTitulo);
+        }
+
+        private void Home_Resize(object sender, EventArgs e)
+        {
+            ControlUtils.centrar(pnlTitulo, lblTitulo);
         }
     }
 }

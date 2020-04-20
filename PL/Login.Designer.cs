@@ -63,18 +63,20 @@
             this.btnLogin.Location = new System.Drawing.Point(87, 171);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(93, 34);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Acceder";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtClave
             // 
+            this.txtClave.AcceptsTab = true;
             this.txtClave.Location = new System.Drawing.Point(13, 121);
-            this.txtClave.Multiline = true;
             this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(241, 21);
-            this.txtClave.TabIndex = 1;
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(241, 20);
+            this.txtClave.TabIndex = 2;
+            this.txtClave.UseSystemPasswordChar = true;
             // 
             // label2
             // 

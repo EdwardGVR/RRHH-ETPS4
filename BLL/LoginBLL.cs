@@ -14,10 +14,10 @@ namespace RRHH.BLL
         public string user { get; set; }
         public string clave { get; set; }
 
-        public void validar (string user, string clave)
+        public bool validar (string user, string clave)
         {
             LoginDAL oLoginDal = new LoginDAL();
-            oLoginDal.validar(user, clave);
+            return oLoginDal.validar(user, clave);
         }
     }
 }
