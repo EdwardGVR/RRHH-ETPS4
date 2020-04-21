@@ -30,27 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.btnEmpleados = new System.Windows.Forms.Button();
-            this.btnVacantes = new System.Windows.Forms.Button();
-            this.btnCapacitaciones = new System.Windows.Forms.Button();
-            this.btnEvaluaciones = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.lblNivelUser = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnEvaluaciones = new System.Windows.Forms.Button();
+            this.btnCapacitaciones = new System.Windows.Forms.Button();
+            this.btnVacantes = new System.Windows.Forms.Button();
+            this.btnEmpleados = new System.Windows.Forms.Button();
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNivelUser = new System.Windows.Forms.Label();
+            this.lblNombreUsuario = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
+            this.pnlContent.SuspendLayout();
             this.pnlMenu.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
+            this.pnlTitulo.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,15 +69,22 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
-            // pnlHeader
+            // pnlContent
             // 
-            this.pnlHeader.Controls.Add(this.pnlTitulo);
-            this.pnlHeader.Controls.Add(this.panel2);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(800, 80);
-            this.pnlHeader.TabIndex = 0;
+            this.pnlContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContent.AutoScroll = true;
+            this.pnlContent.AutoScrollMargin = new System.Drawing.Size(0, 20);
+            this.pnlContent.BackColor = System.Drawing.Color.DimGray;
+            this.pnlContent.Controls.Add(this.flowLayoutPanel3);
+            this.pnlContent.Controls.Add(this.flowLayoutPanel2);
+            this.pnlContent.Controls.Add(this.flowLayoutPanel1);
+            this.pnlContent.Location = new System.Drawing.Point(200, 80);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlContent.Size = new System.Drawing.Size(600, 370);
+            this.pnlContent.TabIndex = 2;
             // 
             // pnlMenu
             // 
@@ -90,74 +101,17 @@
             this.pnlMenu.Size = new System.Drawing.Size(200, 370);
             this.pnlMenu.TabIndex = 1;
             // 
-            // pnlContent
+            // label1
             // 
-            this.pnlContent.BackColor = System.Drawing.Color.Gray;
-            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(200, 80);
-            this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(600, 370);
-            this.pnlContent.TabIndex = 2;
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.BackColor = System.Drawing.Color.Black;
-            this.btnEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 78);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(200, 42);
-            this.btnEmpleados.TabIndex = 0;
-            this.btnEmpleados.Text = "Empleados";
-            this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.UseVisualStyleBackColor = false;
-            // 
-            // btnVacantes
-            // 
-            this.btnVacantes.BackColor = System.Drawing.Color.Black;
-            this.btnVacantes.FlatAppearance.BorderSize = 0;
-            this.btnVacantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVacantes.ForeColor = System.Drawing.Color.White;
-            this.btnVacantes.Location = new System.Drawing.Point(0, 120);
-            this.btnVacantes.Margin = new System.Windows.Forms.Padding(0);
-            this.btnVacantes.Name = "btnVacantes";
-            this.btnVacantes.Size = new System.Drawing.Size(200, 42);
-            this.btnVacantes.TabIndex = 0;
-            this.btnVacantes.Text = "Vacantes";
-            this.btnVacantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVacantes.UseVisualStyleBackColor = false;
-            // 
-            // btnCapacitaciones
-            // 
-            this.btnCapacitaciones.BackColor = System.Drawing.Color.Black;
-            this.btnCapacitaciones.FlatAppearance.BorderSize = 0;
-            this.btnCapacitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapacitaciones.ForeColor = System.Drawing.Color.White;
-            this.btnCapacitaciones.Location = new System.Drawing.Point(0, 162);
-            this.btnCapacitaciones.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCapacitaciones.Name = "btnCapacitaciones";
-            this.btnCapacitaciones.Size = new System.Drawing.Size(200, 42);
-            this.btnCapacitaciones.TabIndex = 0;
-            this.btnCapacitaciones.Text = "Capacitaciones";
-            this.btnCapacitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapacitaciones.UseVisualStyleBackColor = false;
-            // 
-            // btnEvaluaciones
-            // 
-            this.btnEvaluaciones.BackColor = System.Drawing.Color.Black;
-            this.btnEvaluaciones.FlatAppearance.BorderSize = 0;
-            this.btnEvaluaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEvaluaciones.ForeColor = System.Drawing.Color.White;
-            this.btnEvaluaciones.Location = new System.Drawing.Point(0, 204);
-            this.btnEvaluaciones.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEvaluaciones.Name = "btnEvaluaciones";
-            this.btnEvaluaciones.Size = new System.Drawing.Size(200, 42);
-            this.btnEvaluaciones.TabIndex = 0;
-            this.btnEvaluaciones.Text = "Evaluaciones";
-            this.btnEvaluaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEvaluaciones.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Menú";
             // 
             // btnUsuarios
             // 
@@ -174,58 +128,84 @@
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btnEvaluaciones
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Menú";
+            this.btnEvaluaciones.BackColor = System.Drawing.Color.Black;
+            this.btnEvaluaciones.FlatAppearance.BorderSize = 0;
+            this.btnEvaluaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvaluaciones.ForeColor = System.Drawing.Color.White;
+            this.btnEvaluaciones.Location = new System.Drawing.Point(0, 204);
+            this.btnEvaluaciones.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEvaluaciones.Name = "btnEvaluaciones";
+            this.btnEvaluaciones.Size = new System.Drawing.Size(200, 42);
+            this.btnEvaluaciones.TabIndex = 0;
+            this.btnEvaluaciones.Text = "Evaluaciones";
+            this.btnEvaluaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEvaluaciones.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // btnCapacitaciones
             // 
-            this.panel2.Controls.Add(this.lblNivelUser);
-            this.panel2.Controls.Add(this.lblNombreUsuario);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 80);
-            this.panel2.TabIndex = 0;
+            this.btnCapacitaciones.BackColor = System.Drawing.Color.Black;
+            this.btnCapacitaciones.FlatAppearance.BorderSize = 0;
+            this.btnCapacitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapacitaciones.ForeColor = System.Drawing.Color.White;
+            this.btnCapacitaciones.Location = new System.Drawing.Point(0, 162);
+            this.btnCapacitaciones.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCapacitaciones.Name = "btnCapacitaciones";
+            this.btnCapacitaciones.Size = new System.Drawing.Size(200, 42);
+            this.btnCapacitaciones.TabIndex = 0;
+            this.btnCapacitaciones.Text = "Capacitaciones";
+            this.btnCapacitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapacitaciones.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnVacantes
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnVacantes.BackColor = System.Drawing.Color.Black;
+            this.btnVacantes.FlatAppearance.BorderSize = 0;
+            this.btnVacantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVacantes.ForeColor = System.Drawing.Color.White;
+            this.btnVacantes.Location = new System.Drawing.Point(0, 120);
+            this.btnVacantes.Margin = new System.Windows.Forms.Padding(0);
+            this.btnVacantes.Name = "btnVacantes";
+            this.btnVacantes.Size = new System.Drawing.Size(200, 42);
+            this.btnVacantes.TabIndex = 0;
+            this.btnVacantes.Text = "Vacantes";
+            this.btnVacantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVacantes.UseVisualStyleBackColor = false;
             // 
-            // lblNombreUsuario
+            // btnEmpleados
             // 
-            this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(68, 13);
-            this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(84, 13);
-            this.lblNombreUsuario.TabIndex = 1;
-            this.lblNombreUsuario.Text = "Nombre Apellido";
+            this.btnEmpleados.BackColor = System.Drawing.Color.Black;
+            this.btnEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 78);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(200, 42);
+            this.btnEmpleados.TabIndex = 0;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpleados.UseVisualStyleBackColor = false;
             // 
-            // lblNivelUser
+            // pnlHeader
             // 
-            this.lblNivelUser.AutoSize = true;
-            this.lblNivelUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNivelUser.Location = new System.Drawing.Point(68, 29);
-            this.lblNivelUser.Name = "lblNivelUser";
-            this.lblNivelUser.Size = new System.Drawing.Size(31, 13);
-            this.lblNivelUser.TabIndex = 2;
-            this.lblNivelUser.Text = "Nivel";
+            this.pnlHeader.Controls.Add(this.pnlTitulo);
+            this.pnlHeader.Controls.Add(this.panel2);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(800, 80);
+            this.pnlHeader.TabIndex = 0;
+            // 
+            // pnlTitulo
+            // 
+            this.pnlTitulo.Controls.Add(this.lblTitulo);
+            this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitulo.Location = new System.Drawing.Point(200, 0);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(600, 80);
+            this.pnlTitulo.TabIndex = 3;
             // 
             // lblTitulo
             // 
@@ -239,14 +219,77 @@
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Recursos Humanos";
             // 
-            // pnlTitulo
+            // panel2
             // 
-            this.pnlTitulo.Controls.Add(this.lblTitulo);
-            this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitulo.Location = new System.Drawing.Point(200, 0);
-            this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(600, 80);
-            this.pnlTitulo.TabIndex = 3;
+            this.panel2.Controls.Add(this.lblNivelUser);
+            this.panel2.Controls.Add(this.lblNombreUsuario);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 80);
+            this.panel2.TabIndex = 0;
+            // 
+            // lblNivelUser
+            // 
+            this.lblNivelUser.AutoSize = true;
+            this.lblNivelUser.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNivelUser.Location = new System.Drawing.Point(68, 29);
+            this.lblNivelUser.Name = "lblNivelUser";
+            this.lblNivelUser.Size = new System.Drawing.Size(31, 13);
+            this.lblNivelUser.TabIndex = 2;
+            this.lblNivelUser.Text = "Nivel";
+            // 
+            // lblNombreUsuario
+            // 
+            this.lblNombreUsuario.AutoSize = true;
+            this.lblNombreUsuario.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombreUsuario.Location = new System.Drawing.Point(68, 13);
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(84, 13);
+            this.lblNombreUsuario.TabIndex = 1;
+            this.lblNombreUsuario.Text = "Nombre Apellido";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 13);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(574, 154);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Gray;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(14, 183);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(574, 154);
+            this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Gray;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(14, 352);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(574, 154);
+            this.flowLayoutPanel3.TabIndex = 2;
             // 
             // Home
             // 
@@ -260,14 +303,16 @@
             this.Text = "Home";
             this.Resize += new System.EventHandler(this.Home_Resize);
             this.panel1.ResumeLayout(false);
-            this.pnlHeader.ResumeLayout(false);
+            this.pnlContent.ResumeLayout(false);
+            this.pnlContent.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlTitulo.ResumeLayout(false);
+            this.pnlTitulo.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlTitulo.ResumeLayout(false);
-            this.pnlTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +335,8 @@
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnlTitulo;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }
