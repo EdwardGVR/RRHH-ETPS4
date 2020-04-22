@@ -22,5 +22,15 @@ namespace RRHH.PL
         {
             ControlUtils.centrar(pnlTitulo, lblTitulo);
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(pnlContent, new Recientes());
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(pnlContent, new Recientes());
+        }
     }
 }

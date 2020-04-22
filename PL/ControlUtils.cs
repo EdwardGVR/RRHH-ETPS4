@@ -12,7 +12,9 @@ namespace RRHH.PL
         public static void abrirFormEnPanel(Control container, object formChild)
         {
             if (container.Controls.Count > 0)
-            container.Controls.RemoveAt(0);
+            {
+                container.Controls.RemoveAt(0);
+            }
             Form fc = formChild as Form;
             fc.TopLevel = false;
             fc.Dock = DockStyle.Fill;
