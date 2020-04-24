@@ -7,36 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRHH.BLL;
 
 namespace RRHH.PL
 {
     public partial class Empleados : Form
     {
+        EmpleadosBLL oEmpleadosBll;
+
         public Empleados()
         {
+            oEmpleadosBll = new EmpleadosBLL();
             InitializeComponent();
+            dgvEmpleados.DataSource = oEmpleadosBll.getEmpleados().Tables[0];
         }
 
         private void Empleados_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'etps4_rrhhDataSet.empleados' Puede moverla o quitarla según sea necesario.
-            this.empleadosTableAdapter.Fill(this.etps4_rrhhDataSet.empleados);
-            // TODO: esta línea de código carga datos en la tabla 'etps4_rrhhDataSet.empleados' Puede moverla o quitarla según sea necesario.
-            this.empleadosTableAdapter.Fill(this.etps4_rrhhDataSet.empleados);
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.empleadosTableAdapter.FillBy(this.etps4_rrhhDataSet.empleados);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
+            
         }
     }
 }

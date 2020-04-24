@@ -120,6 +120,7 @@
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnEvaluaciones
             // 
@@ -135,6 +136,7 @@
             this.btnEvaluaciones.Text = "Evaluaciones";
             this.btnEvaluaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEvaluaciones.UseVisualStyleBackColor = false;
+            this.btnEvaluaciones.Click += new System.EventHandler(this.btnEvaluaciones_Click);
             // 
             // btnCapacitaciones
             // 
@@ -150,6 +152,7 @@
             this.btnCapacitaciones.Text = "Capacitaciones";
             this.btnCapacitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCapacitaciones.UseVisualStyleBackColor = false;
+            this.btnCapacitaciones.Click += new System.EventHandler(this.btnCapacitaciones_Click);
             // 
             // btnVacantes
             // 
@@ -165,6 +168,7 @@
             this.btnVacantes.Text = "Vacantes";
             this.btnVacantes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVacantes.UseVisualStyleBackColor = false;
+            this.btnVacantes.Click += new System.EventHandler(this.btnVacantes_Click);
             // 
             // btnHome
             // 

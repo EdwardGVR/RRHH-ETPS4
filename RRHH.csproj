@@ -46,13 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\EmpleadosBLL.cs" />
     <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\VacantesBLL.cs" />
     <Compile Include="DAL\ConexionDAL.cs" />
+    <Compile Include="DAL\EmpleadosDAL.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\etps4_rrhhDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>etps4_rrhhDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\VacantesDAL.cs" />
+    <Compile Include="PL\Capacitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Capacitaciones.Designer.cs">
+      <DependentUpon>Capacitaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\ControlUtils.cs" />
     <Compile Include="PL\Empleados.cs">
@@ -60,6 +70,12 @@
     </Compile>
     <Compile Include="PL\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Evaluaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Evaluaciones.Designer.cs">
+      <DependentUpon>Evaluaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Home.cs">
       <SubType>Form</SubType>
@@ -85,10 +101,28 @@
     <Compile Include="PL\Recientes.Designer.cs">
       <DependentUpon>Recientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Vacantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Vacantes.Designer.cs">
+      <DependentUpon>Vacantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\Capacitaciones.resx">
+      <DependentUpon>Capacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Evaluaciones.resx">
+      <DependentUpon>Evaluaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -101,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Recientes.resx">
       <DependentUpon>Recientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Vacantes.resx">
+      <DependentUpon>Vacantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

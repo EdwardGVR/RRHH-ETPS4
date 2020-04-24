@@ -37,5 +37,25 @@ namespace RRHH.PL
         {
             ControlUtils.abrirFormEnPanel(pnlContent, new Empleados());
         }
+
+        private void btnVacantes_Click(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(pnlContent, new Vacantes());
+        }
+
+        private void btnCapacitaciones_Click(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(pnlContent, new Capacitaciones());
+        }
+
+        private void btnEvaluaciones_Click(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(pnlContent, new Evaluaciones());
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(pnlContent, new Usuarios());
+        }
     }
 }
