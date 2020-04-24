@@ -32,5 +32,10 @@ namespace RRHH.PL
         {
             ControlUtils.abrirFormEnPanel(pnlContent, new Recientes());
         }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            ControlUtils.abrirFormEnPanel(pnlContent, new Empleados());
+        }
     }
 }

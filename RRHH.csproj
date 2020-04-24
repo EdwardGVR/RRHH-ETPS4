@@ -49,7 +49,18 @@
     <Compile Include="BLL\LoginBLL.cs" />
     <Compile Include="DAL\ConexionDAL.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\etps4_rrhhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>etps4_rrhhDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PL\ControlUtils.cs" />
+    <Compile Include="PL\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +111,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DAL\etps4_rrhhDataSet.xsc">
+      <DependentUpon>etps4_rrhhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\etps4_rrhhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>etps4_rrhhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAL\etps4_rrhhDataSet.xss">
+      <DependentUpon>etps4_rrhhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\RRHH.DAL.etps4_rrhhDataSet+cargos_empleadosDataTable.datasource" />
+    <None Include="Properties\DataSources\RRHH.DAL.etps4_rrhhDataSet+empleadosDataTable.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
