@@ -12,7 +12,9 @@ namespace RRHH.PL
         public static void abrirFormEnPanel(Control container, object formChild)
         {
             if (container.Controls.Count > 0)
-            container.Controls.RemoveAt(0);
+            {
+                container.Controls.RemoveAt(0);
+            }
             Form fc = formChild as Form;
             fc.TopLevel = false;
             fc.Dock = DockStyle.Fill;
@@ -20,6 +22,13 @@ namespace RRHH.PL
             container.Tag = fc;
             fc.Show();
             Console.WriteLine(fc.Tag);
+        }
+
+        public static void openMdi(Form container, Form cForm)
+        {
+            cForm.MdiParent = container;
+            cForm.Dock = DockStyle.Fill;
+            cForm.Show();
         }
 
         public static void centrar(Control padre, Control hijo)

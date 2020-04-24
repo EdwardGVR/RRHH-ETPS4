@@ -30,9 +30,9 @@
         {
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.gbLogin.SuspendLayout();
@@ -43,9 +43,9 @@
             // 
             this.gbLogin.BackColor = System.Drawing.Color.Black;
             this.gbLogin.Controls.Add(this.btnLogin);
-            this.gbLogin.Controls.Add(this.textBox2);
+            this.gbLogin.Controls.Add(this.txtClave);
             this.gbLogin.Controls.Add(this.label2);
-            this.gbLogin.Controls.Add(this.textBox1);
+            this.gbLogin.Controls.Add(this.txtUsuario);
             this.gbLogin.Controls.Add(this.label1);
             this.gbLogin.ForeColor = System.Drawing.Color.White;
             this.gbLogin.Location = new System.Drawing.Point(267, 111);
@@ -63,18 +63,20 @@
             this.btnLogin.Location = new System.Drawing.Point(87, 171);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(93, 34);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Acceder";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // textBox2
+            // txtClave
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 121);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 21);
-            this.textBox2.TabIndex = 1;
+            this.txtClave.AcceptsTab = true;
+            this.txtClave.Location = new System.Drawing.Point(13, 121);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(241, 20);
+            this.txtClave.TabIndex = 2;
+            this.txtClave.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -85,13 +87,13 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Clave";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 56);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtUsuario.Location = new System.Drawing.Point(13, 56);
+            this.txtUsuario.Multiline = true;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(241, 22);
+            this.txtUsuario.TabIndex = 1;
             // 
             // label1
             // 
@@ -122,6 +124,7 @@
             this.Controls.Add(this.pnlLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Tag = "Login";
             this.Text = "Login";
             this.Resize += new System.EventHandler(this.Login_Resize);
@@ -135,9 +138,9 @@
         #endregion
         private System.Windows.Forms.GroupBox gbLogin;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlLogin;
     }

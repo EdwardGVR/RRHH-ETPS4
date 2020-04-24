@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RRHH.BLL;
+using RRHH.DAL;
 
 namespace RRHH.PL
 {
@@ -24,10 +26,20 @@ namespace RRHH.PL
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            Control container = main.Controls.Find("pnlMain", true)[0];
-            Close();
-            ControlUtils.abrirFormEnPanel(container, new Home());
+            string user = txtUsuario.Text;
+            string clave = txtClave.Text;
+
+            LoginBLL oLoginBLL = new LoginBLL();
+            if (oLoginBLL.validar(user, clave))
+            {
+                ControlUtils.openMdi(ParentForm, new Home());
+                Close();
+            }
+            else {
+                txtUsuario.Text = "";
+                txtClave.Text = "";
+                txtUsuario.Focus();
+            }
         }
     }
 }
