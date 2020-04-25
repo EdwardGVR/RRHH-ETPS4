@@ -87,6 +87,7 @@
             this.btnAgregarVacante.TabIndex = 7;
             this.btnAgregarVacante.Text = "Agregar";
             this.btnAgregarVacante.UseVisualStyleBackColor = false;
+            this.btnAgregarVacante.Click += new System.EventHandler(this.btnAgregarVacante_Click);
             // 
             // Vacantes
             // 

@@ -10,10 +10,16 @@ namespace RRHH.BLL
 {
     class VacantesBLL
     {
+        VacantesDAL oVacantesDAL = new VacantesDAL();
+        
         public DataSet getVacantes (int top = 0)
         {
-            VacantesDAL oVacantesDAL = new VacantesDAL();
             return oVacantesDAL.getVacantes(top);
+        }
+
+        public void insertVacante (string vacante, int idDpto, int cupo, string descripcion)
+        {
+            oVacantesDAL.insertVacante(vacante, idDpto, cupo, descripcion);
         }
     }
 }

@@ -21,5 +21,12 @@ namespace RRHH.PL
             InitializeComponent();
             dgvVacantes.DataSource = oVacantesBLL.getVacantes().Tables[0];
         }
+
+        private void btnAgregarVacante_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddVacante());
+            Close();
+        }
     }
 }

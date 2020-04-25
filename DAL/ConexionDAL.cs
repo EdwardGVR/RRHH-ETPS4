@@ -10,8 +10,8 @@ namespace RRHH.DAL
 {
     class ConexionDAL
     {
-        //private static string dbUser = "DESKTOP-9LV57DI\\SQLEXPRESS";
-        private static string dbUser = "DESKTOP-F0AK4UN";
+        private static string dbUser = "DESKTOP-9LV57DI\\SQLEXPRESS";
+        //private static string dbUser = "DESKTOP-F0AK4UN";
         private static string db = "etps4_rrhh";
         string cadena = $"Data Source = {dbUser}; Initial Catalog = {db}; Integrated Security = True";
         SqlConnection conexion;
@@ -64,6 +64,23 @@ namespace RRHH.DAL
             catch (Exception e) {
                 Console.WriteLine(e);
                 return ds;
+            }
+        }
+
+        public void insertQuery(SqlCommand query)
+        {
+            try
+            {
+                SqlCommand q = new SqlCommand();
+                q = query;
+                q.Connection = conectar();
+                abrir();
+                query.ExecuteNonQuery();
+                cerrar();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
             }
         }
 

@@ -54,5 +54,17 @@ namespace RRHH.DAL
                 return conexion.selectQuery(query);
             }
         }
+
+        public void insertVacante (string vacante, int idDpto, int cupo, string descripcion)
+        {
+            SqlCommand query = new SqlCommand();
+            query.CommandText = "INSERT INTO vacantes(vacante, id_departamento, cupo_vacante, descripcion) " +
+                "VALUES('@vacante', @idDpto, @cupo, '@descripcion')";
+            query.Parameters.AddWithValue("@vacante", vacante);
+            query.Parameters.AddWithValue("@idDpto", idDpto);
+            query.Parameters.AddWithValue("@cupo", cupo);
+            query.Parameters.AddWithValue("@descripcion", descripcion);
+            conexion.insertQuery(query);
+        }
     }
 }
