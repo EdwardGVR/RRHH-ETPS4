@@ -30,28 +30,31 @@
         {
             this.pnlRecientes = new System.Windows.Forms.Panel();
             this.btnVerTodasEvaluaciones = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnVerTodasCapacitaciones = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVerTodasVacantes = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvVacantesRecientes = new System.Windows.Forms.DataGridView();
+            this.dgvCapaRecientes = new System.Windows.Forms.DataGridView();
+            this.dgvEvalRecientes = new System.Windows.Forms.DataGridView();
             this.pnlRecientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacantesRecientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCapaRecientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvalRecientes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlRecientes
             // 
             this.pnlRecientes.AutoScroll = true;
+            this.pnlRecientes.Controls.Add(this.dgvVacantesRecientes);
+            this.pnlRecientes.Controls.Add(this.dgvEvalRecientes);
+            this.pnlRecientes.Controls.Add(this.dgvCapaRecientes);
             this.pnlRecientes.Controls.Add(this.btnVerTodasEvaluaciones);
-            this.pnlRecientes.Controls.Add(this.flowLayoutPanel3);
             this.pnlRecientes.Controls.Add(this.label3);
             this.pnlRecientes.Controls.Add(this.btnVerTodasCapacitaciones);
-            this.pnlRecientes.Controls.Add(this.flowLayoutPanel2);
             this.pnlRecientes.Controls.Add(this.label2);
             this.pnlRecientes.Controls.Add(this.btnVerTodasVacantes);
-            this.pnlRecientes.Controls.Add(this.flowLayoutPanel1);
             this.pnlRecientes.Controls.Add(this.label1);
             this.pnlRecientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRecientes.Location = new System.Drawing.Point(0, 0);
@@ -74,17 +77,6 @@
             this.btnVerTodasEvaluaciones.Text = "Ver todas";
             this.btnVerTodasEvaluaciones.UseVisualStyleBackColor = false;
             this.btnVerTodasEvaluaciones.Click += new System.EventHandler(this.btnVerTodasEvaluaciones_Click);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(15, 475);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(765, 162);
-            this.flowLayoutPanel3.TabIndex = 7;
             // 
             // label3
             // 
@@ -110,16 +102,6 @@
             this.btnVerTodasCapacitaciones.UseVisualStyleBackColor = false;
             this.btnVerTodasCapacitaciones.Click += new System.EventHandler(this.btnVerTodasCapacitaciones_Click);
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(15, 256);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(765, 162);
-            this.flowLayoutPanel2.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -144,16 +126,6 @@
             this.btnVerTodasVacantes.UseVisualStyleBackColor = false;
             this.btnVerTodasVacantes.Click += new System.EventHandler(this.btnVerTodasVacantes_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(15, 41);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(765, 162);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -163,6 +135,54 @@
             this.label1.Size = new System.Drawing.Size(163, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vacantes recientes";
+            // 
+            // dgvVacantesRecientes
+            // 
+            this.dgvVacantesRecientes.AllowUserToAddRows = false;
+            this.dgvVacantesRecientes.AllowUserToDeleteRows = false;
+            this.dgvVacantesRecientes.AllowUserToResizeColumns = false;
+            this.dgvVacantesRecientes.AllowUserToResizeRows = false;
+            this.dgvVacantesRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVacantesRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVacantesRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvVacantesRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVacantesRecientes.Location = new System.Drawing.Point(18, 43);
+            this.dgvVacantesRecientes.Name = "dgvVacantesRecientes";
+            this.dgvVacantesRecientes.Size = new System.Drawing.Size(763, 131);
+            this.dgvVacantesRecientes.TabIndex = 0;
+            // 
+            // dgvCapaRecientes
+            // 
+            this.dgvCapaRecientes.AllowUserToAddRows = false;
+            this.dgvCapaRecientes.AllowUserToDeleteRows = false;
+            this.dgvCapaRecientes.AllowUserToResizeColumns = false;
+            this.dgvCapaRecientes.AllowUserToResizeRows = false;
+            this.dgvCapaRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCapaRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCapaRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCapaRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCapaRecientes.Location = new System.Drawing.Point(18, 263);
+            this.dgvCapaRecientes.Name = "dgvCapaRecientes";
+            this.dgvCapaRecientes.Size = new System.Drawing.Size(762, 131);
+            this.dgvCapaRecientes.TabIndex = 1;
+            // 
+            // dgvEvalRecientes
+            // 
+            this.dgvEvalRecientes.AllowUserToAddRows = false;
+            this.dgvEvalRecientes.AllowUserToDeleteRows = false;
+            this.dgvEvalRecientes.AllowUserToResizeColumns = false;
+            this.dgvEvalRecientes.AllowUserToResizeRows = false;
+            this.dgvEvalRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEvalRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEvalRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEvalRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvalRecientes.Location = new System.Drawing.Point(16, 481);
+            this.dgvEvalRecientes.Name = "dgvEvalRecientes";
+            this.dgvEvalRecientes.Size = new System.Drawing.Size(764, 131);
+            this.dgvEvalRecientes.TabIndex = 2;
             // 
             // Recientes
             // 
@@ -175,8 +195,12 @@
             this.Name = "Recientes";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.Text = "Recientes";
+            this.Resize += new System.EventHandler(this.Recientes_Resize);
             this.pnlRecientes.ResumeLayout(false);
             this.pnlRecientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacantesRecientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCapaRecientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEvalRecientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,13 +209,13 @@
 
         private System.Windows.Forms.Panel pnlRecientes;
         private System.Windows.Forms.Button btnVerTodasEvaluaciones;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnVerTodasCapacitaciones;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVerTodasVacantes;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvVacantesRecientes;
+        private System.Windows.Forms.DataGridView dgvEvalRecientes;
+        private System.Windows.Forms.DataGridView dgvCapaRecientes;
     }
 }

@@ -17,20 +17,42 @@ namespace RRHH.DAL
             conexion = new ConexionDAL();
         }
 
-        public DataSet getVacantes ()
+        public DataSet getVacantes (int top = 0)
         {
-            SqlCommand query = new SqlCommand();
-            query.CommandText = "SELECT " +
-                "vacantes.vacante AS Vacante, " +
-                "departamentos.departamento AS Departamento, " +
-                "vacantes.cupo_vacante AS Cupo, " +
-                "vacantes.descripcion AS Descripcion, " +
-                "vacantes.fehca_creacion AS \"Fecha creacion\", " +
-                "estados_vacantes.estado AS Estado " +
-                "FROM vacantes " +
-                "JOIN departamentos ON vacantes.id_departamento = departamentos.id_departamento " +
-                "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante";
-            return conexion.selectQuery(query);
+            if (top > 0) 
+            {
+                SqlCommand query = new SqlCommand();
+                query.CommandText = "SELECT " +
+                    "TOP (@top)" +
+                    "vacantes.id_vacante AS ID, " +
+                    "vacantes.vacante AS Vacante, " +
+                    "departamentos.departamento AS Departamento, " +
+                    "vacantes.cupo_vacante AS Cupo, " +
+                    "vacantes.descripcion AS Descripcion, " +
+                    "vacantes.fehca_creacion AS \"Fecha creacion\", " +
+                    "estados_vacantes.estado AS Estado " +
+                    "FROM vacantes " +
+                    "JOIN departamentos ON vacantes.id_departamento = departamentos.id_departamento " +
+                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante";
+                query.Parameters.AddWithValue("@top", top);
+                return conexion.selectQuery(query);
+            } 
+            else
+            {
+                SqlCommand query = new SqlCommand();
+                query.CommandText = "SELECT " +
+                    "vacantes.id_vacante AS ID, " +
+                    "vacantes.vacante AS Vacante, " +
+                    "departamentos.departamento AS Departamento, " +
+                    "vacantes.cupo_vacante AS Cupo, " +
+                    "vacantes.descripcion AS Descripcion, " +
+                    "vacantes.fehca_creacion AS \"Fecha creacion\", " +
+                    "estados_vacantes.estado AS Estado " +
+                    "FROM vacantes " +
+                    "JOIN departamentos ON vacantes.id_departamento = departamentos.id_departamento " +
+                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante";
+                return conexion.selectQuery(query);
+            }
         }
     }
 }

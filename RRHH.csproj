@@ -46,17 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CapacitacionesBLL.cs" />
     <Compile Include="BLL\EmpleadosBLL.cs" />
+    <Compile Include="BLL\EvaluacionesBLL.cs" />
     <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\UsuariosBLL.cs" />
     <Compile Include="BLL\VacantesBLL.cs" />
+    <Compile Include="DAL\CapacitacionesDAL.cs" />
     <Compile Include="DAL\ConexionDAL.cs" />
     <Compile Include="DAL\EmpleadosDAL.cs" />
+    <Compile Include="DAL\EvaluacionesDAL.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
-    <Compile Include="DAL\etps4_rrhhDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>etps4_rrhhDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="DAL\VacantesDAL.cs" />
     <Compile Include="PL\Capacitaciones.cs">
       <SubType>Form</SubType>
@@ -151,17 +152,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DAL\etps4_rrhhDataSet.xsc">
-      <DependentUpon>etps4_rrhhDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DAL\etps4_rrhhDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>etps4_rrhhDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DAL\etps4_rrhhDataSet.xss">
-      <DependentUpon>etps4_rrhhDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\RRHH.DAL.etps4_rrhhDataSet+cargos_empleadosDataTable.datasource" />
     <None Include="Properties\DataSources\RRHH.DAL.etps4_rrhhDataSet+empleadosDataTable.datasource" />
     <None Include="Properties\Settings.settings">
