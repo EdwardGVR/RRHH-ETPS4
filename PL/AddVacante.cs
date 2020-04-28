@@ -21,7 +21,8 @@ namespace RRHH.PL
             InitializeComponent();
             cmbDepartamento.DataSource = oDepartamentosBLL.getNombresDepartamentos().Tables[0];
             cmbDepartamento.DisplayMember = "departamento";
-            txtFecha.Text = DateTime.Now.ToString();
+            //txtFecha.Text = DateTime.Now.ToString();
+            txtFecha.Text = DateTime.Now.Date.ToShortDateString();
         }
 
         private void btnCancelarVacante_Click(object sender, EventArgs e)
@@ -33,31 +34,14 @@ namespace RRHH.PL
 
         private void btnGuardarVacante_Click(object sender, EventArgs e)
         {
-
             string vacante, departamento, descripcion;
             int cupo, idDepartamento;
 
             vacante = txtVacante.Text;
-            departamento = cmbDepartamento.SelectedItem.ToString();
+            departamento = cmbDepartamento.Text;
             descripcion = txtDescripcion.Text;
-            cupo = Int32.Parse(txtCupo.Text);
-
-            switch (departamento)
-            {
-                case "Desarrollo":
-                    idDepartamento = 2;
-                    break;
-                case "Redes":
-                    idDepartamento = 3;
-                    break;
-                case "Bases de datos":
-                    idDepartamento = 4;
-                    break;
-                default:
-                    idDepartamento = 0;
-                    Console.WriteLine("Error");
-                    break;
-            }
+            cupo = int.Parse(txtCupo.Text);
+            idDepartamento = oDepartamentosBLL.getDptoID(departamento);
 
             oVacantesBLL.insertVacante(vacante, idDepartamento, cupo, descripcion);
 

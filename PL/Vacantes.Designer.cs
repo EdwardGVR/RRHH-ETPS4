@@ -70,8 +70,10 @@
             this.dgvVacantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVacantes.Location = new System.Drawing.Point(17, 98);
             this.dgvVacantes.Name = "dgvVacantes";
+            this.dgvVacantes.ReadOnly = true;
             this.dgvVacantes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVacantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVacantes.ShowEditingIcon = false;
             this.dgvVacantes.Size = new System.Drawing.Size(771, 267);
             this.dgvVacantes.TabIndex = 6;
             // 

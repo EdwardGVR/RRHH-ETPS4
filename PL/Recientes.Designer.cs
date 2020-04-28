@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.pnlRecientes = new System.Windows.Forms.Panel();
+            this.dgvVacantesRecientes = new System.Windows.Forms.DataGridView();
+            this.dgvEvalRecientes = new System.Windows.Forms.DataGridView();
+            this.dgvCapaRecientes = new System.Windows.Forms.DataGridView();
             this.btnVerTodasEvaluaciones = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnVerTodasCapacitaciones = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVerTodasVacantes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvVacantesRecientes = new System.Windows.Forms.DataGridView();
-            this.dgvCapaRecientes = new System.Windows.Forms.DataGridView();
-            this.dgvEvalRecientes = new System.Windows.Forms.DataGridView();
             this.pnlRecientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVacantesRecientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCapaRecientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvalRecientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCapaRecientes)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlRecientes
@@ -63,6 +63,60 @@
             this.pnlRecientes.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.pnlRecientes.Size = new System.Drawing.Size(800, 430);
             this.pnlRecientes.TabIndex = 0;
+            // 
+            // dgvVacantesRecientes
+            // 
+            this.dgvVacantesRecientes.AllowUserToAddRows = false;
+            this.dgvVacantesRecientes.AllowUserToDeleteRows = false;
+            this.dgvVacantesRecientes.AllowUserToResizeColumns = false;
+            this.dgvVacantesRecientes.AllowUserToResizeRows = false;
+            this.dgvVacantesRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVacantesRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVacantesRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvVacantesRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVacantesRecientes.Location = new System.Drawing.Point(18, 43);
+            this.dgvVacantesRecientes.Name = "dgvVacantesRecientes";
+            this.dgvVacantesRecientes.ReadOnly = true;
+            this.dgvVacantesRecientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVacantesRecientes.Size = new System.Drawing.Size(763, 131);
+            this.dgvVacantesRecientes.TabIndex = 0;
+            // 
+            // dgvEvalRecientes
+            // 
+            this.dgvEvalRecientes.AllowUserToAddRows = false;
+            this.dgvEvalRecientes.AllowUserToDeleteRows = false;
+            this.dgvEvalRecientes.AllowUserToResizeColumns = false;
+            this.dgvEvalRecientes.AllowUserToResizeRows = false;
+            this.dgvEvalRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEvalRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEvalRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEvalRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEvalRecientes.Location = new System.Drawing.Point(16, 481);
+            this.dgvEvalRecientes.Name = "dgvEvalRecientes";
+            this.dgvEvalRecientes.ReadOnly = true;
+            this.dgvEvalRecientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEvalRecientes.Size = new System.Drawing.Size(764, 131);
+            this.dgvEvalRecientes.TabIndex = 2;
+            // 
+            // dgvCapaRecientes
+            // 
+            this.dgvCapaRecientes.AllowUserToAddRows = false;
+            this.dgvCapaRecientes.AllowUserToDeleteRows = false;
+            this.dgvCapaRecientes.AllowUserToResizeColumns = false;
+            this.dgvCapaRecientes.AllowUserToResizeRows = false;
+            this.dgvCapaRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCapaRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCapaRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCapaRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCapaRecientes.Location = new System.Drawing.Point(18, 263);
+            this.dgvCapaRecientes.Name = "dgvCapaRecientes";
+            this.dgvCapaRecientes.ReadOnly = true;
+            this.dgvCapaRecientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCapaRecientes.Size = new System.Drawing.Size(762, 131);
+            this.dgvCapaRecientes.TabIndex = 1;
             // 
             // btnVerTodasEvaluaciones
             // 
@@ -136,54 +190,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Vacantes recientes";
             // 
-            // dgvVacantesRecientes
-            // 
-            this.dgvVacantesRecientes.AllowUserToAddRows = false;
-            this.dgvVacantesRecientes.AllowUserToDeleteRows = false;
-            this.dgvVacantesRecientes.AllowUserToResizeColumns = false;
-            this.dgvVacantesRecientes.AllowUserToResizeRows = false;
-            this.dgvVacantesRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvVacantesRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVacantesRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvVacantesRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVacantesRecientes.Location = new System.Drawing.Point(18, 43);
-            this.dgvVacantesRecientes.Name = "dgvVacantesRecientes";
-            this.dgvVacantesRecientes.Size = new System.Drawing.Size(763, 131);
-            this.dgvVacantesRecientes.TabIndex = 0;
-            // 
-            // dgvCapaRecientes
-            // 
-            this.dgvCapaRecientes.AllowUserToAddRows = false;
-            this.dgvCapaRecientes.AllowUserToDeleteRows = false;
-            this.dgvCapaRecientes.AllowUserToResizeColumns = false;
-            this.dgvCapaRecientes.AllowUserToResizeRows = false;
-            this.dgvCapaRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCapaRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCapaRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCapaRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCapaRecientes.Location = new System.Drawing.Point(18, 263);
-            this.dgvCapaRecientes.Name = "dgvCapaRecientes";
-            this.dgvCapaRecientes.Size = new System.Drawing.Size(762, 131);
-            this.dgvCapaRecientes.TabIndex = 1;
-            // 
-            // dgvEvalRecientes
-            // 
-            this.dgvEvalRecientes.AllowUserToAddRows = false;
-            this.dgvEvalRecientes.AllowUserToDeleteRows = false;
-            this.dgvEvalRecientes.AllowUserToResizeColumns = false;
-            this.dgvEvalRecientes.AllowUserToResizeRows = false;
-            this.dgvEvalRecientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvEvalRecientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEvalRecientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvEvalRecientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEvalRecientes.Location = new System.Drawing.Point(16, 481);
-            this.dgvEvalRecientes.Name = "dgvEvalRecientes";
-            this.dgvEvalRecientes.Size = new System.Drawing.Size(764, 131);
-            this.dgvEvalRecientes.TabIndex = 2;
-            // 
             // Recientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,8 +205,8 @@
             this.pnlRecientes.ResumeLayout(false);
             this.pnlRecientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVacantesRecientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCapaRecientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEvalRecientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCapaRecientes)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -33,7 +33,8 @@ namespace RRHH.DAL
                     "estados_vacantes.estado AS Estado " +
                     "FROM vacantes " +
                     "JOIN departamentos ON vacantes.id_departamento = departamentos.id_departamento " +
-                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante";
+                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante " +
+                    "ORDER BY vacantes.id_vacante DESC";
                 query.Parameters.AddWithValue("@top", top);
                 return conexion.selectQuery(query);
             } 
@@ -50,7 +51,8 @@ namespace RRHH.DAL
                     "estados_vacantes.estado AS Estado " +
                     "FROM vacantes " +
                     "JOIN departamentos ON vacantes.id_departamento = departamentos.id_departamento " +
-                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante";
+                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante " +
+                    "ORDER BY vacantes.id_vacante DESC";
                 return conexion.selectQuery(query);
             }
         }
@@ -59,7 +61,7 @@ namespace RRHH.DAL
         {
             SqlCommand query = new SqlCommand();
             query.CommandText = "INSERT INTO vacantes(vacante, id_departamento, cupo_vacante, descripcion) " +
-                "VALUES('@vacante', @idDpto, @cupo, '@descripcion')";
+                "VALUES(@vacante, @idDpto, @cupo, @descripcion)";
             query.Parameters.AddWithValue("@vacante", vacante);
             query.Parameters.AddWithValue("@idDpto", idDpto);
             query.Parameters.AddWithValue("@cupo", cupo);
