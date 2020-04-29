@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVacante));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGuardarVacante = new System.Windows.Forms.Button();
             this.txtFecha = new System.Windows.Forms.TextBox();
+            this.btnCancelarVacante = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,9 +44,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtCupo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCancelarVacante = new System.Windows.Forms.Button();
-            this.btnGuardarVacante = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -51,7 +68,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(17, 46);
+            this.panel2.Location = new System.Drawing.Point(17, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(771, 5);
             this.panel2.TabIndex = 9;
@@ -60,7 +77,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 18);
+            this.label1.Location = new System.Drawing.Point(13, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 24);
             this.label1.TabIndex = 8;
@@ -68,9 +85,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnGuardarVacante);
             this.groupBox1.Controls.Add(this.txtFecha);
+            this.groupBox1.Controls.Add(this.btnCancelarVacante);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label5);
@@ -82,12 +102,27 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(17, 68);
+            this.groupBox1.Location = new System.Drawing.Point(17, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 338);
+            this.groupBox1.Size = new System.Drawing.Size(770, 339);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar datos";
+            // 
+            // btnGuardarVacante
+            // 
+            this.btnGuardarVacante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarVacante.BackColor = System.Drawing.Color.LightGreen;
+            this.btnGuardarVacante.FlatAppearance.BorderSize = 0;
+            this.btnGuardarVacante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarVacante.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarVacante.Location = new System.Drawing.Point(595, 302);
+            this.btnGuardarVacante.Name = "btnGuardarVacante";
+            this.btnGuardarVacante.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarVacante.TabIndex = 12;
+            this.btnGuardarVacante.Text = "Siguente";
+            this.btnGuardarVacante.UseVisualStyleBackColor = false;
+            this.btnGuardarVacante.Click += new System.EventHandler(this.btnGuardarVacante_Click);
             // 
             // txtFecha
             // 
@@ -96,6 +131,21 @@
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(403, 23);
             this.txtFecha.TabIndex = 9;
+            // 
+            // btnCancelarVacante
+            // 
+            this.btnCancelarVacante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelarVacante.BackColor = System.Drawing.Color.LightGray;
+            this.btnCancelarVacante.FlatAppearance.BorderSize = 0;
+            this.btnCancelarVacante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarVacante.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelarVacante.Location = new System.Drawing.Point(681, 301);
+            this.btnCancelarVacante.Name = "btnCancelarVacante";
+            this.btnCancelarVacante.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarVacante.TabIndex = 11;
+            this.btnCancelarVacante.Text = "Cancelar";
+            this.btnCancelarVacante.UseVisualStyleBackColor = false;
+            this.btnCancelarVacante.Click += new System.EventHandler(this.btnCancelarVacante_Click);
             // 
             // label6
             // 
@@ -182,33 +232,121 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Cupo";
             // 
-            // btnCancelarVacante
+            // panel1
             // 
-            this.btnCancelarVacante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelarVacante.BackColor = System.Drawing.Color.LightGray;
-            this.btnCancelarVacante.FlatAppearance.BorderSize = 0;
-            this.btnCancelarVacante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelarVacante.Location = new System.Drawing.Point(712, 404);
-            this.btnCancelarVacante.Name = "btnCancelarVacante";
-            this.btnCancelarVacante.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarVacante.TabIndex = 11;
-            this.btnCancelarVacante.Text = "Cancelar";
-            this.btnCancelarVacante.UseVisualStyleBackColor = false;
-            this.btnCancelarVacante.Click += new System.EventHandler(this.btnCancelarVacante_Click);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Location = new System.Drawing.Point(488, 17);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 40);
+            this.panel1.TabIndex = 11;
             // 
-            // btnGuardarVacante
+            // label8
             // 
-            this.btnGuardarVacante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardarVacante.BackColor = System.Drawing.Color.LightGreen;
-            this.btnGuardarVacante.FlatAppearance.BorderSize = 0;
-            this.btnGuardarVacante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarVacante.Location = new System.Drawing.Point(631, 405);
-            this.btnGuardarVacante.Name = "btnGuardarVacante";
-            this.btnGuardarVacante.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarVacante.TabIndex = 12;
-            this.btnGuardarVacante.Text = "Guardar";
-            this.btnGuardarVacante.UseVisualStyleBackColor = false;
-            this.btnGuardarVacante.Click += new System.EventHandler(this.btnGuardarVacante_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.LightGray;
+            this.label8.Location = new System.Drawing.Point(191, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 17);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Requisitos";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(39, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 17);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Datos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(150, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(8, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(17, 17);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "1";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(158, 7);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 17);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "2";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(0, 33);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(150, 5);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel4.Location = new System.Drawing.Point(150, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(150, 5);
+            this.panel4.TabIndex = 13;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Location = new System.Drawing.Point(150, 33);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(150, 5);
+            this.panel5.TabIndex = 14;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel6.Location = new System.Drawing.Point(150, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(150, 5);
+            this.panel6.TabIndex = 13;
             // 
             // AddVacante
             // 
@@ -217,16 +355,21 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnGuardarVacante);
-            this.Controls.Add(this.btnCancelarVacante);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddVacante";
             this.Text = "AddVacante";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +392,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancelarVacante;
         private System.Windows.Forms.Button btnGuardarVacante;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

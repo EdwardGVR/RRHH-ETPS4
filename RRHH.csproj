@@ -61,6 +61,18 @@
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="DAL\VacantesDAL.cs" />
+    <Compile Include="PL\AddEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddEmpleado.Designer.cs">
+      <DependentUpon>AddEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\AddRequisitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddRequisitos.Designer.cs">
+      <DependentUpon>AddRequisitos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\AddVacante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +136,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\AddEmpleado.resx">
+      <DependentUpon>AddEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AddRequisitos.resx">
+      <DependentUpon>AddRequisitos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\AddVacante.resx">
       <DependentUpon>AddVacante.cs</DependentUpon>
     </EmbeddedResource>

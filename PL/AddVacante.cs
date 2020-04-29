@@ -21,7 +21,6 @@ namespace RRHH.PL
             InitializeComponent();
             cmbDepartamento.DataSource = oDepartamentosBLL.getNombresDepartamentos().Tables[0];
             cmbDepartamento.DisplayMember = "departamento";
-            //txtFecha.Text = DateTime.Now.ToString();
             txtFecha.Text = DateTime.Now.Date.ToShortDateString();
         }
 
@@ -40,13 +39,13 @@ namespace RRHH.PL
             vacante = txtVacante.Text;
             departamento = cmbDepartamento.Text;
             descripcion = txtDescripcion.Text;
-            cupo = int.Parse(txtCupo.Text);
-            idDepartamento = oDepartamentosBLL.getDptoID(departamento);
+            //cupo = int.Parse(txtCupo.Text);
+            //idDepartamento = oDepartamentosBLL.getDptoID(departamento);
 
-            oVacantesBLL.insertVacante(vacante, idDepartamento, cupo, descripcion);
+            //oVacantesBLL.insertVacante(vacante, idDepartamento, cupo, descripcion);
 
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-            ControlUtils.abrirFormEnPanel(pnlContent, new Vacantes());
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos());
             Close();
         }
     }
