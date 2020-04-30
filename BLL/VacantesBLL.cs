@@ -21,5 +21,10 @@ namespace RRHH.BLL
         {
             oVacantesDAL.insertVacante(vacante, idDpto, cupo, descripcion);
         }
+
+        public DataSet getPrioridades()
+        {
+            return oVacantesDAL.getPrioridades();
+        }
     }
 }

@@ -68,5 +68,12 @@ namespace RRHH.DAL
             query.Parameters.AddWithValue("@descripcion", descripcion);
             conexion.insertQuery(query);
         }
+
+        public DataSet getPrioridades ()
+        {
+            SqlCommand query = new SqlCommand();
+            query.CommandText = "SELECT prioridad_requisito FROM prioridades_requisitos";
+            return conexion.selectQuery(query);
+        }
     }
 }
