@@ -25,6 +25,7 @@ namespace RRHH.DAL
                 query.CommandText = "SELECT " +
                     "TOP (@top)" +
                     "vacantes.id_vacante AS ID, " +
+                    "vacantes.codigo_vacante AS Codigo, " +
                     "vacantes.vacante AS Vacante, " +
                     "departamentos.departamento AS Departamento, " +
                     "vacantes.cupo_vacante AS Cupo, " +
@@ -43,6 +44,7 @@ namespace RRHH.DAL
                 SqlCommand query = new SqlCommand();
                 query.CommandText = "SELECT " +
                     "vacantes.id_vacante AS ID, " +
+                    "vacantes.codigo_vacante AS Codigo, " +
                     "vacantes.vacante AS Vacante, " +
                     "departamentos.departamento AS Departamento, " +
                     "vacantes.cupo_vacante AS Cupo, " +
@@ -57,11 +59,12 @@ namespace RRHH.DAL
             }
         }
 
-        public void insertVacante (string vacante, int idDpto, int cupo, string descripcion)
+        public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
             SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO vacantes(vacante, id_departamento, cupo_vacante, descripcion) " +
-                "VALUES(@vacante, @idDpto, @cupo, @descripcion)";
+            query.CommandText = "INSERT INTO vacantes(codigo_vacante, vacante, id_departamento, cupo_vacante, descripcion) " +
+                "VALUES(@codVac, @vacante, @idDpto, @cupo, @descripcion)";
+            query.Parameters.AddWithValue("@codVac", codVac);
             query.Parameters.AddWithValue("@vacante", vacante);
             query.Parameters.AddWithValue("@idDpto", idDpto);
             query.Parameters.AddWithValue("@cupo", cupo);
@@ -79,8 +82,11 @@ namespace RRHH.DAL
         // Obtiene el correlativo de la vacante segun departamento
         public int getCorrVac(int idDpto) {
             SqlCommand query = new SqlCommand();
-            query.CommandText = "SELECT * FROM vacantes WHERE id_departamento = @idDepartamento";
+            query.CommandText = "SELECT COUNT(*) FROM vacantes WHERE id_departamento = @idDepartamento";
             query.Parameters.AddWithValue("@idDepartamento", idDpto);
+            DataSet result = conexion.selectQuery(query);
+            int corrVac = int.Parse(result.Tables[0].Rows[0][0].ToString());
+            return corrVac + 1;
         }
     }
 }

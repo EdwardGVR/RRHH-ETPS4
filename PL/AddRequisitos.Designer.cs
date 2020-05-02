@@ -53,6 +53,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGuardarOtro = new System.Windows.Forms.Button();
+            this.lblCorrVac = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -140,8 +141,7 @@
             // 
             // txtDetReq1
             // 
-            this.txtDetReq1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDetReq1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDetReq1.Location = new System.Drawing.Point(9, 145);
             this.txtDetReq1.Multiline = true;
@@ -336,12 +336,22 @@
             this.btnGuardarOtro.Text = "Guardar otro";
             this.btnGuardarOtro.UseVisualStyleBackColor = false;
             // 
+            // lblCorrVac
+            // 
+            this.lblCorrVac.AutoSize = true;
+            this.lblCorrVac.Location = new System.Drawing.Point(292, 24);
+            this.lblCorrVac.Name = "lblCorrVac";
+            this.lblCorrVac.Size = new System.Drawing.Size(35, 13);
+            this.lblCorrVac.TabIndex = 18;
+            this.lblCorrVac.Text = "label2";
+            // 
             // AddRequisitos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCorrVac);
             this.Controls.Add(this.btnGuardarOtro);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -391,5 +401,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnGuardarOtro;
+        private System.Windows.Forms.Label lblCorrVac;
     }
 }
