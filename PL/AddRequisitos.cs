@@ -14,12 +14,12 @@ namespace RRHH.PL
     public partial class AddRequisitos : Form
     {
         VacantesBLL oVacantesBLL = new VacantesBLL();
-        public AddRequisitos()
+        public AddRequisitos(int idVacante = 0)
         {
             InitializeComponent();
-            cmbReq1.DataSource = oVacantesBLL.getPrioridades().Tables[0];
-            cmbReq1.DisplayMember = "prioridad_requisito";
-            cmbReq1.SelectedItem = "-- Elegir prioridad --";
+            cmbReq.DataSource = oVacantesBLL.getPrioridades().Tables[0];
+            cmbReq.DisplayMember = "prioridad_requisito";
+            cmbReq.SelectedItem = "-- Elegir prioridad --";
         }
 
 

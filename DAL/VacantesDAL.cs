@@ -75,5 +75,12 @@ namespace RRHH.DAL
             query.CommandText = "SELECT prioridad_requisito FROM prioridades_requisitos";
             return conexion.selectQuery(query);
         }
+
+        // Obtiene el correlativo de la vacante segun departamento
+        public int getCorrVac(int idDpto) {
+            SqlCommand query = new SqlCommand();
+            query.CommandText = "SELECT * FROM vacantes WHERE id_departamento = @idDepartamento";
+            query.Parameters.AddWithValue("@idDepartamento", idDpto);
+        }
     }
 }
