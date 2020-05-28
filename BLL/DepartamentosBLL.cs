@@ -21,5 +21,10 @@ namespace RRHH.BLL
         {
             return oDepartamentosDAL.getDptoID(departamento);
         }
+
+        public string getDptoAbv(int idDpto)
+        {
+            return oDepartamentosDAL.getDptoAbv(idDpto);
+        }
     }
 }

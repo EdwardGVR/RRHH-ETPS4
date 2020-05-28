@@ -33,19 +33,23 @@ namespace RRHH.PL
 
         private void btnGuardarVacante_Click(object sender, EventArgs e)
         {
-            string vacante, departamento, descripcion;
-            int cupo, idDepartamento;
+            string vacante, departamento, descripcion, codVac, abvDpto;
+            int cupo, idDepartamento, corrVac;
 
             vacante = txtVacante.Text;
             departamento = cmbDepartamento.Text;
             descripcion = txtDescripcion.Text;
-            //cupo = int.Parse(txtCupo.Text);
-            //idDepartamento = oDepartamentosBLL.getDptoID(departamento);
+            cupo = int.Parse(txtCupo.Text);
+            
+            idDepartamento = oDepartamentosBLL.getDptoID(departamento);
+            abvDpto = oDepartamentosBLL.getDptoAbv(idDepartamento);
+            corrVac = oVacantesBLL.getCorrVac(idDepartamento);
+            codVac = oVacantesBLL.setVacCode(abvDpto, corrVac);
 
-            //oVacantesBLL.insertVacante(vacante, idDepartamento, cupo, descripcion);
+            oVacantesBLL.insertVacante(codVac, vacante, idDepartamento, cupo, descripcion);
 
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-            ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos());
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos(codVac));
             Close();
         }
     }

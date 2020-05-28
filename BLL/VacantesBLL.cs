@@ -17,14 +17,25 @@ namespace RRHH.BLL
             return oVacantesDAL.getVacantes(top);
         }
 
-        public void insertVacante (string vacante, int idDpto, int cupo, string descripcion)
+        public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
-            oVacantesDAL.insertVacante(vacante, idDpto, cupo, descripcion);
+            oVacantesDAL.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
         }
 
         public DataSet getPrioridades()
         {
             return oVacantesDAL.getPrioridades();
+        }
+
+        public int getCorrVac (int idDpto)
+        {
+            return oVacantesDAL.getCorrVac(idDpto);
+        }
+
+        // Crea el codigo de la vacante basado en parametros
+        public string setVacCode(string dpto, int corrVac)
+        {
+            return "VAC" + dpto.ToUpper().Trim() + corrVac.ToString();
         }
     }
 }
