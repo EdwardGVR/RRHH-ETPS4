@@ -24,9 +24,9 @@ namespace RRHH.DAL
             return ws.getVacantes(top);
         }
 
-        public void insertVacante (string vacante, int idDpto, int cupo, string descripcion)
+        public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
-            ws.insertVacante(vacante, idDpto, cupo, descripcion);
+            ws.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
         } 
 
         public DataSet getPrioridades ()
@@ -35,10 +35,9 @@ namespace RRHH.DAL
         }
 
         // Obtiene el correlativo de la vacante segun departamento
-        //public int getCorrVac(int idDpto) {
-        //    SqlCommand query = new SqlCommand();
-        //    query.CommandText = "SELECT * FROM vacantes WHERE id_departamento = @idDepartamento";
-        //    query.Parameters.AddWithValue("@idDepartamento", idDpto);
-        //}
+        public int getCorrVac(int idDpto)
+        {
+            return ws.getCorrVac(idDpto);
+        }
     }
 }
