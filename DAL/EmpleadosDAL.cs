@@ -11,27 +11,17 @@ namespace RRHH.DAL
     public class EmpleadosDAL
     {
         ConexionDAL conexion;
+        wsRRHH.webServRRHH ws;
 
         public EmpleadosDAL ()
         {
             conexion = new ConexionDAL();
+            ws = conexion.conectarWS();
         }
 
         public DataSet getEmpleados ()
         {
-            SqlCommand query = new SqlCommand();
-            query.CommandText = 
-                "SELECT " +
-                "empleados.id_empleado AS ID, " +
-                "empleados.nombres AS Nombres, " +
-                "empleados.apellidos AS Apellidos, " +
-                "empleados.correo AS Correo, " +
-                "empleados.direccion AS Direccion, " +
-                "cargos_empleados.cargo_empleado AS Cargo " +
-                "FROM empleados " +
-                "JOIN cargos_empleados " +
-                "ON empleados.id_cargo_empleado = cargos_empleados.id_cargo_empleado";
-            return conexion.selectQuery(query);
+            return ws.getEmpleados();
         }
     }
 }

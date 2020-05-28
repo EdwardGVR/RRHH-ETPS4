@@ -11,76 +11,34 @@ namespace RRHH.DAL
     public class VacantesDAL
     {
         ConexionDAL conexion;
+        wsRRHH.webServRRHH ws;
 
         public VacantesDAL ()
         {
             conexion = new ConexionDAL();
+            ws = conexion.conectarWS();
         }
 
         public DataSet getVacantes (int top = 0)
         {
-            if (top > 0) 
-            {
-                SqlCommand query = new SqlCommand();
-                query.CommandText = "SELECT " +
-                    "TOP (@top)" +
-                    "vacantes.id_vacante AS ID, " +
-                    "vacantes.vacante AS Vacante, " +
-                    "departamentos.departamento AS Departamento, " +
-                    "vacantes.cupo_vacante AS Cupo, " +
-                    "vacantes.descripcion AS Descripcion, " +
-                    "vacantes.fehca_creacion AS \"Fecha creacion\", " +
-                    "estados_vacantes.estado AS Estado " +
-                    "FROM vacantes " +
-                    "JOIN departamentos ON vacantes.id_departamento = departamentos.id_departamento " +
-                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante " +
-                    "ORDER BY vacantes.id_vacante DESC";
-                query.Parameters.AddWithValue("@top", top);
-                return conexion.selectQuery(query);
-            } 
-            else
-            {
-                SqlCommand query = new SqlCommand();
-                query.CommandText = "SELECT " +
-                    "vacantes.id_vacante AS ID, " +
-                    "vacantes.vacante AS Vacante, " +
-                    "departamentos.departamento AS Departamento, " +
-                    "vacantes.cupo_vacante AS Cupo, " +
-                    "vacantes.descripcion AS Descripcion, " +
-                    "vacantes.fehca_creacion AS \"Fecha creacion\", " +
-                    "estados_vacantes.estado AS Estado " +
-                    "FROM vacantes " +
-                    "JOIN departamentos ON vacantes.id_departamento = departamentos.id_departamento " +
-                    "JOIN estados_vacantes ON vacantes.id_estado_vacante = estados_vacantes.id_estado_vacante " +
-                    "ORDER BY vacantes.id_vacante DESC";
-                return conexion.selectQuery(query);
-            }
+            return ws.getVacantes(top);
         }
 
         public void insertVacante (string vacante, int idDpto, int cupo, string descripcion)
         {
-            SqlCommand query = new SqlCommand();
-            query.CommandText = "INSERT INTO vacantes(vacante, id_departamento, cupo_vacante, descripcion) " +
-                "VALUES(@vacante, @idDpto, @cupo, @descripcion)";
-            query.Parameters.AddWithValue("@vacante", vacante);
-            query.Parameters.AddWithValue("@idDpto", idDpto);
-            query.Parameters.AddWithValue("@cupo", cupo);
-            query.Parameters.AddWithValue("@descripcion", descripcion);
-            conexion.insertQuery(query);
-        }
+            ws.insertVacante(vacante, idDpto, cupo, descripcion);
+        } 
 
         public DataSet getPrioridades ()
         {
-            SqlCommand query = new SqlCommand();
-            query.CommandText = "SELECT prioridad_requisito FROM prioridades_requisitos";
-            return conexion.selectQuery(query);
+            return ws.getPrioridadesRequisitos();
         }
 
         // Obtiene el correlativo de la vacante segun departamento
-        public int getCorrVac(int idDpto) {
-            SqlCommand query = new SqlCommand();
-            query.CommandText = "SELECT * FROM vacantes WHERE id_departamento = @idDepartamento";
-            query.Parameters.AddWithValue("@idDepartamento", idDpto);
-        }
+        //public int getCorrVac(int idDpto) {
+        //    SqlCommand query = new SqlCommand();
+        //    query.CommandText = "SELECT * FROM vacantes WHERE id_departamento = @idDepartamento";
+        //    query.Parameters.AddWithValue("@idDepartamento", idDpto);
+        //}
     }
 }

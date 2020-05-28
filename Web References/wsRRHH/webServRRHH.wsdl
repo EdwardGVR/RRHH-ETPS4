@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getVacantes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="top" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVacantesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVacantesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPrioridadesRequisitos">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPrioridadesRequisitosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPrioridadesRequisitosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCorrVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCorrVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCorrVacResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCapacitaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="top" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCapacitacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCapacitacionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmpleados">
+        <s:complexType />
+      </s:element>
+      <s:element name="getEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmpleadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEvaluaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="top" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEvaluacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEvaluacionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="getUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNombresDepartamentos">
+        <s:complexType />
+      </s:element>
+      <s:element name="getNombresDepartamentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNombresDepartamentosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDptoID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="departamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDptoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getDptoIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDptoAbv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDptoAbvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDptoAbvResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validarLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validarLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertVacante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codVac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacante" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cupo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertVacanteResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getVacantesSoapIn">
+    <wsdl:part name="parameters" element="tns:getVacantes" />
+  </wsdl:message>
+  <wsdl:message name="getVacantesSoapOut">
+    <wsdl:part name="parameters" element="tns:getVacantesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPrioridadesRequisitosSoapIn">
+    <wsdl:part name="parameters" element="tns:getPrioridadesRequisitos" />
+  </wsdl:message>
+  <wsdl:message name="getPrioridadesRequisitosSoapOut">
+    <wsdl:part name="parameters" element="tns:getPrioridadesRequisitosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCorrVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getCorrVac" />
+  </wsdl:message>
+  <wsdl:message name="getCorrVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getCorrVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCapacitacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:getCapacitaciones" />
+  </wsdl:message>
+  <wsdl:message name="getCapacitacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:getCapacitacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="getEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEvaluacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:getEvaluaciones" />
+  </wsdl:message>
+  <wsdl:message name="getEvaluacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:getEvaluacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:getUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="getUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:getUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNombresDepartamentosSoapIn">
+    <wsdl:part name="parameters" element="tns:getNombresDepartamentos" />
+  </wsdl:message>
+  <wsdl:message name="getNombresDepartamentosSoapOut">
+    <wsdl:part name="parameters" element="tns:getNombresDepartamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDptoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getDptoID" />
+  </wsdl:message>
+  <wsdl:message name="getDptoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getDptoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDptoAbvSoapIn">
+    <wsdl:part name="parameters" element="tns:getDptoAbv" />
+  </wsdl:message>
+  <wsdl:message name="getDptoAbvSoapOut">
+    <wsdl:part name="parameters" element="tns:getDptoAbvResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:validarLogin" />
+  </wsdl:message>
+  <wsdl:message name="validarLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:validarLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertVacanteSoapIn">
+    <wsdl:part name="parameters" element="tns:insertVacante" />
+  </wsdl:message>
+  <wsdl:message name="insertVacanteSoapOut">
+    <wsdl:part name="parameters" element="tns:insertVacanteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="webServRRHHSoap">
+    <wsdl:operation name="getVacantes">
+      <wsdl:input message="tns:getVacantesSoapIn" />
+      <wsdl:output message="tns:getVacantesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPrioridadesRequisitos">
+      <wsdl:input message="tns:getPrioridadesRequisitosSoapIn" />
+      <wsdl:output message="tns:getPrioridadesRequisitosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCorrVac">
+      <wsdl:input message="tns:getCorrVacSoapIn" />
+      <wsdl:output message="tns:getCorrVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCapacitaciones">
+      <wsdl:input message="tns:getCapacitacionesSoapIn" />
+      <wsdl:output message="tns:getCapacitacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleados">
+      <wsdl:input message="tns:getEmpleadosSoapIn" />
+      <wsdl:output message="tns:getEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEvaluaciones">
+      <wsdl:input message="tns:getEvaluacionesSoapIn" />
+      <wsdl:output message="tns:getEvaluacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsuarios">
+      <wsdl:input message="tns:getUsuariosSoapIn" />
+      <wsdl:output message="tns:getUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNombresDepartamentos">
+      <wsdl:input message="tns:getNombresDepartamentosSoapIn" />
+      <wsdl:output message="tns:getNombresDepartamentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDptoID">
+      <wsdl:input message="tns:getDptoIDSoapIn" />
+      <wsdl:output message="tns:getDptoIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDptoAbv">
+      <wsdl:input message="tns:getDptoAbvSoapIn" />
+      <wsdl:output message="tns:getDptoAbvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validarLogin">
+      <wsdl:input message="tns:validarLoginSoapIn" />
+      <wsdl:output message="tns:validarLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertVacante">
+      <wsdl:input message="tns:insertVacanteSoapIn" />
+      <wsdl:output message="tns:insertVacanteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getVacantes">
+      <soap:operation soapAction="http://tempuri.org/getVacantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrioridadesRequisitos">
+      <soap:operation soapAction="http://tempuri.org/getPrioridadesRequisitos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCorrVac">
+      <soap:operation soapAction="http://tempuri.org/getCorrVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCapacitaciones">
+      <soap:operation soapAction="http://tempuri.org/getCapacitaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleados">
+      <soap:operation soapAction="http://tempuri.org/getEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvaluaciones">
+      <soap:operation soapAction="http://tempuri.org/getEvaluaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsuarios">
+      <soap:operation soapAction="http://tempuri.org/getUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNombresDepartamentos">
+      <soap:operation soapAction="http://tempuri.org/getNombresDepartamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDptoID">
+      <soap:operation soapAction="http://tempuri.org/getDptoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDptoAbv">
+      <soap:operation soapAction="http://tempuri.org/getDptoAbv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarLogin">
+      <soap:operation soapAction="http://tempuri.org/validarLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertVacante">
+      <soap:operation soapAction="http://tempuri.org/insertVacante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="webServRRHHSoap12" type="tns:webServRRHHSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getVacantes">
+      <soap12:operation soapAction="http://tempuri.org/getVacantes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPrioridadesRequisitos">
+      <soap12:operation soapAction="http://tempuri.org/getPrioridadesRequisitos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCorrVac">
+      <soap12:operation soapAction="http://tempuri.org/getCorrVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCapacitaciones">
+      <soap12:operation soapAction="http://tempuri.org/getCapacitaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/getEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEvaluaciones">
+      <soap12:operation soapAction="http://tempuri.org/getEvaluaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/getUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNombresDepartamentos">
+      <soap12:operation soapAction="http://tempuri.org/getNombresDepartamentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDptoID">
+      <soap12:operation soapAction="http://tempuri.org/getDptoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDptoAbv">
+      <soap12:operation soapAction="http://tempuri.org/getDptoAbv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarLogin">
+      <soap12:operation soapAction="http://tempuri.org/validarLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertVacante">
+      <soap12:operation soapAction="http://tempuri.org/insertVacante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="webServRRHH">
+    <wsdl:port name="webServRRHHSoap" binding="tns:webServRRHHSoap">
+      <soap:address location="http://eddgvr2-001-site1.atempurl.com/webServRRHH.asmx" />
+    </wsdl:port>
+    <wsdl:port name="webServRRHHSoap12" binding="tns:webServRRHHSoap12">
+      <soap12:address location="http://eddgvr2-001-site1.atempurl.com/webServRRHH.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

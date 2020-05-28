@@ -19,6 +19,7 @@ namespace RRHH.PL
         {
             oVacantesBLL = new VacantesBLL();
             InitializeComponent();
+            //dgvVacantes.DataSource = oVacantesBLL.getVacantes().Tables[0];
             dgvVacantes.DataSource = oVacantesBLL.getVacantes().Tables[0];
         }
 
