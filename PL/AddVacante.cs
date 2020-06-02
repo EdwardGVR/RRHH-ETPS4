@@ -16,11 +16,14 @@ namespace RRHH.PL
         DepartamentosBLL oDepartamentosBLL = new DepartamentosBLL();
         VacantesBLL oVacantesBLL = new VacantesBLL();
 
+        Boolean emptyFields = false;
+
         public AddVacante()
         {
             InitializeComponent();
             cmbDepartamento.DataSource = oDepartamentosBLL.getNombresDepartamentos().Tables[0];
             cmbDepartamento.DisplayMember = "departamento";
+            cmbDepartamento.SelectedIndex = 0;
             txtFecha.Text = DateTime.Now.Date.ToShortDateString();
         }
 
@@ -36,21 +39,45 @@ namespace RRHH.PL
             string vacante, departamento, descripcion, codVac, abvDpto;
             int cupo, idDepartamento, corrVac;
 
-            vacante = txtVacante.Text;
-            departamento = cmbDepartamento.Text;
-            descripcion = txtDescripcion.Text;
-            cupo = int.Parse(txtCupo.Text);
-            
-            idDepartamento = oDepartamentosBLL.getDptoID(departamento);
-            abvDpto = oDepartamentosBLL.getDptoAbv(idDepartamento);
-            corrVac = oVacantesBLL.getCorrVac(idDepartamento);
-            codVac = oVacantesBLL.setVacCode(abvDpto, corrVac);
+            if (string.IsNullOrEmpty(txtVacante.Text))
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(cmbDepartamento.Text)) 
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(txtDescripcion.Text))
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(txtCupo.Text))
+            {
+                emptyFields = true;
+            } else
+            {
+                emptyFields = false;
+            }
 
-            oVacantesBLL.insertVacante(codVac, vacante, idDepartamento, cupo, descripcion);
+            if (emptyFields)
+            {
+                MessageBox.Show("Debe llenar los campos");
+            }
+            else
+            {
+                vacante = txtVacante.Text;
+                departamento = cmbDepartamento.Text;
+                descripcion = txtDescripcion.Text;
+                cupo = decimal.ToInt32(txtCupo.Value);
 
-            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-            ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos(codVac));
-            Close();
+                idDepartamento = oDepartamentosBLL.getDptoID(departamento);
+                abvDpto = oDepartamentosBLL.getDptoAbv(idDepartamento);
+                corrVac = oVacantesBLL.getCorrVac(idDepartamento);
+                codVac = oVacantesBLL.setVacCode(abvDpto, corrVac);
+
+                //oVacantesBLL.insertVacante(codVac, vacante, idDepartamento, cupo, descripcion);
+
+                Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos(codVac));
+                Close();
+            }
         }
     }
 }

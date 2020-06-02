@@ -35,8 +35,8 @@
             this.cmbReq = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDetReq1 = new System.Windows.Forms.TextBox();
-            this.txtReq1 = new System.Windows.Forms.TextBox();
+            this.txtDetReq = new System.Windows.Forms.TextBox();
+            this.txtReq = new System.Windows.Forms.TextBox();
             this.btnGuardarVacante = new System.Windows.Forms.Button();
             this.btnCancelarVacante = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGuardarOtro = new System.Windows.Forms.Button();
-            this.lblCorrVac = new System.Windows.Forms.Label();
+            this.lblInfoVac = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,6 +68,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lblInfoVac);
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -80,17 +81,16 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.DarkGray;
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.cmbReq);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.txtDetReq1);
-            this.panel3.Controls.Add(this.txtReq1);
-            this.panel3.Location = new System.Drawing.Point(28, 41);
+            this.panel3.Controls.Add(this.txtDetReq);
+            this.panel3.Controls.Add(this.txtReq);
+            this.panel3.Location = new System.Drawing.Point(27, 58);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(712, 237);
             this.panel3.TabIndex = 22;
@@ -110,12 +110,12 @@
             // 
             this.cmbReq.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbReq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReq.FormattingEnabled = true;
             this.cmbReq.Location = new System.Drawing.Point(10, 86);
             this.cmbReq.Name = "cmbReq";
             this.cmbReq.Size = new System.Drawing.Size(693, 24);
             this.cmbReq.TabIndex = 21;
-            this.cmbReq.Text = "-- Seleccionar prioridad --";
             // 
             // label5
             // 
@@ -139,24 +139,24 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Prioridad";
             // 
-            // txtDetReq1
+            // txtDetReq
             // 
-            this.txtDetReq1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDetReq.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDetReq1.Location = new System.Drawing.Point(9, 145);
-            this.txtDetReq1.Multiline = true;
-            this.txtDetReq1.Name = "txtDetReq1";
-            this.txtDetReq1.Size = new System.Drawing.Size(694, 81);
-            this.txtDetReq1.TabIndex = 7;
+            this.txtDetReq.Location = new System.Drawing.Point(9, 145);
+            this.txtDetReq.Multiline = true;
+            this.txtDetReq.Name = "txtDetReq";
+            this.txtDetReq.Size = new System.Drawing.Size(694, 81);
+            this.txtDetReq.TabIndex = 7;
             // 
-            // txtReq1
+            // txtReq
             // 
-            this.txtReq1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtReq.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReq1.Location = new System.Drawing.Point(9, 29);
-            this.txtReq1.Name = "txtReq1";
-            this.txtReq1.Size = new System.Drawing.Size(694, 23);
-            this.txtReq1.TabIndex = 5;
+            this.txtReq.Location = new System.Drawing.Point(9, 29);
+            this.txtReq.Name = "txtReq";
+            this.txtReq.Size = new System.Drawing.Size(694, 23);
+            this.txtReq.TabIndex = 5;
             // 
             // btnGuardarVacante
             // 
@@ -171,6 +171,7 @@
             this.btnGuardarVacante.TabIndex = 12;
             this.btnGuardarVacante.Text = "Guardar y terminar";
             this.btnGuardarVacante.UseVisualStyleBackColor = false;
+            this.btnGuardarVacante.Click += new System.EventHandler(this.btnGuardarVacante_Click);
             // 
             // btnCancelarVacante
             // 
@@ -185,6 +186,7 @@
             this.btnCancelarVacante.TabIndex = 11;
             this.btnCancelarVacante.Text = "Cancelar";
             this.btnCancelarVacante.UseVisualStyleBackColor = false;
+            this.btnCancelarVacante.Click += new System.EventHandler(this.btnCancelarVacante_Click);
             // 
             // label1
             // 
@@ -335,15 +337,16 @@
             this.btnGuardarOtro.TabIndex = 17;
             this.btnGuardarOtro.Text = "Guardar otro";
             this.btnGuardarOtro.UseVisualStyleBackColor = false;
+            this.btnGuardarOtro.Click += new System.EventHandler(this.btnGuardarOtro_Click);
             // 
-            // lblCorrVac
+            // lblInfoVac
             // 
-            this.lblCorrVac.AutoSize = true;
-            this.lblCorrVac.Location = new System.Drawing.Point(292, 24);
-            this.lblCorrVac.Name = "lblCorrVac";
-            this.lblCorrVac.Size = new System.Drawing.Size(35, 13);
-            this.lblCorrVac.TabIndex = 18;
-            this.lblCorrVac.Text = "label2";
+            this.lblInfoVac.AutoSize = true;
+            this.lblInfoVac.Location = new System.Drawing.Point(25, 38);
+            this.lblInfoVac.Name = "lblInfoVac";
+            this.lblInfoVac.Size = new System.Drawing.Size(46, 17);
+            this.lblInfoVac.TabIndex = 23;
+            this.lblInfoVac.Text = "label2";
             // 
             // AddRequisitos
             // 
@@ -351,7 +354,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblCorrVac);
             this.Controls.Add(this.btnGuardarOtro);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -363,6 +365,7 @@
             this.Name = "AddRequisitos";
             this.Text = "AddRequisitos";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -380,9 +383,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnGuardarVacante;
         private System.Windows.Forms.Button btnCancelarVacante;
-        private System.Windows.Forms.TextBox txtDetReq1;
+        private System.Windows.Forms.TextBox txtDetReq;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtReq1;
+        private System.Windows.Forms.TextBox txtReq;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
@@ -401,6 +404,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnGuardarOtro;
-        private System.Windows.Forms.Label lblCorrVac;
+        private System.Windows.Forms.Label lblInfoVac;
     }
 }

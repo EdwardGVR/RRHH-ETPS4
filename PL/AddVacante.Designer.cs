@@ -42,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbDepartamento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCupo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -55,12 +54,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtCupo = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCupo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -88,6 +89,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtCupo);
             this.groupBox1.Controls.Add(this.btnGuardarVacante);
             this.groupBox1.Controls.Add(this.txtFecha);
             this.groupBox1.Controls.Add(this.btnCancelarVacante);
@@ -98,7 +100,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cmbDepartamento);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtCupo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -197,6 +198,7 @@
             // 
             // cmbDepartamento
             // 
+            this.cmbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartamento.Location = new System.Drawing.Point(9, 108);
             this.cmbDepartamento.Name = "cmbDepartamento";
             this.cmbDepartamento.Size = new System.Drawing.Size(403, 24);
@@ -212,13 +214,6 @@
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Departamento";
-            // 
-            // txtCupo
-            // 
-            this.txtCupo.Location = new System.Drawing.Point(9, 161);
-            this.txtCupo.Name = "txtCupo";
-            this.txtCupo.Size = new System.Drawing.Size(403, 23);
-            this.txtCupo.TabIndex = 1;
             // 
             // label2
             // 
@@ -347,6 +342,18 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Datos";
             // 
+            // txtCupo
+            // 
+            this.txtCupo.Location = new System.Drawing.Point(10, 161);
+            this.txtCupo.Name = "txtCupo";
+            this.txtCupo.Size = new System.Drawing.Size(402, 23);
+            this.txtCupo.TabIndex = 13;
+            this.txtCupo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // AddVacante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +376,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCupo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,7 +395,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbDepartamento;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCupo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancelarVacante;
         private System.Windows.Forms.Button btnGuardarVacante;
@@ -402,5 +409,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.NumericUpDown txtCupo;
     }
 }
