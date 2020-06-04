@@ -27,7 +27,12 @@ namespace RRHH.DAL
         public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
             ws.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
-        } 
+        }
+
+        public void insertRequisito(int idVac, string codVac, string requisito, string detalles, int idPrioridad)
+        {
+            ws.insertRequisito(idVac, codVac, requisito, detalles, idPrioridad);
+        }
 
         public DataSet getPrioridades ()
         {
@@ -38,6 +43,11 @@ namespace RRHH.DAL
         public int getCorrVac(int idDpto)
         {
             return ws.getCorrVac(idDpto);
+        }
+
+        public int getIdVac (string codVac)
+        {
+            return ws.getIdVac(codVac);
         }
     }
 }

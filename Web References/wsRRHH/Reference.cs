@@ -36,6 +36,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getCorrVacOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getIdVacOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getCapacitacionesOperationCompleted;
         
         private System.Threading.SendOrPostCallback getEmpleadosOperationCompleted;
@@ -53,6 +55,8 @@ namespace RRHH.wsRRHH {
         private System.Threading.SendOrPostCallback validarLoginOperationCompleted;
         
         private System.Threading.SendOrPostCallback insertVacanteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertRequisitoOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -102,6 +106,9 @@ namespace RRHH.wsRRHH {
         public event getCorrVacCompletedEventHandler getCorrVacCompleted;
         
         /// <remarks/>
+        public event getIdVacCompletedEventHandler getIdVacCompleted;
+        
+        /// <remarks/>
         public event getCapacitacionesCompletedEventHandler getCapacitacionesCompleted;
         
         /// <remarks/>
@@ -127,6 +134,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event insertVacanteCompletedEventHandler insertVacanteCompleted;
+        
+        /// <remarks/>
+        public event insertRequisitoCompletedEventHandler insertRequisitoCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getVacantes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -210,6 +220,35 @@ namespace RRHH.wsRRHH {
             if ((this.getCorrVacCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getCorrVacCompleted(this, new getCorrVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getIdVac", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getIdVac(string codVac) {
+            object[] results = this.Invoke("getIdVac", new object[] {
+                        codVac});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getIdVacAsync(string codVac) {
+            this.getIdVacAsync(codVac, null);
+        }
+        
+        /// <remarks/>
+        public void getIdVacAsync(string codVac, object userState) {
+            if ((this.getIdVacOperationCompleted == null)) {
+                this.getIdVacOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetIdVacOperationCompleted);
+            }
+            this.InvokeAsync("getIdVac", new object[] {
+                        codVac}, this.getIdVacOperationCompleted, userState);
+        }
+        
+        private void OngetIdVacOperationCompleted(object arg) {
+            if ((this.getIdVacCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getIdVacCompleted(this, new getIdVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -478,6 +517,42 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertRequisito", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void insertRequisito(int idVac, string codVac, string requisito, string detalles, int idPrioridad) {
+            this.Invoke("insertRequisito", new object[] {
+                        idVac,
+                        codVac,
+                        requisito,
+                        detalles,
+                        idPrioridad});
+        }
+        
+        /// <remarks/>
+        public void insertRequisitoAsync(int idVac, string codVac, string requisito, string detalles, int idPrioridad) {
+            this.insertRequisitoAsync(idVac, codVac, requisito, detalles, idPrioridad, null);
+        }
+        
+        /// <remarks/>
+        public void insertRequisitoAsync(int idVac, string codVac, string requisito, string detalles, int idPrioridad, object userState) {
+            if ((this.insertRequisitoOperationCompleted == null)) {
+                this.insertRequisitoOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertRequisitoOperationCompleted);
+            }
+            this.InvokeAsync("insertRequisito", new object[] {
+                        idVac,
+                        codVac,
+                        requisito,
+                        detalles,
+                        idPrioridad}, this.insertRequisitoOperationCompleted, userState);
+        }
+        
+        private void OninsertRequisitoOperationCompleted(object arg) {
+            if ((this.insertRequisitoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertRequisitoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -561,6 +636,32 @@ namespace RRHH.wsRRHH {
         private object[] results;
         
         internal getCorrVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getIdVacCompletedEventHandler(object sender, getIdVacCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getIdVacCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getIdVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -785,6 +886,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void insertVacanteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void insertRequisitoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

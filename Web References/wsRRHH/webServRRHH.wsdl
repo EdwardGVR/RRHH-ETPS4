@@ -54,6 +54,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getIdVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codVac" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getIdVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getIdVacResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="getCapacitaciones">
         <s:complexType>
           <s:sequence>
@@ -204,6 +218,20 @@
       <s:element name="insertVacanteResponse">
         <s:complexType />
       </s:element>
+      <s:element name="insertRequisito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVac" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codVac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requisito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalles" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPrioridad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertRequisitoResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="getVacantesSoapIn">
@@ -223,6 +251,12 @@
   </wsdl:message>
   <wsdl:message name="getCorrVacSoapOut">
     <wsdl:part name="parameters" element="tns:getCorrVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIdVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getIdVac" />
+  </wsdl:message>
+  <wsdl:message name="getIdVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getIdVacResponse" />
   </wsdl:message>
   <wsdl:message name="getCapacitacionesSoapIn">
     <wsdl:part name="parameters" element="tns:getCapacitaciones" />
@@ -278,6 +312,12 @@
   <wsdl:message name="insertVacanteSoapOut">
     <wsdl:part name="parameters" element="tns:insertVacanteResponse" />
   </wsdl:message>
+  <wsdl:message name="insertRequisitoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertRequisito" />
+  </wsdl:message>
+  <wsdl:message name="insertRequisitoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertRequisitoResponse" />
+  </wsdl:message>
   <wsdl:portType name="webServRRHHSoap">
     <wsdl:operation name="getVacantes">
       <wsdl:input message="tns:getVacantesSoapIn" />
@@ -290,6 +330,10 @@
     <wsdl:operation name="getCorrVac">
       <wsdl:input message="tns:getCorrVacSoapIn" />
       <wsdl:output message="tns:getCorrVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getIdVac">
+      <wsdl:input message="tns:getIdVacSoapIn" />
+      <wsdl:output message="tns:getIdVacSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="getCapacitaciones">
       <wsdl:input message="tns:getCapacitacionesSoapIn" />
@@ -327,6 +371,10 @@
       <wsdl:input message="tns:insertVacanteSoapIn" />
       <wsdl:output message="tns:insertVacanteSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="insertRequisito">
+      <wsdl:input message="tns:insertRequisitoSoapIn" />
+      <wsdl:output message="tns:insertRequisitoSoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -350,6 +398,15 @@
     </wsdl:operation>
     <wsdl:operation name="getCorrVac">
       <soap:operation soapAction="http://tempuri.org/getCorrVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdVac">
+      <soap:operation soapAction="http://tempuri.org/getIdVac" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -438,6 +495,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="insertRequisito">
+      <soap:operation soapAction="http://tempuri.org/insertRequisito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="webServRRHHSoap12" type="tns:webServRRHHSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -461,6 +527,15 @@
     </wsdl:operation>
     <wsdl:operation name="getCorrVac">
       <soap12:operation soapAction="http://tempuri.org/getCorrVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdVac">
+      <soap12:operation soapAction="http://tempuri.org/getIdVac" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -542,6 +617,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <soap12:operation soapAction="http://tempuri.org/insertVacante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRequisito">
+      <soap12:operation soapAction="http://tempuri.org/insertRequisito" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

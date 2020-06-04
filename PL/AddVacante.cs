@@ -72,7 +72,7 @@ namespace RRHH.PL
                 corrVac = oVacantesBLL.getCorrVac(idDepartamento);
                 codVac = oVacantesBLL.setVacCode(abvDpto, corrVac);
 
-                //oVacantesBLL.insertVacante(codVac, vacante, idDepartamento, cupo, descripcion);
+                oVacantesBLL.insertVacante(codVac, vacante, idDepartamento, cupo, descripcion);
 
                 Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
                 ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos(codVac));
