@@ -24,6 +24,16 @@ namespace RRHH.DAL
             return ws.getVacantes(top);
         }
 
+        public DataSet getDetallesVac (string codVac)
+        {
+            return ws.getDetallesVac(codVac);
+        }
+
+        public DataSet getRequisitosVac (string codVac)
+        {
+            return ws.getRequisitosVac(codVac);
+        }
+
         public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
             ws.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
