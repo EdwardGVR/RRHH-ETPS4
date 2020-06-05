@@ -49,5 +49,14 @@ namespace RRHH.PL
         {
             
         }
+
+        private void dgvVacantesRecientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string codVac = dgvVacantesRecientes.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetVacantes(codVac));
+            Close();
+        }
     }
 }

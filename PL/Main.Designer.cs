@@ -41,6 +41,7 @@
             this.Name = "Main";
             this.Tag = "Principal";
             this.Text = "RRHH ETPS4";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
 

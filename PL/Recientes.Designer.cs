@@ -81,6 +81,7 @@
             this.dgvVacantesRecientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVacantesRecientes.Size = new System.Drawing.Size(763, 131);
             this.dgvVacantesRecientes.TabIndex = 0;
+            this.dgvVacantesRecientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVacantesRecientes_CellClick);
             // 
             // dgvEvalRecientes
             // 
