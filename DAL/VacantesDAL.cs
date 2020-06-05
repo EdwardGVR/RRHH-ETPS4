@@ -49,5 +49,10 @@ namespace RRHH.DAL
         {
             return ws.getIdVac(codVac);
         }
+
+        public void deleteVacante (string codVac)
+        {
+            ws.deleteVacante(codVac);
+        }
     }
 }

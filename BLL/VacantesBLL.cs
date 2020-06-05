@@ -47,5 +47,10 @@ namespace RRHH.BLL
         {
             return "VAC" + dpto.ToUpper().Trim() + corrVac.ToString();
         }
+
+        public void deleteVacante (string codVac)
+        {
+            oVacantesDAL.deleteVacante(codVac);
+        }
     }
 }

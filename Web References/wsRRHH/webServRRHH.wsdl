@@ -232,6 +232,16 @@
       <s:element name="insertRequisitoResponse">
         <s:complexType />
       </s:element>
+      <s:element name="deleteVacante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vacCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteVacanteResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="getVacantesSoapIn">
@@ -318,6 +328,12 @@
   <wsdl:message name="insertRequisitoSoapOut">
     <wsdl:part name="parameters" element="tns:insertRequisitoResponse" />
   </wsdl:message>
+  <wsdl:message name="deleteVacanteSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteVacante" />
+  </wsdl:message>
+  <wsdl:message name="deleteVacanteSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteVacanteResponse" />
+  </wsdl:message>
   <wsdl:portType name="webServRRHHSoap">
     <wsdl:operation name="getVacantes">
       <wsdl:input message="tns:getVacantesSoapIn" />
@@ -374,6 +390,10 @@
     <wsdl:operation name="insertRequisito">
       <wsdl:input message="tns:insertRequisitoSoapIn" />
       <wsdl:output message="tns:insertRequisitoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteVacante">
+      <wsdl:input message="tns:deleteVacanteSoapIn" />
+      <wsdl:output message="tns:deleteVacanteSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
@@ -504,6 +524,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="deleteVacante">
+      <soap:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="webServRRHHSoap12" type="tns:webServRRHHSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -626,6 +655,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertRequisito">
       <soap12:operation soapAction="http://tempuri.org/insertRequisito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteVacante">
+      <soap12:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

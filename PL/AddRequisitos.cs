@@ -99,7 +99,28 @@ namespace RRHH.PL
             else
             {
                 // Guardar requisito y regresar al listado de vacantes
+                int idVac = oVacantesBLL.getIdVac(codeVac);
+                string req = txtReq.Text;
+                string det = txtDetReq.Text;
+                int idPrior;
 
+                switch (cmbReq.Text)
+                {
+                    case "Alta":
+                        idPrior = 1;
+                        break;
+                    case "Media":
+                        idPrior = 2;
+                        break;
+                    case "Baja":
+                        idPrior = 3;
+                        break;
+                    default:
+                        idPrior = 0;
+                        break;
+                }
+
+                oVacantesBLL.insertRequisito(idVac, codeVac, req, det, idPrior);
 
                 Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
                 ControlUtils.abrirFormEnPanel(pnlContent, new Vacantes());
@@ -110,7 +131,7 @@ namespace RRHH.PL
         private void btnCancelarVacante_Click(object sender, EventArgs e)
         {
             // Borrar vacante y sus requisitos y volver al listado de vacantes
-
+            oVacantesBLL.deleteVacante(codeVac);
 
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new Vacantes());
