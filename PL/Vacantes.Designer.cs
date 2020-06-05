@@ -76,6 +76,7 @@
             this.dgvVacantes.ShowEditingIcon = false;
             this.dgvVacantes.Size = new System.Drawing.Size(771, 267);
             this.dgvVacantes.TabIndex = 6;
+            this.dgvVacantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVacantes_CellClick);
             // 
             // btnAgregarVacante
             // 
