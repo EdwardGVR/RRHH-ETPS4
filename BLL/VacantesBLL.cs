@@ -12,19 +12,20 @@ namespace RRHH.BLL
     {
         VacantesDAL oVacantesDAL = new VacantesDAL();
         
+        // GETS
         public DataSet getVacantes (int top = 0)
         {
             return oVacantesDAL.getVacantes(top);
         }
 
-        public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
+        public DataSet getDetVac (string codVac)
         {
-            oVacantesDAL.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
+            return oVacantesDAL.getDetallesVac(codVac);
         }
 
-        public void insertRequisito(int idVac, string codVac, string requisito, string detalles, int idPrioridad)
+        public DataSet getReqVac (string codVac)
         {
-            oVacantesDAL.insertRequisito(idVac, codVac, requisito, detalles, idPrioridad);
+            return oVacantesDAL.getRequisitosVac(codVac);
         }
 
         public DataSet getPrioridades()
@@ -42,12 +43,24 @@ namespace RRHH.BLL
             return oVacantesDAL.getIdVac(codVac);
         }
 
+        // INSERTS
+        public void insertVacante(string codVac, string vacante, int idDpto, int cupo, string descripcion)
+        {
+            oVacantesDAL.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
+        }
+
+        public void insertRequisito(int idVac, string codVac, string requisito, string detalles, int idPrioridad)
+        {
+            oVacantesDAL.insertRequisito(idVac, codVac, requisito, detalles, idPrioridad);
+        }
+
         // Crea el codigo de la vacante basado en parametros
         public string setVacCode(string dpto, int corrVac)
         {
             return "VAC" + dpto.ToUpper().Trim() + corrVac.ToString();
         }
 
+        // DELETES
         public void deleteVacante (string codVac)
         {
             oVacantesDAL.deleteVacante(codVac);

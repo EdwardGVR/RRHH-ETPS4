@@ -34,6 +34,10 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getPrioridadesRequisitosOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getDetallesVacanteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getRequisitosVacOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getCorrVacOperationCompleted;
         
         private System.Threading.SendOrPostCallback getIdVacOperationCompleted;
@@ -103,6 +107,12 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event getPrioridadesRequisitosCompletedEventHandler getPrioridadesRequisitosCompleted;
+        
+        /// <remarks/>
+        public event getDetallesVacanteCompletedEventHandler getDetallesVacanteCompleted;
+        
+        /// <remarks/>
+        public event getRequisitosVacCompletedEventHandler getRequisitosVacCompleted;
         
         /// <remarks/>
         public event getCorrVacCompletedEventHandler getCorrVacCompleted;
@@ -196,6 +206,64 @@ namespace RRHH.wsRRHH {
             if ((this.getPrioridadesRequisitosCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getPrioridadesRequisitosCompleted(this, new getPrioridadesRequisitosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDetallesVacante(string codVac) {
+            object[] results = this.Invoke("getDetallesVacante", new object[] {
+                        codVac});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDetallesVacanteAsync(string codVac) {
+            this.getDetallesVacanteAsync(codVac, null);
+        }
+        
+        /// <remarks/>
+        public void getDetallesVacanteAsync(string codVac, object userState) {
+            if ((this.getDetallesVacanteOperationCompleted == null)) {
+                this.getDetallesVacanteOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesVacanteOperationCompleted);
+            }
+            this.InvokeAsync("getDetallesVacante", new object[] {
+                        codVac}, this.getDetallesVacanteOperationCompleted, userState);
+        }
+        
+        private void OngetDetallesVacanteOperationCompleted(object arg) {
+            if ((this.getDetallesVacanteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDetallesVacanteCompleted(this, new getDetallesVacanteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getRequisitosVac", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getRequisitosVac(string codVac) {
+            object[] results = this.Invoke("getRequisitosVac", new object[] {
+                        codVac});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getRequisitosVacAsync(string codVac) {
+            this.getRequisitosVacAsync(codVac, null);
+        }
+        
+        /// <remarks/>
+        public void getRequisitosVacAsync(string codVac, object userState) {
+            if ((this.getRequisitosVacOperationCompleted == null)) {
+                this.getRequisitosVacOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetRequisitosVacOperationCompleted);
+            }
+            this.InvokeAsync("getRequisitosVac", new object[] {
+                        codVac}, this.getRequisitosVacOperationCompleted, userState);
+        }
+        
+        private void OngetRequisitosVacOperationCompleted(object arg) {
+            if ((this.getRequisitosVacCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getRequisitosVacCompleted(this, new getRequisitosVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -643,6 +711,58 @@ namespace RRHH.wsRRHH {
         private object[] results;
         
         internal getPrioridadesRequisitosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDetallesVacanteCompletedEventHandler(object sender, getDetallesVacanteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDetallesVacanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDetallesVacanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getRequisitosVacCompletedEventHandler(object sender, getRequisitosVacCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getRequisitosVacCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getRequisitosVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

@@ -26,7 +26,7 @@ namespace RRHH.DAL
 
         public DataSet getDetallesVac (string codVac)
         {
-            return ws.getDetallesVac(codVac);
+            return ws.getDetallesVacante(codVac);
         }
 
         public DataSet getRequisitosVac (string codVac)
