@@ -43,6 +43,11 @@ namespace RRHH.BLL
             return oVacantesDAL.getIdVac(codVac);
         }
 
+        public DataSet getDetallesRequisito (int idReq)
+        {
+            return oVacantesDAL.getDetallesReqisito(idReq);
+        }
+
         // INSERTS
         public void insertVacante(string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {

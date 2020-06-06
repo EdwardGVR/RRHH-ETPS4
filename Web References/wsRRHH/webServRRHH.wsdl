@@ -82,6 +82,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getDetallesRequisito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idReq" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesRequisitoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetallesRequisitoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="getCorrVac">
         <s:complexType>
           <s:sequence>
@@ -310,6 +331,12 @@
   <wsdl:message name="getRequisitosVacSoapOut">
     <wsdl:part name="parameters" element="tns:getRequisitosVacResponse" />
   </wsdl:message>
+  <wsdl:message name="getDetallesRequisitoSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetallesRequisito" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesRequisitoSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetallesRequisitoResponse" />
+  </wsdl:message>
   <wsdl:message name="getCorrVacSoapIn">
     <wsdl:part name="parameters" element="tns:getCorrVac" />
   </wsdl:message>
@@ -405,6 +432,10 @@
       <wsdl:input message="tns:getRequisitosVacSoapIn" />
       <wsdl:output message="tns:getRequisitosVacSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getDetallesRequisito">
+      <wsdl:input message="tns:getDetallesRequisitoSoapIn" />
+      <wsdl:output message="tns:getDetallesRequisitoSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="getCorrVac">
       <wsdl:input message="tns:getCorrVacSoapIn" />
       <wsdl:output message="tns:getCorrVacSoapOut" />
@@ -489,6 +520,15 @@
     </wsdl:operation>
     <wsdl:operation name="getRequisitosVac">
       <soap:operation soapAction="http://tempuri.org/getRequisitosVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesRequisito">
+      <soap:operation soapAction="http://tempuri.org/getDetallesRequisito" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -645,6 +685,15 @@
     </wsdl:operation>
     <wsdl:operation name="getRequisitosVac">
       <soap12:operation soapAction="http://tempuri.org/getRequisitosVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesRequisito">
+      <soap12:operation soapAction="http://tempuri.org/getDetallesRequisito" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

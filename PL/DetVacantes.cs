@@ -15,6 +15,7 @@ namespace RRHH.PL
     {
         VacantesBLL oVacantesBLL = new VacantesBLL();
         string codVac, vacante, departamento, descripcion, fechaCreacion, estado, cupo;
+
         int idVac;
         
         public DetVacantes(string codVac)
@@ -45,6 +46,15 @@ namespace RRHH.PL
         {
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new Vacantes());
+            Close();
+        }
+
+        private void dgvReq_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idReq = int.Parse(dgvReq.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetRequisito(idReq));
             Close();
         }
     }

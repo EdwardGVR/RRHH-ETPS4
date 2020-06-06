@@ -266,6 +266,7 @@
             this.dgvReq.ShowEditingIcon = false;
             this.dgvReq.Size = new System.Drawing.Size(350, 246);
             this.dgvReq.TabIndex = 7;
+            this.dgvReq.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReq_CellClick);
             // 
             // groupBox2
             // 

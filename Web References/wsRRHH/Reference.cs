@@ -38,6 +38,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getRequisitosVacOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getDetallesRequisitoOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getCorrVacOperationCompleted;
         
         private System.Threading.SendOrPostCallback getIdVacOperationCompleted;
@@ -113,6 +115,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event getRequisitosVacCompletedEventHandler getRequisitosVacCompleted;
+        
+        /// <remarks/>
+        public event getDetallesRequisitoCompletedEventHandler getDetallesRequisitoCompleted;
         
         /// <remarks/>
         public event getCorrVacCompletedEventHandler getCorrVacCompleted;
@@ -264,6 +269,35 @@ namespace RRHH.wsRRHH {
             if ((this.getRequisitosVacCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getRequisitosVacCompleted(this, new getRequisitosVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesRequisito", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDetallesRequisito(int idReq) {
+            object[] results = this.Invoke("getDetallesRequisito", new object[] {
+                        idReq});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDetallesRequisitoAsync(int idReq) {
+            this.getDetallesRequisitoAsync(idReq, null);
+        }
+        
+        /// <remarks/>
+        public void getDetallesRequisitoAsync(int idReq, object userState) {
+            if ((this.getDetallesRequisitoOperationCompleted == null)) {
+                this.getDetallesRequisitoOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesRequisitoOperationCompleted);
+            }
+            this.InvokeAsync("getDetallesRequisito", new object[] {
+                        idReq}, this.getDetallesRequisitoOperationCompleted, userState);
+        }
+        
+        private void OngetDetallesRequisitoOperationCompleted(object arg) {
+            if ((this.getDetallesRequisitoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDetallesRequisitoCompleted(this, new getDetallesRequisitoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -763,6 +797,32 @@ namespace RRHH.wsRRHH {
         private object[] results;
         
         internal getRequisitosVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDetallesRequisitoCompletedEventHandler(object sender, getDetallesRequisitoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDetallesRequisitoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDetallesRequisitoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
