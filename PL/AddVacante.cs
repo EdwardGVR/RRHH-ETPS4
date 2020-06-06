@@ -37,7 +37,7 @@ namespace RRHH.PL
         private void btnGuardarVacante_Click(object sender, EventArgs e)
         {
             string vacante, departamento, descripcion, codVac, abvDpto;
-            int cupo, idDepartamento, corrVac;
+            int cupo, idDepartamento, corrVac, idVac;
 
             if (string.IsNullOrEmpty(txtVacante.Text))
             {
@@ -73,6 +73,11 @@ namespace RRHH.PL
                 codVac = oVacantesBLL.setVacCode(abvDpto, corrVac);
 
                 oVacantesBLL.insertVacante(codVac, vacante, idDepartamento, cupo, descripcion);
+
+                idVac = oVacantesBLL.getIdVac(codVac);
+                string newCodVac = codVac + idVac;
+
+                oVacantesBLL.updateVacante(codVac, newCodVac, vacante, descripcion, idDepartamento, 3, cupo);
 
                 Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
                 ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos(codVac));

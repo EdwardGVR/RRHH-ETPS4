@@ -48,6 +48,17 @@ namespace RRHH.BLL
             return oVacantesDAL.getDetallesReqisito(idReq);
         }
 
+        public DataSet getEstadosVacantes ()
+        {
+            return oVacantesDAL.getEstadosVacantes();
+        }
+
+        // UPDATES
+        public void updateVacante (string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo)
+        {
+            oVacantesDAL.updateVacante(codVac, newCodVac, vacante, descripcion, idDpto, idEstado, cupo);
+        }
+
         // INSERTS
         public void insertVacante(string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {

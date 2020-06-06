@@ -39,6 +39,11 @@ namespace RRHH.DAL
             return ws.getDetallesRequisito(idReq);
         }
 
+        public DataSet getEstadosVacantes ()
+        {
+            return ws.getEstadosVacantes();
+        }
+
         public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
             ws.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
@@ -63,6 +68,11 @@ namespace RRHH.DAL
         public int getIdVac (string codVac)
         {
             return ws.getIdVac(codVac);
+        }
+
+        public void updateVacante (string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo)
+        {
+            ws.updateVacante(codVac, newCodVac, vacante, descripcion, idDpto, idEstado, cupo);
         }
 
         public void deleteVacante (string codVac)

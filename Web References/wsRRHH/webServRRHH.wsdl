@@ -40,6 +40,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getEstadosVacantes">
+        <s:complexType />
+      </s:element>
+      <s:element name="getEstadosVacantesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEstadosVacantesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="getDetallesVacante">
         <s:complexType>
           <s:sequence>
@@ -267,6 +284,22 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="updateVacante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codVac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newCodVac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vacante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEstado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cupo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateVacanteResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="insertVacante">
         <s:complexType>
           <s:sequence>
@@ -318,6 +351,12 @@
   </wsdl:message>
   <wsdl:message name="getPrioridadesRequisitosSoapOut">
     <wsdl:part name="parameters" element="tns:getPrioridadesRequisitosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEstadosVacantesSoapIn">
+    <wsdl:part name="parameters" element="tns:getEstadosVacantes" />
+  </wsdl:message>
+  <wsdl:message name="getEstadosVacantesSoapOut">
+    <wsdl:part name="parameters" element="tns:getEstadosVacantesResponse" />
   </wsdl:message>
   <wsdl:message name="getDetallesVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:getDetallesVacante" />
@@ -397,6 +436,12 @@
   <wsdl:message name="validarLoginSoapOut">
     <wsdl:part name="parameters" element="tns:validarLoginResponse" />
   </wsdl:message>
+  <wsdl:message name="updateVacanteSoapIn">
+    <wsdl:part name="parameters" element="tns:updateVacante" />
+  </wsdl:message>
+  <wsdl:message name="updateVacanteSoapOut">
+    <wsdl:part name="parameters" element="tns:updateVacanteResponse" />
+  </wsdl:message>
   <wsdl:message name="insertVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:insertVacante" />
   </wsdl:message>
@@ -423,6 +468,10 @@
     <wsdl:operation name="getPrioridadesRequisitos">
       <wsdl:input message="tns:getPrioridadesRequisitosSoapIn" />
       <wsdl:output message="tns:getPrioridadesRequisitosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEstadosVacantes">
+      <wsdl:input message="tns:getEstadosVacantesSoapIn" />
+      <wsdl:output message="tns:getEstadosVacantesSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="getDetallesVacante">
       <wsdl:input message="tns:getDetallesVacanteSoapIn" />
@@ -476,6 +525,10 @@
       <wsdl:input message="tns:validarLoginSoapIn" />
       <wsdl:output message="tns:validarLoginSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="updateVacante">
+      <wsdl:input message="tns:updateVacanteSoapIn" />
+      <wsdl:output message="tns:updateVacanteSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <wsdl:input message="tns:insertVacanteSoapIn" />
       <wsdl:output message="tns:insertVacanteSoapOut" />
@@ -502,6 +555,15 @@
     </wsdl:operation>
     <wsdl:operation name="getPrioridadesRequisitos">
       <soap:operation soapAction="http://tempuri.org/getPrioridadesRequisitos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEstadosVacantes">
+      <soap:operation soapAction="http://tempuri.org/getEstadosVacantes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -626,6 +688,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="updateVacante">
+      <soap:operation soapAction="http://tempuri.org/updateVacante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <soap:operation soapAction="http://tempuri.org/insertVacante" style="document" />
       <wsdl:input>
@@ -667,6 +738,15 @@
     </wsdl:operation>
     <wsdl:operation name="getPrioridadesRequisitos">
       <soap12:operation soapAction="http://tempuri.org/getPrioridadesRequisitos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEstadosVacantes">
+      <soap12:operation soapAction="http://tempuri.org/getEstadosVacantes" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -784,6 +864,15 @@
     </wsdl:operation>
     <wsdl:operation name="validarLogin">
       <soap12:operation soapAction="http://tempuri.org/validarLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateVacante">
+      <soap12:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

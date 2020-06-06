@@ -26,6 +26,7 @@ namespace RRHH.PL
             dgvReq.DataSource = oVacantesBLL.getReqVac(codVac).Tables[0];
             DataSet datosVacante = oVacantesBLL.getDetVac(codVac);
 
+            this.codVac = codVac;
             lblCodVac.Text = codVac;
             vacante = datosVacante.Tables[0].Rows[0][2].ToString();
             departamento = datosVacante.Tables[0].Rows[0][3].ToString();
@@ -55,6 +56,14 @@ namespace RRHH.PL
 
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new DetRequisito(idReq));
+            Close();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new EditVacante(codVac));
             Close();
         }
     }

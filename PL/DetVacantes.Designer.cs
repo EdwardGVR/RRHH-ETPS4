@@ -39,6 +39,7 @@
             this.lblFechaCreacion = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.btnAgregarRequisito = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -131,7 +133,7 @@
             // 
             this.lblFechaCreacion.AutoSize = true;
             this.lblFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaCreacion.Location = new System.Drawing.Point(29, 291);
+            this.lblFechaCreacion.Location = new System.Drawing.Point(29, 337);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
             this.lblFechaCreacion.Size = new System.Drawing.Size(157, 20);
             this.lblFechaCreacion.TabIndex = 14;
@@ -141,7 +143,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(29, 341);
+            this.lblEstado.Location = new System.Drawing.Point(29, 291);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(66, 20);
             this.lblEstado.TabIndex = 15;
@@ -151,6 +153,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -170,6 +173,18 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(348, 19);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(30, 30);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 23;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtDescripcion
             // 
@@ -191,9 +206,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Vacante";
+            this.label2.Text = "Vacante:";
             // 
             // label3
             // 
@@ -201,9 +216,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(18, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 20);
+            this.label3.Size = new System.Drawing.Size(116, 20);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Departamento";
+            this.label3.Text = "Departamento:";
             // 
             // label4
             // 
@@ -211,9 +226,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(18, 127);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 20);
+            this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Puestos vacantes";
+            this.label4.Text = "Puestos vacantes:";
             // 
             // label5
             // 
@@ -221,29 +236,29 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(18, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 20);
+            this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Descripción";
+            this.label5.Text = "Descripción:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 272);
+            this.label6.Location = new System.Drawing.Point(18, 318);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 20);
+            this.label6.Size = new System.Drawing.Size(144, 20);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Fecha de creación";
+            this.label6.Text = "Fecha de creación:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 322);
+            this.label7.Location = new System.Drawing.Point(18, 272);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.Size = new System.Drawing.Size(64, 20);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Estado";
+            this.label7.Text = "Estado:";
             // 
             // dgvReq
             // 
@@ -317,6 +332,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -346,5 +362,6 @@
         private System.Windows.Forms.DataGridView dgvReq;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAgregarRequisito;
+        private System.Windows.Forms.PictureBox btnEdit;
     }
 }
