@@ -10,10 +10,18 @@ namespace RRHH.BLL
 {
     class CapacitacionesBLL
     {
+        CapacitacionesDAL oCapsDAL = new CapacitacionesDAL();
+        
+        // SELECTS
         public DataSet getCapacitaciones (int top = 0)
         {
-            CapacitacionesDAL oCapsDAL = new CapacitacionesDAL();
             return oCapsDAL.getCapacitaciones(top);
+        }
+
+        // INSERTS
+        public void insertCapacitacion (string titulo, string descripcion, int cupo, int idDpto)
+        {
+            oCapsDAL.insertCapacitacion(titulo, descripcion, cupo, idDpto);
         }
     }
 }

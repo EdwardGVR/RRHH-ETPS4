@@ -78,6 +78,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback insertEmpleadoOperationCompleted;
         
+        private System.Threading.SendOrPostCallback insertCapacitacionOperationCompleted;
+        
         private System.Threading.SendOrPostCallback deleteVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteRequisitoOperationCompleted;
@@ -191,6 +193,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event insertEmpleadoCompletedEventHandler insertEmpleadoCompleted;
+        
+        /// <remarks/>
+        public event insertCapacitacionCompletedEventHandler insertCapacitacionCompleted;
         
         /// <remarks/>
         public event deleteVacanteCompletedEventHandler deleteVacanteCompleted;
@@ -934,6 +939,40 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertCapacitacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void insertCapacitacion(string titulo, string descripcion, int cupo, int idDpto) {
+            this.Invoke("insertCapacitacion", new object[] {
+                        titulo,
+                        descripcion,
+                        cupo,
+                        idDpto});
+        }
+        
+        /// <remarks/>
+        public void insertCapacitacionAsync(string titulo, string descripcion, int cupo, int idDpto) {
+            this.insertCapacitacionAsync(titulo, descripcion, cupo, idDpto, null);
+        }
+        
+        /// <remarks/>
+        public void insertCapacitacionAsync(string titulo, string descripcion, int cupo, int idDpto, object userState) {
+            if ((this.insertCapacitacionOperationCompleted == null)) {
+                this.insertCapacitacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertCapacitacionOperationCompleted);
+            }
+            this.InvokeAsync("insertCapacitacion", new object[] {
+                        titulo,
+                        descripcion,
+                        cupo,
+                        idDpto}, this.insertCapacitacionOperationCompleted, userState);
+        }
+        
+        private void OninsertCapacitacionOperationCompleted(object arg) {
+            if ((this.insertCapacitacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertCapacitacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteVacante(string vacCode) {
             this.Invoke("deleteVacante", new object[] {
@@ -1521,6 +1560,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void insertEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void insertCapacitacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
