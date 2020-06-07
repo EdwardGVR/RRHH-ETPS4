@@ -16,7 +16,7 @@ namespace RRHH.PL
     {
         DepartamentosBLL oDepartamentosBLL;
         VacantesBLL oVacantesBLL;
-        string codVac, vacante, departamento, descripcion, fechaCreacion, estado, cupo;
+        string codVac, vacante, departamento, descripcion, estado, cupo;
 
         public EditVacante(string codVac)
         {
@@ -76,7 +76,8 @@ namespace RRHH.PL
             {
                 corrVac = oVacantesBLL.getCorrVac(idDpto);
                 abvDpto = oDepartamentosBLL.getDptoAbv(idDpto);
-                newCodVac = oVacantesBLL.setVacCode(abvDpto, corrVac);
+                int idVac = oVacantesBLL.getIdVac(codVac);
+                newCodVac = oVacantesBLL.setVacCode(abvDpto, corrVac) + idVac;
             }
 
             oVacantesBLL.updateVacante(codVac, newCodVac, vacante, descripcion, idDpto, idEstado, cupoNumber);

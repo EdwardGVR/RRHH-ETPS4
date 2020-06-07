@@ -80,7 +80,7 @@ namespace RRHH.PL
                 oVacantesBLL.updateVacante(codVac, newCodVac, vacante, descripcion, idDepartamento, 3, cupo);
 
                 Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-                ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos(codVac));
+                ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitos(newCodVac));
                 Close();
             }
         }
