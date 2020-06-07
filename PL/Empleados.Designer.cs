@@ -73,6 +73,7 @@
             this.btnAgregarEmpleado.TabIndex = 2;
             this.btnAgregarEmpleado.Text = "Agregar";
             this.btnAgregarEmpleado.UseVisualStyleBackColor = false;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // dgvEmpleados
             // 

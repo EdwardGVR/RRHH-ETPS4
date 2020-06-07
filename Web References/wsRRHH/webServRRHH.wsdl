@@ -224,6 +224,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getDepartamentos">
+        <s:complexType />
+      </s:element>
+      <s:element name="getDepartamentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDepartamentosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="getNombresDepartamentos">
         <s:complexType />
       </s:element>
@@ -266,6 +283,23 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="getDptoAbvResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPuestos">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPuestosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPuestosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -435,6 +469,12 @@
   <wsdl:message name="getUsuariosSoapOut">
     <wsdl:part name="parameters" element="tns:getUsuariosResponse" />
   </wsdl:message>
+  <wsdl:message name="getDepartamentosSoapIn">
+    <wsdl:part name="parameters" element="tns:getDepartamentos" />
+  </wsdl:message>
+  <wsdl:message name="getDepartamentosSoapOut">
+    <wsdl:part name="parameters" element="tns:getDepartamentosResponse" />
+  </wsdl:message>
   <wsdl:message name="getNombresDepartamentosSoapIn">
     <wsdl:part name="parameters" element="tns:getNombresDepartamentos" />
   </wsdl:message>
@@ -452,6 +492,12 @@
   </wsdl:message>
   <wsdl:message name="getDptoAbvSoapOut">
     <wsdl:part name="parameters" element="tns:getDptoAbvResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPuestosSoapIn">
+    <wsdl:part name="parameters" element="tns:getPuestos" />
+  </wsdl:message>
+  <wsdl:message name="getPuestosSoapOut">
+    <wsdl:part name="parameters" element="tns:getPuestosResponse" />
   </wsdl:message>
   <wsdl:message name="validarLoginSoapIn">
     <wsdl:part name="parameters" element="tns:validarLogin" />
@@ -544,6 +590,10 @@
       <wsdl:input message="tns:getUsuariosSoapIn" />
       <wsdl:output message="tns:getUsuariosSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getDepartamentos">
+      <wsdl:input message="tns:getDepartamentosSoapIn" />
+      <wsdl:output message="tns:getDepartamentosSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="getNombresDepartamentos">
       <wsdl:input message="tns:getNombresDepartamentosSoapIn" />
       <wsdl:output message="tns:getNombresDepartamentosSoapOut" />
@@ -555,6 +605,10 @@
     <wsdl:operation name="getDptoAbv">
       <wsdl:input message="tns:getDptoAbvSoapIn" />
       <wsdl:output message="tns:getDptoAbvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPuestos">
+      <wsdl:input message="tns:getPuestosSoapIn" />
+      <wsdl:output message="tns:getPuestosSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="validarLogin">
       <wsdl:input message="tns:validarLoginSoapIn" />
@@ -695,6 +749,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getDepartamentos">
+      <soap:operation soapAction="http://tempuri.org/getDepartamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getNombresDepartamentos">
       <soap:operation soapAction="http://tempuri.org/getNombresDepartamentos" style="document" />
       <wsdl:input>
@@ -715,6 +778,15 @@
     </wsdl:operation>
     <wsdl:operation name="getDptoAbv">
       <soap:operation soapAction="http://tempuri.org/getDptoAbv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPuestos">
+      <soap:operation soapAction="http://tempuri.org/getPuestos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -896,6 +968,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getDepartamentos">
+      <soap12:operation soapAction="http://tempuri.org/getDepartamentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getNombresDepartamentos">
       <soap12:operation soapAction="http://tempuri.org/getNombresDepartamentos" style="document" />
       <wsdl:input>
@@ -916,6 +997,15 @@
     </wsdl:operation>
     <wsdl:operation name="getDptoAbv">
       <soap12:operation soapAction="http://tempuri.org/getDptoAbv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPuestos">
+      <soap12:operation soapAction="http://tempuri.org/getPuestos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

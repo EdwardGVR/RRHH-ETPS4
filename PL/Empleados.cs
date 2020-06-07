@@ -26,5 +26,12 @@ namespace RRHH.PL
         {
             
         }
+
+        private void btnAgregarEmpleado_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddEmpleado());
+            Close();
+        }
     }
 }

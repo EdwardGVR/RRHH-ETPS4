@@ -54,11 +54,15 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getUsuariosOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getDepartamentosOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getNombresDepartamentosOperationCompleted;
         
         private System.Threading.SendOrPostCallback getDptoIDOperationCompleted;
         
         private System.Threading.SendOrPostCallback getDptoAbvOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getPuestosOperationCompleted;
         
         private System.Threading.SendOrPostCallback validarLoginOperationCompleted;
         
@@ -149,6 +153,9 @@ namespace RRHH.wsRRHH {
         public event getUsuariosCompletedEventHandler getUsuariosCompleted;
         
         /// <remarks/>
+        public event getDepartamentosCompletedEventHandler getDepartamentosCompleted;
+        
+        /// <remarks/>
         public event getNombresDepartamentosCompletedEventHandler getNombresDepartamentosCompleted;
         
         /// <remarks/>
@@ -156,6 +163,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event getDptoAbvCompletedEventHandler getDptoAbvCompleted;
+        
+        /// <remarks/>
+        public event getPuestosCompletedEventHandler getPuestosCompleted;
         
         /// <remarks/>
         public event validarLoginCompletedEventHandler validarLoginCompleted;
@@ -519,6 +529,33 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDepartamentos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDepartamentos() {
+            object[] results = this.Invoke("getDepartamentos", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDepartamentosAsync() {
+            this.getDepartamentosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getDepartamentosAsync(object userState) {
+            if ((this.getDepartamentosOperationCompleted == null)) {
+                this.getDepartamentosOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDepartamentosOperationCompleted);
+            }
+            this.InvokeAsync("getDepartamentos", new object[0], this.getDepartamentosOperationCompleted, userState);
+        }
+        
+        private void OngetDepartamentosOperationCompleted(object arg) {
+            if ((this.getDepartamentosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDepartamentosCompleted(this, new getDepartamentosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getNombresDepartamentos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getNombresDepartamentos() {
             object[] results = this.Invoke("getNombresDepartamentos", new object[0]);
@@ -600,6 +637,33 @@ namespace RRHH.wsRRHH {
             if ((this.getDptoAbvCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getDptoAbvCompleted(this, new getDptoAbvCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getPuestos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getPuestos() {
+            object[] results = this.Invoke("getPuestos", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getPuestosAsync() {
+            this.getPuestosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getPuestosAsync(object userState) {
+            if ((this.getPuestosOperationCompleted == null)) {
+                this.getPuestosOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetPuestosOperationCompleted);
+            }
+            this.InvokeAsync("getPuestos", new object[0], this.getPuestosOperationCompleted, userState);
+        }
+        
+        private void OngetPuestosOperationCompleted(object arg) {
+            if ((this.getPuestosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getPuestosCompleted(this, new getPuestosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1169,6 +1233,32 @@ namespace RRHH.wsRRHH {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDepartamentosCompletedEventHandler(object sender, getDepartamentosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDepartamentosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDepartamentosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void getNombresDepartamentosCompletedEventHandler(object sender, getNombresDepartamentosCompletedEventArgs e);
     
     /// <remarks/>
@@ -1241,6 +1331,32 @@ namespace RRHH.wsRRHH {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getPuestosCompletedEventHandler(object sender, getPuestosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getPuestosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getPuestosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
             }
         }
     }

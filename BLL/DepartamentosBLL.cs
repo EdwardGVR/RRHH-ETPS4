@@ -11,6 +11,11 @@ namespace RRHH.BLL
     class DepartamentosBLL
     {
         DepartamentosDAL oDepartamentosDAL = new DepartamentosDAL();
+
+        public DataSet getDepartamentos ()
+        {
+            return oDepartamentosDAL.getDepartamentos();
+        }
         
         public DataSet getNombresDepartamentos ()
         {
@@ -25,6 +30,11 @@ namespace RRHH.BLL
         public string getDptoAbv(int idDpto)
         {
             return oDepartamentosDAL.getDptoAbv(idDpto);
+        }
+
+        public DataSet getPuestos ()
+        {
+            return oDepartamentosDAL.getPuestos();
         }
     }
 }

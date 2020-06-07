@@ -19,6 +19,11 @@ namespace RRHH.DAL
             ws = conexion.conectarWS();
         }
 
+        public DataSet getDepartamentos ()
+        {
+            return ws.getDepartamentos();
+        }
+
         public DataSet getNombresDepartamentos ()
         {
             return ws.getNombresDepartamentos();
@@ -33,6 +38,11 @@ namespace RRHH.DAL
         public string getDptoAbv (int idDpto)
         {
             return ws.getDptoAbv(idDpto);
+        }
+
+        public DataSet getPuestos ()
+        {
+            return ws.getPuestos();
         }
     }
 }
