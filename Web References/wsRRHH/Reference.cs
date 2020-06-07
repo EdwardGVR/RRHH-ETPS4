@@ -66,6 +66,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback validarLoginOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getDetallesEmpleadoOperationCompleted;
+        
         private System.Threading.SendOrPostCallback updateVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateRequisitoOperationCompleted;
@@ -73,6 +75,8 @@ namespace RRHH.wsRRHH {
         private System.Threading.SendOrPostCallback insertVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback insertRequisitoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertEmpleadoOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteVacanteOperationCompleted;
         
@@ -171,6 +175,9 @@ namespace RRHH.wsRRHH {
         public event validarLoginCompletedEventHandler validarLoginCompleted;
         
         /// <remarks/>
+        public event getDetallesEmpleadoCompletedEventHandler getDetallesEmpleadoCompleted;
+        
+        /// <remarks/>
         public event updateVacanteCompletedEventHandler updateVacanteCompleted;
         
         /// <remarks/>
@@ -181,6 +188,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event insertRequisitoCompletedEventHandler insertRequisitoCompleted;
+        
+        /// <remarks/>
+        public event insertEmpleadoCompletedEventHandler insertEmpleadoCompleted;
         
         /// <remarks/>
         public event deleteVacanteCompletedEventHandler deleteVacanteCompleted;
@@ -699,6 +709,39 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDetallesEmpleado(string idType, int id, string dui) {
+            object[] results = this.Invoke("getDetallesEmpleado", new object[] {
+                        idType,
+                        id,
+                        dui});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDetallesEmpleadoAsync(string idType, int id, string dui) {
+            this.getDetallesEmpleadoAsync(idType, id, dui, null);
+        }
+        
+        /// <remarks/>
+        public void getDetallesEmpleadoAsync(string idType, int id, string dui, object userState) {
+            if ((this.getDetallesEmpleadoOperationCompleted == null)) {
+                this.getDetallesEmpleadoOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesEmpleadoOperationCompleted);
+            }
+            this.InvokeAsync("getDetallesEmpleado", new object[] {
+                        idType,
+                        id,
+                        dui}, this.getDetallesEmpleadoOperationCompleted, userState);
+        }
+        
+        private void OngetDetallesEmpleadoOperationCompleted(object arg) {
+            if ((this.getDetallesEmpleadoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDetallesEmpleadoCompleted(this, new getDetallesEmpleadoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateVacante(string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo) {
             this.Invoke("updateVacante", new object[] {
@@ -841,6 +884,52 @@ namespace RRHH.wsRRHH {
             if ((this.insertRequisitoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.insertRequisitoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void insertEmpleado(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario) {
+            this.Invoke("insertEmpleado", new object[] {
+                        nombres,
+                        apellidos,
+                        dui,
+                        email,
+                        telefono1,
+                        telefono2,
+                        direccion,
+                        idDpto,
+                        idCargo,
+                        salario});
+        }
+        
+        /// <remarks/>
+        public void insertEmpleadoAsync(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario) {
+            this.insertEmpleadoAsync(nombres, apellidos, dui, email, telefono1, telefono2, direccion, idDpto, idCargo, salario, null);
+        }
+        
+        /// <remarks/>
+        public void insertEmpleadoAsync(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario, object userState) {
+            if ((this.insertEmpleadoOperationCompleted == null)) {
+                this.insertEmpleadoOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertEmpleadoOperationCompleted);
+            }
+            this.InvokeAsync("insertEmpleado", new object[] {
+                        nombres,
+                        apellidos,
+                        dui,
+                        email,
+                        telefono1,
+                        telefono2,
+                        direccion,
+                        idDpto,
+                        idCargo,
+                        salario}, this.insertEmpleadoOperationCompleted, userState);
+        }
+        
+        private void OninsertEmpleadoOperationCompleted(object arg) {
+            if ((this.insertEmpleadoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertEmpleadoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1389,6 +1478,32 @@ namespace RRHH.wsRRHH {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDetallesEmpleadoCompletedEventHandler(object sender, getDetallesEmpleadoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDetallesEmpleadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDetallesEmpleadoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void updateVacanteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
@@ -1402,6 +1517,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void insertRequisitoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void insertEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]

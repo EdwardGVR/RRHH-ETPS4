@@ -318,6 +318,29 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getDetallesEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesEmpleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetallesEmpleadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -373,6 +396,25 @@
         </s:complexType>
       </s:element>
       <s:element name="insertRequisitoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellidos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCargo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="salario" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertEmpleadoResponse">
         <s:complexType />
       </s:element>
       <s:element name="deleteVacante">
@@ -505,6 +547,12 @@
   <wsdl:message name="validarLoginSoapOut">
     <wsdl:part name="parameters" element="tns:validarLoginResponse" />
   </wsdl:message>
+  <wsdl:message name="getDetallesEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetallesEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetallesEmpleadoResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -528,6 +576,12 @@
   </wsdl:message>
   <wsdl:message name="insertRequisitoSoapOut">
     <wsdl:part name="parameters" element="tns:insertRequisitoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="insertEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertEmpleadoResponse" />
   </wsdl:message>
   <wsdl:message name="deleteVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:deleteVacante" />
@@ -614,6 +668,10 @@
       <wsdl:input message="tns:validarLoginSoapIn" />
       <wsdl:output message="tns:validarLoginSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getDetallesEmpleado">
+      <wsdl:input message="tns:getDetallesEmpleadoSoapIn" />
+      <wsdl:output message="tns:getDetallesEmpleadoSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
       <wsdl:output message="tns:updateVacanteSoapOut" />
@@ -629,6 +687,10 @@
     <wsdl:operation name="insertRequisito">
       <wsdl:input message="tns:insertRequisitoSoapIn" />
       <wsdl:output message="tns:insertRequisitoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertEmpleado">
+      <wsdl:input message="tns:insertEmpleadoSoapIn" />
+      <wsdl:output message="tns:insertEmpleadoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <wsdl:input message="tns:deleteVacanteSoapIn" />
@@ -803,6 +865,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getDetallesEmpleado">
+      <soap:operation soapAction="http://tempuri.org/getDetallesEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -832,6 +903,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertRequisito">
       <soap:operation soapAction="http://tempuri.org/insertRequisito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertEmpleado">
+      <soap:operation soapAction="http://tempuri.org/insertEmpleado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1022,6 +1102,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getDetallesEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/getDetallesEmpleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap12:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1051,6 +1140,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertRequisito">
       <soap12:operation soapAction="http://tempuri.org/insertRequisito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/insertEmpleado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

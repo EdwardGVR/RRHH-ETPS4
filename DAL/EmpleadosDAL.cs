@@ -19,9 +19,21 @@ namespace RRHH.DAL
             ws = conexion.conectarWS();
         }
 
+        // SELECTS
         public DataSet getEmpleados ()
         {
             return ws.getEmpleados();
+        }
+
+        public DataSet getDetallesEmpleado (string idType, int id, string dui)
+        {
+            return ws.getDetallesEmpleado(idType, id, dui);
+        }
+
+        // INSERTS
+        public void insertEmpleado (string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario)
+        {
+            ws.insertEmpleado(nombres, apellidos, dui, email, telefono1, telefono2, direccion, idDpto, idCargo, salario);
         }
     }
 }
