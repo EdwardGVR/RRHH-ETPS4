@@ -59,6 +59,11 @@ namespace RRHH.BLL
             oVacantesDAL.updateVacante(codVac, newCodVac, vacante, descripcion, idDpto, idEstado, cupo);
         }
 
+        public void updateRequisito (int idReq, string requisito, string detalles, int idPrioridad)
+        {
+            oVacantesDAL.updateRequisito(idReq, requisito, detalles, idPrioridad);
+        }
+
         // INSERTS
         public void insertVacante(string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
@@ -80,6 +85,11 @@ namespace RRHH.BLL
         public void deleteVacante (string codVac)
         {
             oVacantesDAL.deleteVacante(codVac);
+        }
+
+        public void deleteRequisito (int idReq)
+        {
+            oVacantesDAL.deleteRequisito(idReq);
         }
     }
 }

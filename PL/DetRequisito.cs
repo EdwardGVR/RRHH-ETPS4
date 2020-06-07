@@ -14,12 +14,16 @@ namespace RRHH.PL
     public partial class DetRequisito : Form
     {
         string requisito, detalles, prioridad, codVac;
+        int idReq;
 
         public DetRequisito(int idReq)
         {
-            VacantesBLL oVacantesBLL = new VacantesBLL();
             InitializeComponent();
+
+            VacantesBLL oVacantesBLL = new VacantesBLL();
             DataSet datosRequisito = oVacantesBLL.getDetallesRequisito(idReq);
+
+            this.idReq = idReq;
 
             codVac = datosRequisito.Tables[0].Rows[0][1].ToString();
             requisito = datosRequisito.Tables[0].Rows[0][3].ToString();
@@ -36,6 +40,13 @@ namespace RRHH.PL
         {
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new DetVacantes(codVac));
+            Close();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new EditRequisito(idReq));
             Close();
         }
     }

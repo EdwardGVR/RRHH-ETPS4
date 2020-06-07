@@ -66,5 +66,12 @@ namespace RRHH.PL
             ControlUtils.abrirFormEnPanel(pnlContent, new EditVacante(codVac));
             Close();
         }
+
+        private void btnAgregarRequisito_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitoFromDetails(codVac));
+            Close();
+        }
     }
 }

@@ -133,7 +133,7 @@
             // 
             this.lblFechaCreacion.AutoSize = true;
             this.lblFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaCreacion.Location = new System.Drawing.Point(29, 337);
+            this.lblFechaCreacion.Location = new System.Drawing.Point(29, 346);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
             this.lblFechaCreacion.Size = new System.Drawing.Size(157, 20);
             this.lblFechaCreacion.TabIndex = 14;
@@ -143,7 +143,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(29, 291);
+            this.lblEstado.Location = new System.Drawing.Point(29, 300);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(66, 20);
             this.lblEstado.TabIndex = 15;
@@ -192,10 +192,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.BackColor = System.Drawing.Color.DimGray;
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Enabled = false;
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(31, 201);
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(347, 68);
             this.txtDescripcion.TabIndex = 22;
             this.txtDescripcion.Text = "Descripcion";
@@ -244,7 +245,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 318);
+            this.label6.Location = new System.Drawing.Point(18, 327);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 20);
             this.label6.TabIndex = 20;
@@ -254,7 +255,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 272);
+            this.label7.Location = new System.Drawing.Point(18, 281);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 20);
             this.label7.TabIndex = 21;
@@ -311,6 +312,7 @@
             this.btnAgregarRequisito.TabIndex = 8;
             this.btnAgregarRequisito.Text = "Agregar requisito";
             this.btnAgregarRequisito.UseVisualStyleBackColor = false;
+            this.btnAgregarRequisito.Click += new System.EventHandler(this.btnAgregarRequisito_Click);
             // 
             // DetVacantes
             // 

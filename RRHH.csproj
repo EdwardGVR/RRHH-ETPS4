@@ -69,6 +69,12 @@
     <Compile Include="PL\AddEmpleado.Designer.cs">
       <DependentUpon>AddEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\AddRequisitoFromDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddRequisitoFromDetails.Designer.cs">
+      <DependentUpon>AddRequisitoFromDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\AddRequisitos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="PL\DetVacantes.Designer.cs">
       <DependentUpon>DetVacantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\EditRequisito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\EditRequisito.Designer.cs">
+      <DependentUpon>EditRequisito.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\EditVacante.cs">
       <SubType>Form</SubType>
@@ -164,6 +176,9 @@
     <EmbeddedResource Include="PL\AddEmpleado.resx">
       <DependentUpon>AddEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\AddRequisitoFromDetails.resx">
+      <DependentUpon>AddRequisitoFromDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\AddRequisitos.resx">
       <DependentUpon>AddRequisitos.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DetVacantes.resx">
       <DependentUpon>DetVacantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\EditRequisito.resx">
+      <DependentUpon>EditRequisito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\EditVacante.resx">
       <DependentUpon>EditVacante.cs</DependentUpon>

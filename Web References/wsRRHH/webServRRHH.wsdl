@@ -300,6 +300,19 @@
       <s:element name="updateVacanteResponse">
         <s:complexType />
       </s:element>
+      <s:element name="updateRequisito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idReq" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="requisito" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalles" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPrioridad" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateRequisitoResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="insertVacante">
         <s:complexType>
           <s:sequence>
@@ -336,6 +349,16 @@
         </s:complexType>
       </s:element>
       <s:element name="deleteVacanteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteRequisito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idReq" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteRequisitoResponse">
         <s:complexType />
       </s:element>
     </s:schema>
@@ -442,6 +465,12 @@
   <wsdl:message name="updateVacanteSoapOut">
     <wsdl:part name="parameters" element="tns:updateVacanteResponse" />
   </wsdl:message>
+  <wsdl:message name="updateRequisitoSoapIn">
+    <wsdl:part name="parameters" element="tns:updateRequisito" />
+  </wsdl:message>
+  <wsdl:message name="updateRequisitoSoapOut">
+    <wsdl:part name="parameters" element="tns:updateRequisitoResponse" />
+  </wsdl:message>
   <wsdl:message name="insertVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:insertVacante" />
   </wsdl:message>
@@ -459,6 +488,12 @@
   </wsdl:message>
   <wsdl:message name="deleteVacanteSoapOut">
     <wsdl:part name="parameters" element="tns:deleteVacanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteRequisitoSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteRequisito" />
+  </wsdl:message>
+  <wsdl:message name="deleteRequisitoSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteRequisitoResponse" />
   </wsdl:message>
   <wsdl:portType name="webServRRHHSoap">
     <wsdl:operation name="getVacantes">
@@ -529,6 +564,10 @@
       <wsdl:input message="tns:updateVacanteSoapIn" />
       <wsdl:output message="tns:updateVacanteSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="updateRequisito">
+      <wsdl:input message="tns:updateRequisitoSoapIn" />
+      <wsdl:output message="tns:updateRequisitoSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <wsdl:input message="tns:insertVacanteSoapIn" />
       <wsdl:output message="tns:insertVacanteSoapOut" />
@@ -540,6 +579,10 @@
     <wsdl:operation name="deleteVacante">
       <wsdl:input message="tns:deleteVacanteSoapIn" />
       <wsdl:output message="tns:deleteVacanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRequisito">
+      <wsdl:input message="tns:deleteRequisitoSoapIn" />
+      <wsdl:output message="tns:deleteRequisitoSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
@@ -697,6 +740,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="updateRequisito">
+      <soap:operation soapAction="http://tempuri.org/updateRequisito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <soap:operation soapAction="http://tempuri.org/insertVacante" style="document" />
       <wsdl:input>
@@ -717,6 +769,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <soap:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRequisito">
+      <soap:operation soapAction="http://tempuri.org/deleteRequisito" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -880,6 +941,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="updateRequisito">
+      <soap12:operation soapAction="http://tempuri.org/updateRequisito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <soap12:operation soapAction="http://tempuri.org/insertVacante" style="document" />
       <wsdl:input>
@@ -900,6 +970,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <soap12:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRequisito">
+      <soap12:operation soapAction="http://tempuri.org/deleteRequisito" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

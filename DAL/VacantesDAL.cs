@@ -75,9 +75,19 @@ namespace RRHH.DAL
             ws.updateVacante(codVac, newCodVac, vacante, descripcion, idDpto, idEstado, cupo);
         }
 
+        public void updateRequisito (int idReq, string requisito, string detalles, int idPrioridad)
+        {
+            ws.updateRequisito(idReq, requisito, detalles, idPrioridad);
+        }
+
         public void deleteVacante (string codVac)
         {
             ws.deleteVacante(codVac);
+        }
+
+        public void deleteRequisito (int idReq)
+        {
+            ws.deleteRequisito(idReq);
         }
     }
 }
