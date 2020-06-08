@@ -18,6 +18,11 @@ namespace RRHH.BLL
             return oEmpleadosDAL.getEmpleados();
         }
 
+        public DataSet getDetallesEmpleado (int id)
+        {
+            return oEmpleadosDAL.getDetallesEmpleado(id);
+        }
+
         // INSERTS
         public void insertEmpleado(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario)
         {

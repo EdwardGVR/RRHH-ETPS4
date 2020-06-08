@@ -33,5 +33,14 @@ namespace RRHH.PL
             ControlUtils.abrirFormEnPanel(pnlContent, new AddEmpleado());
             Close();
         }
+
+        private void dgvEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idEmp = int.Parse(dgvEmpleados.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetEmpleado(idEmp));
+            Close();
+        }
     }
 }

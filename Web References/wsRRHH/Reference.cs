@@ -735,28 +735,24 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet getDetallesEmpleado(string idType, int id, string dui) {
+        public System.Data.DataSet getDetallesEmpleado(int id) {
             object[] results = this.Invoke("getDetallesEmpleado", new object[] {
-                        idType,
-                        id,
-                        dui});
+                        id});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void getDetallesEmpleadoAsync(string idType, int id, string dui) {
-            this.getDetallesEmpleadoAsync(idType, id, dui, null);
+        public void getDetallesEmpleadoAsync(int id) {
+            this.getDetallesEmpleadoAsync(id, null);
         }
         
         /// <remarks/>
-        public void getDetallesEmpleadoAsync(string idType, int id, string dui, object userState) {
+        public void getDetallesEmpleadoAsync(int id, object userState) {
             if ((this.getDetallesEmpleadoOperationCompleted == null)) {
                 this.getDetallesEmpleadoOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesEmpleadoOperationCompleted);
             }
             this.InvokeAsync("getDetallesEmpleado", new object[] {
-                        idType,
-                        id,
-                        dui}, this.getDetallesEmpleadoOperationCompleted, userState);
+                        id}, this.getDetallesEmpleadoOperationCompleted, userState);
         }
         
         private void OngetDetallesEmpleadoOperationCompleted(object arg) {

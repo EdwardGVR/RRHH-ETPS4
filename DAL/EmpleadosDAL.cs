@@ -25,9 +25,9 @@ namespace RRHH.DAL
             return ws.getEmpleados();
         }
 
-        public DataSet getDetallesEmpleado (string idType, int id, string dui)
+        public DataSet getDetallesEmpleado (int id)
         {
-            return ws.getDetallesEmpleado(idType, id, dui);
+            return ws.getDetallesEmpleado(id);
         }
 
         // INSERTS

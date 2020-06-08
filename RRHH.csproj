@@ -118,6 +118,12 @@
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\ControlUtils.cs" />
+    <Compile Include="PL\DetEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DetEmpleado.Designer.cs">
+      <DependentUpon>DetEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\DetRequisito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Capacitaciones.resx">
       <DependentUpon>Capacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DetEmpleado.resx">
+      <DependentUpon>DetEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DetRequisito.resx">
       <DependentUpon>DetRequisito.cs</DependentUpon>
