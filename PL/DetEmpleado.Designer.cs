@@ -166,7 +166,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(31, 300);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.ReadOnly = true;
-            this.txtDireccion.Size = new System.Drawing.Size(343, 65);
+            this.txtDireccion.Size = new System.Drawing.Size(404, 65);
             this.txtDireccion.TabIndex = 22;
             this.txtDireccion.Text = "Detalles";
             // 
@@ -292,9 +292,11 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(399, 38);
+            this.panel1.Location = new System.Drawing.Point(441, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 298);
             this.panel1.TabIndex = 16;
@@ -303,7 +305,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(432, 226);
+            this.label6.Location = new System.Drawing.Point(474, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 20);
             this.label6.TabIndex = 41;
@@ -313,7 +315,7 @@
             // 
             this.lblEstadoContrato.AutoSize = true;
             this.lblEstadoContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoContrato.Location = new System.Drawing.Point(443, 245);
+            this.lblEstadoContrato.Location = new System.Drawing.Point(485, 245);
             this.lblEstadoContrato.Name = "lblEstadoContrato";
             this.lblEstadoContrato.Size = new System.Drawing.Size(80, 20);
             this.lblEstadoContrato.TabIndex = 40;
@@ -323,7 +325,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(432, 132);
+            this.label10.Location = new System.Drawing.Point(474, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 20);
             this.label10.TabIndex = 38;
@@ -333,7 +335,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(432, 179);
+            this.label11.Location = new System.Drawing.Point(474, 179);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(168, 20);
             this.label11.TabIndex = 39;
@@ -343,7 +345,7 @@
             // 
             this.lblSalario.AutoSize = true;
             this.lblSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalario.Location = new System.Drawing.Point(443, 151);
+            this.lblSalario.Location = new System.Drawing.Point(485, 151);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(85, 20);
             this.lblSalario.TabIndex = 36;
@@ -353,7 +355,7 @@
             // 
             this.lblFechaContrato.AutoSize = true;
             this.lblFechaContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaContrato.Location = new System.Drawing.Point(443, 198);
+            this.lblFechaContrato.Location = new System.Drawing.Point(485, 198);
             this.lblFechaContrato.Name = "lblFechaContrato";
             this.lblFechaContrato.Size = new System.Drawing.Size(80, 20);
             this.lblFechaContrato.TabIndex = 37;
@@ -363,7 +365,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(432, 38);
+            this.label14.Location = new System.Drawing.Point(474, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 20);
             this.label14.TabIndex = 34;
@@ -373,7 +375,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(432, 84);
+            this.label15.Location = new System.Drawing.Point(474, 84);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(112, 20);
             this.label15.TabIndex = 35;
@@ -383,7 +385,7 @@
             // 
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.Location = new System.Drawing.Point(443, 57);
+            this.lblPuesto.Location = new System.Drawing.Point(485, 57);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(85, 20);
             this.lblPuesto.TabIndex = 32;
@@ -393,7 +395,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(443, 103);
+            this.lblDepartamento.Location = new System.Drawing.Point(485, 103);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(80, 20);
             this.lblDepartamento.TabIndex = 33;

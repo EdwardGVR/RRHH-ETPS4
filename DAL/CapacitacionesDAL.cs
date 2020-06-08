@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace RRHH.DAL
 {
@@ -25,11 +26,31 @@ namespace RRHH.DAL
         {
             return ws.getCapacitaciones(top);
         }
+        
+        public DataSet getDetallesCapacitacion (int idCap)
+        {
+            return ws.getDetallesCapacitacion(idCap);
+        }
+
+        public DataSet getAsignCapacitaciones (int idCap)
+        {
+            return ws.getAsignCapacitaciones(idCap);
+        }
+
+        public Boolean validateCapEmp (int idCap, int idEmp)
+        {
+            return ws.validateCapEmp(idCap, idEmp);
+        }
 
         // INSERTS
         public void insertCapacitacion (string titulo, string descripcion, int cupo, int idDpto)
         {
             ws.insertCapacitacion(titulo, descripcion, cupo, idDpto);
+        }
+
+        public void asignarEmpCap (int idCap, int idEmp, string codigo)
+        {
+            ws.asignarEmpCap(idCap, idEmp, codigo);
         }
     }
 }

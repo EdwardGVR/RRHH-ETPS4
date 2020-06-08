@@ -82,6 +82,7 @@
             this.dgvCapacitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCapacitaciones.Size = new System.Drawing.Size(776, 272);
             this.dgvCapacitaciones.TabIndex = 5;
+            this.dgvCapacitaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCapacitaciones_CellClick);
             // 
             // label1
             // 

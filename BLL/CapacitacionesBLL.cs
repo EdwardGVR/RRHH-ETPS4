@@ -18,10 +18,32 @@ namespace RRHH.BLL
             return oCapsDAL.getCapacitaciones(top);
         }
 
+        public DataSet getDetallesCapacitaciones (int idCap)
+        {
+            return oCapsDAL.getDetallesCapacitacion(idCap);
+        }
+
+        public DataSet getAsignCapacitacion (int idCap)
+        {
+            return oCapsDAL.getAsignCapacitaciones(idCap);
+        }
+
+        public Boolean validateCapEmp(int idCap, int idEmp)
+        {
+            return oCapsDAL.validateCapEmp(idCap, idEmp);
+        }
+
         // INSERTS
         public void insertCapacitacion (string titulo, string descripcion, int cupo, int idDpto)
         {
             oCapsDAL.insertCapacitacion(titulo, descripcion, cupo, idDpto);
+        }
+
+        public void asignarEmpCap(int idCap, int idEmp)
+        {
+            string code = "CAP" + idCap.ToString() + "EMP" + idEmp.ToString() + "ASGN";
+
+            oCapsDAL.asignarEmpCap(idCap, idEmp, code);
         }
     }
 }

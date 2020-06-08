@@ -373,6 +373,84 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getDetallesCapacitacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCap" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesCapacitacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetallesCapacitacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAsignCapacitaciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCap" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAsignCapacitacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAsignCapacitacionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmpleadosByDpto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmpleadosByDptoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmpleadosByDptoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateCapEmp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCap" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEmp" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateCapEmpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validateCapEmpResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -488,6 +566,18 @@
         </s:complexType>
       </s:element>
       <s:element name="insertUsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="asignarEmpCap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCap" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idEmp" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="asignarEmpCapResponse">
         <s:complexType />
       </s:element>
       <s:element name="deleteVacante">
@@ -638,6 +728,30 @@
   <wsdl:message name="getNivelesUsuariosSoapOut">
     <wsdl:part name="parameters" element="tns:getNivelesUsuariosResponse" />
   </wsdl:message>
+  <wsdl:message name="getDetallesCapacitacionSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetallesCapacitacion" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesCapacitacionSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetallesCapacitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAsignCapacitacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:getAsignCapacitaciones" />
+  </wsdl:message>
+  <wsdl:message name="getAsignCapacitacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:getAsignCapacitacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmpleadosByDptoSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmpleadosByDpto" />
+  </wsdl:message>
+  <wsdl:message name="getEmpleadosByDptoSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmpleadosByDptoResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateCapEmpSoapIn">
+    <wsdl:part name="parameters" element="tns:validateCapEmp" />
+  </wsdl:message>
+  <wsdl:message name="validateCapEmpSoapOut">
+    <wsdl:part name="parameters" element="tns:validateCapEmpResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -685,6 +799,12 @@
   </wsdl:message>
   <wsdl:message name="insertUsuarioSoapOut">
     <wsdl:part name="parameters" element="tns:insertUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="asignarEmpCapSoapIn">
+    <wsdl:part name="parameters" element="tns:asignarEmpCap" />
+  </wsdl:message>
+  <wsdl:message name="asignarEmpCapSoapOut">
+    <wsdl:part name="parameters" element="tns:asignarEmpCapResponse" />
   </wsdl:message>
   <wsdl:message name="deleteVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:deleteVacante" />
@@ -783,6 +903,22 @@
       <wsdl:input message="tns:getNivelesUsuariosSoapIn" />
       <wsdl:output message="tns:getNivelesUsuariosSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getDetallesCapacitacion">
+      <wsdl:input message="tns:getDetallesCapacitacionSoapIn" />
+      <wsdl:output message="tns:getDetallesCapacitacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAsignCapacitaciones">
+      <wsdl:input message="tns:getAsignCapacitacionesSoapIn" />
+      <wsdl:output message="tns:getAsignCapacitacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleadosByDpto">
+      <wsdl:input message="tns:getEmpleadosByDptoSoapIn" />
+      <wsdl:output message="tns:getEmpleadosByDptoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateCapEmp">
+      <wsdl:input message="tns:validateCapEmpSoapIn" />
+      <wsdl:output message="tns:validateCapEmpSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
       <wsdl:output message="tns:updateVacanteSoapOut" />
@@ -814,6 +950,10 @@
     <wsdl:operation name="insertUsuario">
       <wsdl:input message="tns:insertUsuarioSoapIn" />
       <wsdl:output message="tns:insertUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="asignarEmpCap">
+      <wsdl:input message="tns:asignarEmpCapSoapIn" />
+      <wsdl:output message="tns:asignarEmpCapSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <wsdl:input message="tns:deleteVacanteSoapIn" />
@@ -1015,6 +1155,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getDetallesCapacitacion">
+      <soap:operation soapAction="http://tempuri.org/getDetallesCapacitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAsignCapacitaciones">
+      <soap:operation soapAction="http://tempuri.org/getAsignCapacitaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleadosByDpto">
+      <soap:operation soapAction="http://tempuri.org/getEmpleadosByDpto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateCapEmp">
+      <soap:operation soapAction="http://tempuri.org/validateCapEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1080,6 +1256,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertUsuario">
       <soap:operation soapAction="http://tempuri.org/insertUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asignarEmpCap">
+      <soap:operation soapAction="http://tempuri.org/asignarEmpCap" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1297,6 +1482,42 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getDetallesCapacitacion">
+      <soap12:operation soapAction="http://tempuri.org/getDetallesCapacitacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAsignCapacitaciones">
+      <soap12:operation soapAction="http://tempuri.org/getAsignCapacitaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmpleadosByDpto">
+      <soap12:operation soapAction="http://tempuri.org/getEmpleadosByDpto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateCapEmp">
+      <soap12:operation soapAction="http://tempuri.org/validateCapEmp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap12:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1362,6 +1583,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertUsuario">
       <soap12:operation soapAction="http://tempuri.org/insertUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asignarEmpCap">
+      <soap12:operation soapAction="http://tempuri.org/asignarEmpCap" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Microsoft.SqlServer.Server;
 
 namespace RRHH.DAL
 {
@@ -23,6 +24,11 @@ namespace RRHH.DAL
         public DataSet getEmpleados ()
         {
             return ws.getEmpleados();
+        }
+
+        public DataSet getEmpleadosByDpto (int idDpto)
+        {
+            return ws.getEmpleadosByDpto(idDpto);
         }
 
         public DataSet getDetallesEmpleado (int id)

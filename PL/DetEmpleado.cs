@@ -32,11 +32,23 @@ namespace RRHH.PL
             telefono = datosEmpleado.Tables[0].Rows[0][5].ToString();
             telefono2 = datosEmpleado.Tables[0].Rows[1][5].ToString();
             salario = datosEmpleado.Tables[0].Rows[0][6].ToString();
+            fechaContrato = datosEmpleado.Tables[0].Rows[0][7].ToString();
+            estadoContrato = datosEmpleado.Tables[0].Rows[0][8].ToString();
+            puesto = datosEmpleado.Tables[0].Rows[0][9].ToString();
+            departamento = datosEmpleado.Tables[0].Rows[0][10].ToString();
 
             lblNombres.Text = nombres;
+            lblApellidos.Text = apellidos;
+            lblDUI.Text = dui;
+            lblCorreo.Text = correo;
             lblTel1.Text = telefono;
             lblTel2.Text = telefono2;
-            lblSalario.Text = salario;
+            txtDireccion.Text = direccion;
+            lblPuesto.Text = puesto;
+            lblDepartamento.Text = departamento;
+            lblSalario.Text = "$" + salario;
+            lblFechaContrato.Text = fechaContrato;
+            lblEstadoContrato.Text = estadoContrato;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

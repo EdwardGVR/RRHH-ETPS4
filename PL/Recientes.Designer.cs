@@ -118,6 +118,7 @@
             this.dgvCapaRecientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCapaRecientes.Size = new System.Drawing.Size(762, 131);
             this.dgvCapaRecientes.TabIndex = 1;
+            this.dgvCapaRecientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCapaRecientes_CellClick);
             // 
             // btnVerTodasEvaluaciones
             // 
