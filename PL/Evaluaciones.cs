@@ -19,5 +19,12 @@ namespace RRHH.PL
             InitializeComponent();
             dgvEvaluaciones.DataSource = oEvalBLL.getEvaluaciones().Tables[0];
         }
+
+        private void btnAgregarEvaluacion_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddEvaluacion());
+            Close();
+        }
     }
 }

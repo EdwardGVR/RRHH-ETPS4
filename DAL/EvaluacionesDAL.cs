@@ -19,9 +19,21 @@ namespace RRHH.DAL
             ws = conexion.conectarWS();
         }
 
+        // SELECTS
         public DataSet getEvaluaciones (int top = 0)
         {
             return ws.getEvaluaciones(top);
+        }
+
+        public DataSet getTiposEvaluaciones ()
+        {
+            return ws.getTiposEvaluaciones();
+        }
+
+        // INSERTS
+        public void insertEvaluacion (string evaluacion, int idTipo, string objetivos, int maxScore)
+        {
+            ws.insertEvaluacion(evaluacion, idTipo, objetivos, maxScore);
         }
     }
 }

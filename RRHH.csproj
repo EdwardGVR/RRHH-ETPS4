@@ -75,6 +75,12 @@
     <Compile Include="PL\AddEmpleado.Designer.cs">
       <DependentUpon>AddEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\AddEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddEvaluacion.Designer.cs">
+      <DependentUpon>AddEvaluacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\AddRequisitoFromDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\AddEmpleado.resx">
       <DependentUpon>AddEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AddEvaluacion.resx">
+      <DependentUpon>AddEvaluacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\AddRequisitoFromDetails.resx">
       <DependentUpon>AddRequisitoFromDetails.cs</DependentUpon>

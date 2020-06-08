@@ -22,7 +22,9 @@ namespace RRHH.PL
             InitializeComponent();
             cmbDepartamento.DataSource = departamentos.getDepartamentos().Tables[0];
             cmbDepartamento.DisplayMember = "departamento";
-            cmbDepartamento.ValueMember = "id_departamentos";
+            cmbDepartamento.ValueMember = "id_departamento";
+
+            txtFechaCreacion.Text = DateTime.Now.Date.ToShortDateString();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

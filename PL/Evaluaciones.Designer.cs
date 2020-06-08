@@ -57,6 +57,7 @@
             this.btnAgregarEvaluacion.TabIndex = 10;
             this.btnAgregarEvaluacion.Text = "Agregar";
             this.btnAgregarEvaluacion.UseVisualStyleBackColor = false;
+            this.btnAgregarEvaluacion.Click += new System.EventHandler(this.btnAgregarEvaluacion_Click);
             // 
             // dgvEvaluaciones
             // 

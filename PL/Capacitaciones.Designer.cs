@@ -57,6 +57,7 @@
             this.btnAgregarCapacitacion.TabIndex = 6;
             this.btnAgregarCapacitacion.Text = "Agregar";
             this.btnAgregarCapacitacion.UseVisualStyleBackColor = false;
+            this.btnAgregarCapacitacion.Click += new System.EventHandler(this.btnAgregarCapacitacion_Click);
             // 
             // dgvCapacitaciones
             // 

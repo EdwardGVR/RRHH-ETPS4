@@ -20,5 +20,12 @@ namespace RRHH.PL
             InitializeComponent();
             dgvCapacitaciones.DataSource = oCapsBLL.getCapacitaciones().Tables[0];
         }
+
+        private void btnAgregarCapacitacion_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddCapacitaciones());
+            Close();
+        }
     }
 }

@@ -10,10 +10,23 @@ namespace RRHH.BLL
 {
     class EvaluacionesBLL
     {
+        EvaluacionesDAL oEvalDAL = new EvaluacionesDAL();
+
+        // SELECTS
         public DataSet getEvaluaciones (int top = 0)
         {
-            EvaluacionesDAL oEvalDAL = new EvaluacionesDAL();
             return oEvalDAL.getEvaluaciones(top);
+        }
+
+        public DataSet getTiposEvaluaciones()
+        {
+            return oEvalDAL.getTiposEvaluaciones();
+        }
+
+        // INSERTS
+        public void insertEvaluacion (string evaluacion, int idTipo, string objetivos, int maxScore)
+        {
+            oEvalDAL.insertEvaluacion(evaluacion, idTipo, objetivos, maxScore);
         }
     }
 }
