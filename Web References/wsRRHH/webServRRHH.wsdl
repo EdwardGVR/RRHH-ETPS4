@@ -358,6 +358,23 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getNivelesUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="getNivelesUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNivelesUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -458,6 +475,21 @@
         </s:complexType>
       </s:element>
       <s:element name="insertEvaluacionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombres" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellidos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idNivel" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertUsuarioResponse">
         <s:complexType />
       </s:element>
       <s:element name="deleteVacante">
@@ -602,6 +634,12 @@
   <wsdl:message name="getTiposEvaluacionesSoapOut">
     <wsdl:part name="parameters" element="tns:getTiposEvaluacionesResponse" />
   </wsdl:message>
+  <wsdl:message name="getNivelesUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:getNivelesUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="getNivelesUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:getNivelesUsuariosResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -643,6 +681,12 @@
   </wsdl:message>
   <wsdl:message name="insertEvaluacionSoapOut">
     <wsdl:part name="parameters" element="tns:insertEvaluacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertUsuario" />
+  </wsdl:message>
+  <wsdl:message name="insertUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertUsuarioResponse" />
   </wsdl:message>
   <wsdl:message name="deleteVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:deleteVacante" />
@@ -737,6 +781,10 @@
       <wsdl:input message="tns:getTiposEvaluacionesSoapIn" />
       <wsdl:output message="tns:getTiposEvaluacionesSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getNivelesUsuarios">
+      <wsdl:input message="tns:getNivelesUsuariosSoapIn" />
+      <wsdl:output message="tns:getNivelesUsuariosSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
       <wsdl:output message="tns:updateVacanteSoapOut" />
@@ -764,6 +812,10 @@
     <wsdl:operation name="insertEvaluacion">
       <wsdl:input message="tns:insertEvaluacionSoapIn" />
       <wsdl:output message="tns:insertEvaluacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertUsuario">
+      <wsdl:input message="tns:insertUsuarioSoapIn" />
+      <wsdl:output message="tns:insertUsuarioSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <wsdl:input message="tns:deleteVacanteSoapIn" />
@@ -956,6 +1008,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getNivelesUsuarios">
+      <soap:operation soapAction="http://tempuri.org/getNivelesUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1012,6 +1073,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertEvaluacion">
       <soap:operation soapAction="http://tempuri.org/insertEvaluacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUsuario">
+      <soap:operation soapAction="http://tempuri.org/insertUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1220,6 +1290,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getNivelesUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/getNivelesUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap12:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1276,6 +1355,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertEvaluacion">
       <soap12:operation soapAction="http://tempuri.org/insertEvaluacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertUsuario">
+      <soap12:operation soapAction="http://tempuri.org/insertUsuario" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -57,6 +57,7 @@
             this.btnAgregarUsuario.TabIndex = 14;
             this.btnAgregarUsuario.Text = "Agregar";
             this.btnAgregarUsuario.UseVisualStyleBackColor = false;
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
             // dgvUsuarios
             // 

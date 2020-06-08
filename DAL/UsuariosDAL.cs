@@ -19,9 +19,21 @@ namespace RRHH.DAL
             ws = conexion.conectarWS();
         }
 
+        // SELECTS
         public DataSet getUsuarios ()
         {
             return ws.getUsuarios();
+        }
+
+        public DataSet getNiveles ()
+        {
+            return ws.getNivelesUsuarios();
+        }
+
+        // INSERTS
+        public void insertUsuario (string nombres, string apellidos, string email, string usuario, string password, int idNivel)
+        {
+            ws.insertUsuario(nombres, apellidos, email, usuario, password, idNivel);
         }
     }
 }

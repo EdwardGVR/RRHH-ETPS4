@@ -10,10 +10,23 @@ namespace RRHH.BLL
 {
     class UsuariosBLL
     {
+        UsuariosDAL oUsersDAL = new UsuariosDAL();
+        
+        // SELECTS
         public DataSet getUsuarios ()
         {
-            UsuariosDAL oUsersDAL = new UsuariosDAL();
             return oUsersDAL.getUsuarios();
+        }
+
+        public DataSet getNiveles ()
+        {
+            return oUsersDAL.getNiveles();
+        }
+
+        // INSERTS
+        public void insertUsuario (string nombres, string apellidos, string email, string usuario, string password, int idNivel)
+        {
+            oUsersDAL.insertUsuario(nombres, apellidos, email, usuario, password, idNivel);
         }
     }
 }

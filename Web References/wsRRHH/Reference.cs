@@ -70,6 +70,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getTiposEvaluacionesOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getNivelesUsuariosOperationCompleted;
+        
         private System.Threading.SendOrPostCallback updateVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateRequisitoOperationCompleted;
@@ -83,6 +85,8 @@ namespace RRHH.wsRRHH {
         private System.Threading.SendOrPostCallback insertCapacitacionOperationCompleted;
         
         private System.Threading.SendOrPostCallback insertEvaluacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback insertUsuarioOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteVacanteOperationCompleted;
         
@@ -187,6 +191,9 @@ namespace RRHH.wsRRHH {
         public event getTiposEvaluacionesCompletedEventHandler getTiposEvaluacionesCompleted;
         
         /// <remarks/>
+        public event getNivelesUsuariosCompletedEventHandler getNivelesUsuariosCompleted;
+        
+        /// <remarks/>
         public event updateVacanteCompletedEventHandler updateVacanteCompleted;
         
         /// <remarks/>
@@ -206,6 +213,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event insertEvaluacionCompletedEventHandler insertEvaluacionCompleted;
+        
+        /// <remarks/>
+        public event insertUsuarioCompletedEventHandler insertUsuarioCompleted;
         
         /// <remarks/>
         public event deleteVacanteCompletedEventHandler deleteVacanteCompleted;
@@ -784,6 +794,33 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getNivelesUsuarios", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getNivelesUsuarios() {
+            object[] results = this.Invoke("getNivelesUsuarios", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getNivelesUsuariosAsync() {
+            this.getNivelesUsuariosAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getNivelesUsuariosAsync(object userState) {
+            if ((this.getNivelesUsuariosOperationCompleted == null)) {
+                this.getNivelesUsuariosOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetNivelesUsuariosOperationCompleted);
+            }
+            this.InvokeAsync("getNivelesUsuarios", new object[0], this.getNivelesUsuariosOperationCompleted, userState);
+        }
+        
+        private void OngetNivelesUsuariosOperationCompleted(object arg) {
+            if ((this.getNivelesUsuariosCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getNivelesUsuariosCompleted(this, new getNivelesUsuariosCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateVacante(string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo) {
             this.Invoke("updateVacante", new object[] {
@@ -1040,6 +1077,44 @@ namespace RRHH.wsRRHH {
             if ((this.insertEvaluacionCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.insertEvaluacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void insertUsuario(string nombres, string apellidos, string email, string usuario, string password, int idNivel) {
+            this.Invoke("insertUsuario", new object[] {
+                        nombres,
+                        apellidos,
+                        email,
+                        usuario,
+                        password,
+                        idNivel});
+        }
+        
+        /// <remarks/>
+        public void insertUsuarioAsync(string nombres, string apellidos, string email, string usuario, string password, int idNivel) {
+            this.insertUsuarioAsync(nombres, apellidos, email, usuario, password, idNivel, null);
+        }
+        
+        /// <remarks/>
+        public void insertUsuarioAsync(string nombres, string apellidos, string email, string usuario, string password, int idNivel, object userState) {
+            if ((this.insertUsuarioOperationCompleted == null)) {
+                this.insertUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OninsertUsuarioOperationCompleted);
+            }
+            this.InvokeAsync("insertUsuario", new object[] {
+                        nombres,
+                        apellidos,
+                        email,
+                        usuario,
+                        password,
+                        idNivel}, this.insertUsuarioOperationCompleted, userState);
+        }
+        
+        private void OninsertUsuarioOperationCompleted(object arg) {
+            if ((this.insertUsuarioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.insertUsuarioCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1640,6 +1715,32 @@ namespace RRHH.wsRRHH {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getNivelesUsuariosCompletedEventHandler(object sender, getNivelesUsuariosCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getNivelesUsuariosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getNivelesUsuariosCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void updateVacanteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
@@ -1665,6 +1766,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void insertEvaluacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void insertUsuarioCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]

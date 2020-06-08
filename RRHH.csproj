@@ -93,6 +93,12 @@
     <Compile Include="PL\AddRequisitos.Designer.cs">
       <DependentUpon>AddRequisitos.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\AddUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddUsuario.Designer.cs">
+      <DependentUpon>AddUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\AddVacante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\AddRequisitos.resx">
       <DependentUpon>AddRequisitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AddUsuario.resx">
+      <DependentUpon>AddUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\AddVacante.resx">
       <DependentUpon>AddVacante.cs</DependentUpon>

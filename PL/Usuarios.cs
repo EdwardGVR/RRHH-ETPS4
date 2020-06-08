@@ -19,5 +19,12 @@ namespace RRHH.PL
             InitializeComponent();
             dgvUsuarios.DataSource = oUsersBLL.getUsuarios().Tables[0];
         }
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddUsuario());
+            Close();
+        }
     }
 }
