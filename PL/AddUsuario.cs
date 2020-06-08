@@ -15,6 +15,9 @@ namespace RRHH.PL
     {
         UsuariosBLL usuarios = new UsuariosBLL();
 
+        Boolean emptyFields = false;
+        Boolean passMatch = false;
+
         public AddUsuario()
         {
             InitializeComponent();
@@ -28,7 +31,7 @@ namespace RRHH.PL
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string nombres, apellidos, usuario, correo, password;
+            string nombres, apellidos, usuario, correo, password, confirmPass;
             int idNivel;
 
             nombres = txtNombres.Text;
@@ -36,13 +39,54 @@ namespace RRHH.PL
             usuario = txtUsuario.Text;
             correo = txtEmail.Text;
             password = txtPassword.Text;
+            confirmPass = txtConfirmPass.Text;
             idNivel = int.Parse(cmbNivel.SelectedValue.ToString());
 
-            usuarios.insertUsuario(nombres, apellidos, correo, usuario, password, idNivel);
+            if (string.IsNullOrEmpty(nombres))
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(apellidos))
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(usuario))
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(correo))
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(password))
+            {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(confirmPass))
+            {
+                emptyFields = true;
+            } else
+            {
+                if (password.Equals(confirmPass))
+                {
+                    passMatch = true;
+                }
 
-            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-            ControlUtils.abrirFormEnPanel(pnlContent, new Usuarios());
-            Close();
+                emptyFields = false;
+            }
+
+            if (emptyFields)
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+            } else
+            {
+                if (passMatch)
+                {
+                    usuarios.insertUsuario(nombres, apellidos, correo, usuario, password, idNivel);
+
+                    Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                    ControlUtils.abrirFormEnPanel(pnlContent, new Usuarios());
+                    Close();
+                } else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
