@@ -63,6 +63,12 @@
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="DAL\VacantesDAL.cs" />
+    <Compile Include="PL\AddAsignCapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddAsignCapacitacion.Designer.cs">
+      <DependentUpon>AddAsignCapacitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\AddCapacitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PL\AddAsignCapacitacion.resx">
+      <DependentUpon>AddAsignCapacitacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\AddCapacitaciones.resx">
       <DependentUpon>AddCapacitaciones.cs</DependentUpon>
     </EmbeddedResource>

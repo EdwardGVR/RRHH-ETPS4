@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGuardaryAsignar = new System.Windows.Forms.Button();
             this.txtCupo = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnGuardaryAsignar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCupo)).BeginInit();
@@ -126,6 +126,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar datos";
             // 
+            // btnGuardaryAsignar
+            // 
+            this.btnGuardaryAsignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardaryAsignar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnGuardaryAsignar.FlatAppearance.BorderSize = 0;
+            this.btnGuardaryAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardaryAsignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardaryAsignar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardaryAsignar.Location = new System.Drawing.Point(391, 339);
+            this.btnGuardaryAsignar.Name = "btnGuardaryAsignar";
+            this.btnGuardaryAsignar.Size = new System.Drawing.Size(144, 23);
+            this.btnGuardaryAsignar.TabIndex = 23;
+            this.btnGuardaryAsignar.Text = "Asignar empleados";
+            this.btnGuardaryAsignar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardaryAsignar.UseVisualStyleBackColor = false;
+            this.btnGuardaryAsignar.Click += new System.EventHandler(this.btnGuardaryAsignar_Click);
+            // 
             // txtCupo
             // 
             this.txtCupo.Location = new System.Drawing.Point(10, 185);
@@ -161,6 +178,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.LightGreen;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Location = new System.Drawing.Point(541, 339);
             this.btnGuardar.Name = "btnGuardar";
@@ -177,6 +195,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.LightGray;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Location = new System.Drawing.Point(691, 338);
             this.btnCancelar.Name = "btnCancelar";
@@ -367,22 +386,6 @@
             this.label7.Size = new System.Drawing.Size(50, 17);
             this.label7.TabIndex = 1;
             this.label7.Text = "Datos";
-            // 
-            // btnGuardaryAsignar
-            // 
-            this.btnGuardaryAsignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardaryAsignar.BackColor = System.Drawing.Color.LightGreen;
-            this.btnGuardaryAsignar.FlatAppearance.BorderSize = 0;
-            this.btnGuardaryAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardaryAsignar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardaryAsignar.Location = new System.Drawing.Point(391, 339);
-            this.btnGuardaryAsignar.Name = "btnGuardaryAsignar";
-            this.btnGuardaryAsignar.Size = new System.Drawing.Size(144, 23);
-            this.btnGuardaryAsignar.TabIndex = 23;
-            this.btnGuardaryAsignar.Text = "Asignar empleados";
-            this.btnGuardaryAsignar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardaryAsignar.UseVisualStyleBackColor = false;
-            this.btnGuardaryAsignar.Click += new System.EventHandler(this.btnGuardaryAsignar_Click);
             // 
             // AddCapacitaciones
             // 
