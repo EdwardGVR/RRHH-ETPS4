@@ -82,6 +82,7 @@
             this.dgvEvaluaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEvaluaciones.Size = new System.Drawing.Size(776, 272);
             this.dgvEvaluaciones.TabIndex = 9;
+            this.dgvEvaluaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEvaluaciones_CellClick);
             // 
             // label1
             // 

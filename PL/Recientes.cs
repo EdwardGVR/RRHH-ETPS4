@@ -67,5 +67,14 @@ namespace RRHH.PL
             ControlUtils.abrirFormEnPanel(pnlContent, new DetCapacitaciones(idCap));
             Close();
         }
+
+        private void dgvEvalRecientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idEval = int.Parse(dgvEvalRecientes.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetEvaluacion(idEval));
+            Close();
+        }
     }
 }
