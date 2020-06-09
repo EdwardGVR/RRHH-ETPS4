@@ -81,8 +81,9 @@
             this.btnAsignarAplicantes.Name = "btnAsignarAplicantes";
             this.btnAsignarAplicantes.Size = new System.Drawing.Size(122, 31);
             this.btnAsignarAplicantes.TabIndex = 8;
-            this.btnAsignarAplicantes.Text = "Asignar empleados";
+            this.btnAsignarAplicantes.Text = "Asignar aplicantes";
             this.btnAsignarAplicantes.UseVisualStyleBackColor = false;
+            this.btnAsignarAplicantes.Click += new System.EventHandler(this.btnAsignarAplicantes_Click);
             // 
             // dgvAsign
             // 

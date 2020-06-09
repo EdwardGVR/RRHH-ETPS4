@@ -33,10 +33,25 @@ namespace RRHH.BLL
             return oEvalDAL.getAsignEvalApl(idEval);
         }
 
+        public DataSet getAplicantesByVac(int idVac)
+        {
+            return oEvalDAL.getAplicantesByVac(idVac);
+        }
+
+        public Boolean validateEvApl(int idEval, int idApl)
+        {
+            return oEvalDAL.validateEvApl(idEval, idApl);
+        }
+
         // INSERTS
         public void insertEvaluacion (string evaluacion, int idTipo, string objetivos, int maxScore)
         {
             oEvalDAL.insertEvaluacion(evaluacion, idTipo, objetivos, maxScore);
+        }
+
+        public void asignAplEval(int idEval, int idAplicante, string fecha, string hora)
+        {
+            oEvalDAL.asignAplEval(idEval, idAplicante, fecha, hora);
         }
     }
 }

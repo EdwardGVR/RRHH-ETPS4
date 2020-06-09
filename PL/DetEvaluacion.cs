@@ -41,5 +41,12 @@ namespace RRHH.PL
             lblFechaCreacion.Text = fechaCreacion;
             lblTipoEval.Text = tipoEval;
         }
+
+        private void btnAsignarAplicantes_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddAsignEvaluacion(idEval));
+            Close();
+        }
     }
 }

@@ -40,10 +40,25 @@ namespace RRHH.DAL
             return ws.getAsignEvalApl(idEval);
         }
 
+        public DataSet getAplicantesByVac (int idVac)
+        {
+            return ws.getAplicantesByVac(idVac);
+        }
+
+        public Boolean validateEvApl(int idEval, int idApl)
+        {
+            return ws.validateEvApl(idEval, idApl);
+        }
+
         // INSERTS
         public void insertEvaluacion (string evaluacion, int idTipo, string objetivos, int maxScore)
         {
             ws.insertEvaluacion(evaluacion, idTipo, objetivos, maxScore);
+        }
+
+        public void asignAplEval (int idEval, int idAplicante, string fecha, string hora)
+        {
+            ws.asignarAplEval(idEval, idAplicante, fecha, hora);
         }
     }
 }

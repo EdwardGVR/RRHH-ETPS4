@@ -493,6 +493,42 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getAplicantesByVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEval" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAplicantesByVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAplicantesByVacResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateEvApl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEval" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idApl" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateEvAplResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validateEvAplResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -620,6 +656,19 @@
         </s:complexType>
       </s:element>
       <s:element name="asignarEmpCapResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="asignarAplEval">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEval" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idAplicante" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaEvaluacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horaEvaluacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="asignarAplEvalResponse">
         <s:complexType />
       </s:element>
       <s:element name="deleteVacante">
@@ -806,6 +855,18 @@
   <wsdl:message name="getAsignEvalAplSoapOut">
     <wsdl:part name="parameters" element="tns:getAsignEvalAplResponse" />
   </wsdl:message>
+  <wsdl:message name="getAplicantesByVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getAplicantesByVac" />
+  </wsdl:message>
+  <wsdl:message name="getAplicantesByVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getAplicantesByVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateEvAplSoapIn">
+    <wsdl:part name="parameters" element="tns:validateEvApl" />
+  </wsdl:message>
+  <wsdl:message name="validateEvAplSoapOut">
+    <wsdl:part name="parameters" element="tns:validateEvAplResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -859,6 +920,12 @@
   </wsdl:message>
   <wsdl:message name="asignarEmpCapSoapOut">
     <wsdl:part name="parameters" element="tns:asignarEmpCapResponse" />
+  </wsdl:message>
+  <wsdl:message name="asignarAplEvalSoapIn">
+    <wsdl:part name="parameters" element="tns:asignarAplEval" />
+  </wsdl:message>
+  <wsdl:message name="asignarAplEvalSoapOut">
+    <wsdl:part name="parameters" element="tns:asignarAplEvalResponse" />
   </wsdl:message>
   <wsdl:message name="deleteVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:deleteVacante" />
@@ -981,6 +1048,14 @@
       <wsdl:input message="tns:getAsignEvalAplSoapIn" />
       <wsdl:output message="tns:getAsignEvalAplSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getAplicantesByVac">
+      <wsdl:input message="tns:getAplicantesByVacSoapIn" />
+      <wsdl:output message="tns:getAplicantesByVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateEvApl">
+      <wsdl:input message="tns:validateEvAplSoapIn" />
+      <wsdl:output message="tns:validateEvAplSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
       <wsdl:output message="tns:updateVacanteSoapOut" />
@@ -1016,6 +1091,10 @@
     <wsdl:operation name="asignarEmpCap">
       <wsdl:input message="tns:asignarEmpCapSoapIn" />
       <wsdl:output message="tns:asignarEmpCapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="asignarAplEval">
+      <wsdl:input message="tns:asignarAplEvalSoapIn" />
+      <wsdl:output message="tns:asignarAplEvalSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <wsdl:input message="tns:deleteVacanteSoapIn" />
@@ -1271,6 +1350,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAplicantesByVac">
+      <soap:operation soapAction="http://tempuri.org/getAplicantesByVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateEvApl">
+      <soap:operation soapAction="http://tempuri.org/validateEvApl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1345,6 +1442,15 @@
     </wsdl:operation>
     <wsdl:operation name="asignarEmpCap">
       <soap:operation soapAction="http://tempuri.org/asignarEmpCap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asignarAplEval">
+      <soap:operation soapAction="http://tempuri.org/asignarAplEval" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1616,6 +1722,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAplicantesByVac">
+      <soap12:operation soapAction="http://tempuri.org/getAplicantesByVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateEvApl">
+      <soap12:operation soapAction="http://tempuri.org/validateEvApl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap12:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1690,6 +1814,15 @@
     </wsdl:operation>
     <wsdl:operation name="asignarEmpCap">
       <soap12:operation soapAction="http://tempuri.org/asignarEmpCap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asignarAplEval">
+      <soap12:operation soapAction="http://tempuri.org/asignarAplEval" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
