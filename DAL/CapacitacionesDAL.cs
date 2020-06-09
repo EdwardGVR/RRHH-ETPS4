@@ -42,6 +42,11 @@ namespace RRHH.DAL
             return ws.validateCapEmp(idCap, idEmp);
         }
 
+        public DataSet getDetallesAsignCap (int idAsign)
+        {
+            return ws.getDetallesAsignCap(idAsign);
+        }
+
         // INSERTS
         public void insertCapacitacion (string titulo, string descripcion, int cupo, int idDpto)
         {

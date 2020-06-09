@@ -56,9 +56,9 @@ namespace RRHH.PL
         {
             int idAsign = int.Parse(dgvAsign.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-            //Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-            //ControlUtils.abrirFormEnPanel(pnlContent, new DetCapacitaciones(idCap));
-            //Close();
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetAsignCap(idAsign));
+            Close();
         }
 
         private void btnAgregarRequisito_Click(object sender, EventArgs e)

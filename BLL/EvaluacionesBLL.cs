@@ -43,6 +43,11 @@ namespace RRHH.BLL
             return oEvalDAL.validateEvApl(idEval, idApl);
         }
 
+        public DataSet getDetallesAsignEval(int idAsign)
+        {
+            return oEvalDAL.getDetallesAsignEval(idAsign);
+        }
+
         // INSERTS
         public void insertEvaluacion (string evaluacion, int idTipo, string objetivos, int maxScore)
         {

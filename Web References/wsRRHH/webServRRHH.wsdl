@@ -529,6 +529,69 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getDetallesUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetallesUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesAsignCap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAsign" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesAsignCapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetallesAsignCapResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesAsignEval">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAsign" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesAsignEvalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetallesAsignEvalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -867,6 +930,24 @@
   <wsdl:message name="validateEvAplSoapOut">
     <wsdl:part name="parameters" element="tns:validateEvAplResponse" />
   </wsdl:message>
+  <wsdl:message name="getDetallesUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetallesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetallesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesAsignCapSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetallesAsignCap" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesAsignCapSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetallesAsignCapResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesAsignEvalSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetallesAsignEval" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesAsignEvalSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetallesAsignEvalResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -1055,6 +1136,18 @@
     <wsdl:operation name="validateEvApl">
       <wsdl:input message="tns:validateEvAplSoapIn" />
       <wsdl:output message="tns:validateEvAplSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesUsuario">
+      <wsdl:input message="tns:getDetallesUsuarioSoapIn" />
+      <wsdl:output message="tns:getDetallesUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAsignCap">
+      <wsdl:input message="tns:getDetallesAsignCapSoapIn" />
+      <wsdl:output message="tns:getDetallesAsignCapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAsignEval">
+      <wsdl:input message="tns:getDetallesAsignEvalSoapIn" />
+      <wsdl:output message="tns:getDetallesAsignEvalSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
@@ -1361,6 +1454,33 @@
     </wsdl:operation>
     <wsdl:operation name="validateEvApl">
       <soap:operation soapAction="http://tempuri.org/validateEvApl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesUsuario">
+      <soap:operation soapAction="http://tempuri.org/getDetallesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAsignCap">
+      <soap:operation soapAction="http://tempuri.org/getDetallesAsignCap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAsignEval">
+      <soap:operation soapAction="http://tempuri.org/getDetallesAsignEval" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1733,6 +1853,33 @@
     </wsdl:operation>
     <wsdl:operation name="validateEvApl">
       <soap12:operation soapAction="http://tempuri.org/validateEvApl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesUsuario">
+      <soap12:operation soapAction="http://tempuri.org/getDetallesUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAsignCap">
+      <soap12:operation soapAction="http://tempuri.org/getDetallesAsignCap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAsignEval">
+      <soap12:operation soapAction="http://tempuri.org/getDetallesAsignEval" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

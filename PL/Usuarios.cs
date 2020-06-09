@@ -26,5 +26,14 @@ namespace RRHH.PL
             ControlUtils.abrirFormEnPanel(pnlContent, new AddUsuario());
             Close();
         }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idUser = int.Parse(dgvUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetUsuario(idUser));
+            Close();
+        }
     }
 }

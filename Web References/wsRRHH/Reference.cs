@@ -88,6 +88,12 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback validateEvAplOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getDetallesUsuarioOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getDetallesAsignCapOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getDetallesAsignEvalOperationCompleted;
+        
         private System.Threading.SendOrPostCallback updateVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateRequisitoOperationCompleted;
@@ -236,6 +242,15 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event validateEvAplCompletedEventHandler validateEvAplCompleted;
+        
+        /// <remarks/>
+        public event getDetallesUsuarioCompletedEventHandler getDetallesUsuarioCompleted;
+        
+        /// <remarks/>
+        public event getDetallesAsignCapCompletedEventHandler getDetallesAsignCapCompleted;
+        
+        /// <remarks/>
+        public event getDetallesAsignEvalCompletedEventHandler getDetallesAsignEvalCompleted;
         
         /// <remarks/>
         public event updateVacanteCompletedEventHandler updateVacanteCompleted;
@@ -1099,6 +1114,93 @@ namespace RRHH.wsRRHH {
             if ((this.validateEvAplCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.validateEvAplCompleted(this, new validateEvAplCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDetallesUsuario(int idUsuario) {
+            object[] results = this.Invoke("getDetallesUsuario", new object[] {
+                        idUsuario});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDetallesUsuarioAsync(int idUsuario) {
+            this.getDetallesUsuarioAsync(idUsuario, null);
+        }
+        
+        /// <remarks/>
+        public void getDetallesUsuarioAsync(int idUsuario, object userState) {
+            if ((this.getDetallesUsuarioOperationCompleted == null)) {
+                this.getDetallesUsuarioOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesUsuarioOperationCompleted);
+            }
+            this.InvokeAsync("getDetallesUsuario", new object[] {
+                        idUsuario}, this.getDetallesUsuarioOperationCompleted, userState);
+        }
+        
+        private void OngetDetallesUsuarioOperationCompleted(object arg) {
+            if ((this.getDetallesUsuarioCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDetallesUsuarioCompleted(this, new getDetallesUsuarioCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesAsignCap", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDetallesAsignCap(int idAsign) {
+            object[] results = this.Invoke("getDetallesAsignCap", new object[] {
+                        idAsign});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDetallesAsignCapAsync(int idAsign) {
+            this.getDetallesAsignCapAsync(idAsign, null);
+        }
+        
+        /// <remarks/>
+        public void getDetallesAsignCapAsync(int idAsign, object userState) {
+            if ((this.getDetallesAsignCapOperationCompleted == null)) {
+                this.getDetallesAsignCapOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesAsignCapOperationCompleted);
+            }
+            this.InvokeAsync("getDetallesAsignCap", new object[] {
+                        idAsign}, this.getDetallesAsignCapOperationCompleted, userState);
+        }
+        
+        private void OngetDetallesAsignCapOperationCompleted(object arg) {
+            if ((this.getDetallesAsignCapCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDetallesAsignCapCompleted(this, new getDetallesAsignCapCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesAsignEval", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDetallesAsignEval(int idAsign) {
+            object[] results = this.Invoke("getDetallesAsignEval", new object[] {
+                        idAsign});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDetallesAsignEvalAsync(int idAsign) {
+            this.getDetallesAsignEvalAsync(idAsign, null);
+        }
+        
+        /// <remarks/>
+        public void getDetallesAsignEvalAsync(int idAsign, object userState) {
+            if ((this.getDetallesAsignEvalOperationCompleted == null)) {
+                this.getDetallesAsignEvalOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesAsignEvalOperationCompleted);
+            }
+            this.InvokeAsync("getDetallesAsignEval", new object[] {
+                        idAsign}, this.getDetallesAsignEvalOperationCompleted, userState);
+        }
+        
+        private void OngetDetallesAsignEvalOperationCompleted(object arg) {
+            if ((this.getDetallesAsignEvalCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDetallesAsignEvalCompleted(this, new getDetallesAsignEvalCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2291,6 +2393,84 @@ namespace RRHH.wsRRHH {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDetallesUsuarioCompletedEventHandler(object sender, getDetallesUsuarioCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDetallesUsuarioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDetallesUsuarioCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDetallesAsignCapCompletedEventHandler(object sender, getDetallesAsignCapCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDetallesAsignCapCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDetallesAsignCapCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDetallesAsignEvalCompletedEventHandler(object sender, getDetallesAsignEvalCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDetallesAsignEvalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDetallesAsignEvalCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
             }
         }
     }

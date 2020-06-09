@@ -27,6 +27,10 @@ namespace RRHH.PL
             cmbVacantes.DataSource = vacantes.getVacantes().Tables[0];
             cmbVacantes.DisplayMember = "Vacante";
             cmbVacantes.ValueMember = "ID";
+
+            cmbAplicantes.DataSource = evaluaciones.getAplicantesByVac(int.Parse(cmbVacantes.SelectedValue.ToString())).Tables[0];
+            cmbAplicantes.DisplayMember = "Aplicante";
+            cmbAplicantes.ValueMember = "ID";
         }
 
         private void cmbVacantes_SelectionChangeCommitted(object sender, EventArgs e)
@@ -43,22 +47,31 @@ namespace RRHH.PL
             int idAplicante;
             string fechaEvaluacion, horaEvaluacion;
 
-            idAplicante = int.Parse(cmbAplicantes.SelectedValue.ToString());
             fechaEvaluacion = dtpFechaEval.Value.ToShortDateString();
             horaEvaluacion = dtpHoraEval.Value.ToShortTimeString();
 
-            if (evaluaciones.validateEvApl(idEval, idAplicante))
+            if (string.IsNullOrEmpty(cmbAplicantes.Text)) 
             {
-                evaluaciones.asignAplEval(idEval, idAplicante, fechaEvaluacion, horaEvaluacion);
-
-                Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-                ControlUtils.abrirFormEnPanel(pnlContent, new AddAsignEvaluacion(idEval));
-                Close();
-            }
+                MessageBox.Show("Asegurese de llenar los campos");
+            } 
             else
             {
-                MessageBox.Show("Ese aplicante ya se encuentra asignado a esta evaluacion");
+                idAplicante = int.Parse(cmbAplicantes.SelectedValue.ToString());
+
+                if (evaluaciones.validateEvApl(idEval, idAplicante))
+                {
+                    evaluaciones.asignAplEval(idEval, idAplicante, fechaEvaluacion, horaEvaluacion);
+
+                    Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                    ControlUtils.abrirFormEnPanel(pnlContent, new AddAsignEvaluacion(idEval));
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ese aplicante ya se encuentra asignado a esta evaluacion");
+                }
             }
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -66,21 +79,29 @@ namespace RRHH.PL
             int idAplicante;
             string fechaEvaluacion, horaEvaluacion;
 
-            idAplicante = int.Parse(cmbAplicantes.SelectedValue.ToString());
             fechaEvaluacion = dtpFechaEval.Value.ToShortDateString();
             horaEvaluacion = dtpHoraEval.Value.ToShortTimeString();
 
-            if (evaluaciones.validateEvApl(idEval, idAplicante))
+            if (string.IsNullOrEmpty(cmbAplicantes.Text))
             {
-                evaluaciones.asignAplEval(idEval, idAplicante, fechaEvaluacion, horaEvaluacion);
-
-                Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-                ControlUtils.abrirFormEnPanel(pnlContent, new DetEvaluacion(idEval));
-                Close();
+                MessageBox.Show("Asegurese de llenar los campos");
             }
-            else
-            {
-                MessageBox.Show("Ese aplicante ya se encuentra asignado a esta evaluacion");
+            else 
+            { 
+                idAplicante = int.Parse(cmbAplicantes.SelectedValue.ToString());
+
+                if (evaluaciones.validateEvApl(idEval, idAplicante))
+                {
+                    evaluaciones.asignAplEval(idEval, idAplicante, fechaEvaluacion, horaEvaluacion);
+
+                    Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                    ControlUtils.abrirFormEnPanel(pnlContent, new DetEvaluacion(idEval));
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ese aplicante ya se encuentra asignado a esta evaluacion");
+                }
             }
         }
 

@@ -29,7 +29,7 @@ namespace RRHH.PL
             cmbDepartamentos.DisplayMember = "departamento";
             cmbDepartamentos.ValueMember = "id_departamento";
 
-            cmbEmpleados.DataSource = empleados.getEmpleadosByDpto(2).Tables[0];
+            cmbEmpleados.DataSource = empleados.getEmpleadosByDpto(int.Parse(cmbDepartamentos.SelectedValue.ToString())).Tables[0];
             cmbEmpleados.DisplayMember = "Empleado";
             cmbEmpleados.ValueMember = "ID";
         }
@@ -55,38 +55,54 @@ namespace RRHH.PL
         private void btnGuardarOtro_Click(object sender, EventArgs e)
         {
             int idEmp;
-            idEmp = int.Parse(cmbEmpleados.SelectedValue.ToString());
 
-            if (capacitaciones.validateCapEmp(idCap, idEmp))
+            if (string.IsNullOrEmpty(cmbEmpleados.Text))
             {
-                capacitaciones.asignarEmpCap(idCap, idEmp);
-
-                Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-                ControlUtils.abrirFormEnPanel(pnlContent, new AddAsignCapacitacion(idCap));
-                Close();
+                MessageBox.Show("Asegurese de llenar los campos");
             } else
             {
-                MessageBox.Show("El empleado ya se encuentra asignado a esta capacitacion");
+                idEmp = int.Parse(cmbEmpleados.SelectedValue.ToString());
+
+                if (capacitaciones.validateCapEmp(idCap, idEmp))
+                {
+                    capacitaciones.asignarEmpCap(idCap, idEmp);
+
+                    Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                    ControlUtils.abrirFormEnPanel(pnlContent, new AddAsignCapacitacion(idCap));
+                    Close();
+                } else
+                {
+                    MessageBox.Show("El empleado ya se encuentra asignado a esta capacitacion");
+                }
             }
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             int idEmp;
-            idEmp = int.Parse(cmbEmpleados.SelectedValue.ToString());
 
-            if (capacitaciones.validateCapEmp(idCap, idEmp))
+            if (string.IsNullOrEmpty(cmbEmpleados.Text))
             {
-                capacitaciones.asignarEmpCap(idCap, idEmp);
+                MessageBox.Show("Asegurese de llenar los campos");
+            } else
+            {
+                idEmp = int.Parse(cmbEmpleados.SelectedValue.ToString());
 
-                Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-                ControlUtils.abrirFormEnPanel(pnlContent, new DetCapacitaciones(idCap));
-                Close();
+                if (capacitaciones.validateCapEmp(idCap, idEmp))
+                {
+                    capacitaciones.asignarEmpCap(idCap, idEmp);
+
+                    Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                    ControlUtils.abrirFormEnPanel(pnlContent, new DetCapacitaciones(idCap));
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ese empleado ya se encuentra asignado a esta capacitacion");
+                }
             }
-            else
-            {
-                MessageBox.Show("Ese empleado ya se encuentra asignado a esta capacitacion");
-            }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

@@ -48,5 +48,14 @@ namespace RRHH.PL
             ControlUtils.abrirFormEnPanel(pnlContent, new AddAsignEvaluacion(idEval));
             Close();
         }
+
+        private void dgvAsign_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idAsign = int.Parse(dgvAsign.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetAsignEval(idAsign));
+            Close();
+        }
     }
 }

@@ -33,6 +33,11 @@ namespace RRHH.BLL
             return oCapsDAL.validateCapEmp(idCap, idEmp);
         }
 
+        public DataSet getDetallesAsignCap(int idAsign)
+        {
+            return oCapsDAL.getDetallesAsignCap(idAsign);
+        }
+
         // INSERTS
         public void insertCapacitacion (string titulo, string descripcion, int cupo, int idDpto)
         {

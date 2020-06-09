@@ -34,6 +34,10 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpHoraEval = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpFechaEval = new System.Windows.Forms.DateTimePicker();
             this.cmbAplicantes = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbVacantes = new System.Windows.Forms.ComboBox();
@@ -42,10 +46,6 @@
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtpFechaEval = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpHoraEval = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -123,6 +123,48 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(712, 283);
             this.panel3.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(8, 221);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 20);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Hora de evaluacion";
+            // 
+            // dtpHoraEval
+            // 
+            this.dtpHoraEval.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpHoraEval.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraEval.Location = new System.Drawing.Point(12, 244);
+            this.dtpHoraEval.Name = "dtpHoraEval";
+            this.dtpHoraEval.Size = new System.Drawing.Size(691, 23);
+            this.dtpHoraEval.TabIndex = 26;
+            this.dtpHoraEval.Value = new System.DateTime(2020, 6, 9, 9, 44, 0, 0);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(8, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 20);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Fecha de evaluacion";
+            // 
+            // dtpFechaEval
+            // 
+            this.dtpFechaEval.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFechaEval.Location = new System.Drawing.Point(12, 175);
+            this.dtpFechaEval.Name = "dtpFechaEval";
+            this.dtpFechaEval.Size = new System.Drawing.Size(691, 23);
+            this.dtpFechaEval.TabIndex = 24;
             // 
             // cmbAplicantes
             // 
@@ -215,44 +257,6 @@
             this.label5.Size = new System.Drawing.Size(290, 24);
             this.label5.TabIndex = 30;
             this.label5.Text = "Agregar asignacion a evaluacion:";
-            // 
-            // dtpFechaEval
-            // 
-            this.dtpFechaEval.Location = new System.Drawing.Point(12, 175);
-            this.dtpFechaEval.Name = "dtpFechaEval";
-            this.dtpFechaEval.Size = new System.Drawing.Size(691, 23);
-            this.dtpFechaEval.TabIndex = 24;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(8, 152);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Fecha de evaluacion";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(8, 221);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 20);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Hora de evaluacion";
-            // 
-            // dtpHoraEval
-            // 
-            this.dtpHoraEval.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraEval.Location = new System.Drawing.Point(12, 244);
-            this.dtpHoraEval.Name = "dtpHoraEval";
-            this.dtpHoraEval.Size = new System.Drawing.Size(691, 23);
-            this.dtpHoraEval.TabIndex = 26;
-            this.dtpHoraEval.Value = new System.DateTime(2020, 6, 9, 9, 44, 0, 0);
             // 
             // AddAsignEvaluacion
             // 

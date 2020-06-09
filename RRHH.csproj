@@ -124,6 +124,18 @@
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\ControlUtils.cs" />
+    <Compile Include="PL\DetAsignCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DetAsignCap.Designer.cs">
+      <DependentUpon>DetAsignCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DetAsignEval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DetAsignEval.Designer.cs">
+      <DependentUpon>DetAsignEval.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\DetCapacitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,12 @@
     </Compile>
     <Compile Include="PL\DetRequisito.Designer.cs">
       <DependentUpon>DetRequisito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\DetUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DetUsuario.Designer.cs">
+      <DependentUpon>DetUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\DetVacantes.cs">
       <SubType>Form</SubType>
@@ -251,6 +269,12 @@
     <EmbeddedResource Include="PL\Capacitaciones.resx">
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\DetAsignCap.resx">
+      <DependentUpon>DetAsignCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DetAsignEval.resx">
+      <DependentUpon>DetAsignEval.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\DetCapacitaciones.resx">
       <DependentUpon>DetCapacitaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DetRequisito.resx">
       <DependentUpon>DetRequisito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DetUsuario.resx">
+      <DependentUpon>DetUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DetVacantes.resx">
       <DependentUpon>DetVacantes.cs</DependentUpon>

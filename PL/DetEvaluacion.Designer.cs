@@ -105,6 +105,7 @@
             this.dgvAsign.ShowEditingIcon = false;
             this.dgvAsign.Size = new System.Drawing.Size(290, 257);
             this.dgvAsign.TabIndex = 7;
+            this.dgvAsign.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsign_CellClick);
             // 
             // groupBox1
             // 

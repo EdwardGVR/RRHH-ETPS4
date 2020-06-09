@@ -50,6 +50,11 @@ namespace RRHH.DAL
             return ws.validateEvApl(idEval, idApl);
         }
 
+        public DataSet getDetallesAsignEval(int idAsign)
+        {
+            return ws.getDetallesAsignEval(idAsign);
+        }
+
         // INSERTS
         public void insertEvaluacion (string evaluacion, int idTipo, string objetivos, int maxScore)
         {

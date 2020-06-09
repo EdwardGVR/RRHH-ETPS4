@@ -30,6 +30,11 @@ namespace RRHH.DAL
             return ws.getNivelesUsuarios();
         }
 
+        public DataSet getDetallesUsuario(int idUsuario)
+        {
+            return ws.getDetallesUsuario(idUsuario);
+        }
+
         // INSERTS
         public void insertUsuario (string nombres, string apellidos, string email, string usuario, string password, int idNivel)
         {
