@@ -630,6 +630,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getDetallesAplicante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idApl" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDetallesAplicanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDetallesAplicanteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -1049,6 +1070,12 @@
   <wsdl:message name="getTiposAplicantesSoapOut">
     <wsdl:part name="parameters" element="tns:getTiposAplicantesResponse" />
   </wsdl:message>
+  <wsdl:message name="getDetallesAplicanteSoapIn">
+    <wsdl:part name="parameters" element="tns:getDetallesAplicante" />
+  </wsdl:message>
+  <wsdl:message name="getDetallesAplicanteSoapOut">
+    <wsdl:part name="parameters" element="tns:getDetallesAplicanteResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -1281,6 +1308,10 @@
     <wsdl:operation name="getTiposAplicantes">
       <wsdl:input message="tns:getTiposAplicantesSoapIn" />
       <wsdl:output message="tns:getTiposAplicantesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAplicante">
+      <wsdl:input message="tns:getDetallesAplicanteSoapIn" />
+      <wsdl:output message="tns:getDetallesAplicanteSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
@@ -1648,6 +1679,15 @@
     </wsdl:operation>
     <wsdl:operation name="getTiposAplicantes">
       <soap:operation soapAction="http://tempuri.org/getTiposAplicantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAplicante">
+      <soap:operation soapAction="http://tempuri.org/getDetallesAplicante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2101,6 +2141,15 @@
     </wsdl:operation>
     <wsdl:operation name="getTiposAplicantes">
       <soap12:operation soapAction="http://tempuri.org/getTiposAplicantes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetallesAplicante">
+      <soap12:operation soapAction="http://tempuri.org/getDetallesAplicante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

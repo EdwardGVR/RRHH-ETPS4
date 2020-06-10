@@ -98,6 +98,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getTiposAplicantesOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getDetallesAplicanteOperationCompleted;
+        
         private System.Threading.SendOrPostCallback updateVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateRequisitoOperationCompleted;
@@ -269,6 +271,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event getTiposAplicantesCompletedEventHandler getTiposAplicantesCompleted;
+        
+        /// <remarks/>
+        public event getDetallesAplicanteCompletedEventHandler getDetallesAplicanteCompleted;
         
         /// <remarks/>
         public event updateVacanteCompletedEventHandler updateVacanteCompleted;
@@ -1287,6 +1292,35 @@ namespace RRHH.wsRRHH {
             if ((this.getTiposAplicantesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getTiposAplicantesCompleted(this, new getTiposAplicantesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesAplicante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getDetallesAplicante(int idApl) {
+            object[] results = this.Invoke("getDetallesAplicante", new object[] {
+                        idApl});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getDetallesAplicanteAsync(int idApl) {
+            this.getDetallesAplicanteAsync(idApl, null);
+        }
+        
+        /// <remarks/>
+        public void getDetallesAplicanteAsync(int idApl, object userState) {
+            if ((this.getDetallesAplicanteOperationCompleted == null)) {
+                this.getDetallesAplicanteOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetDetallesAplicanteOperationCompleted);
+            }
+            this.InvokeAsync("getDetallesAplicante", new object[] {
+                        idApl}, this.getDetallesAplicanteOperationCompleted, userState);
+        }
+        
+        private void OngetDetallesAplicanteOperationCompleted(object arg) {
+            if ((this.getDetallesAplicanteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getDetallesAplicanteCompleted(this, new getDetallesAplicanteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2727,6 +2761,32 @@ namespace RRHH.wsRRHH {
         private object[] results;
         
         internal getTiposAplicantesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getDetallesAplicanteCompletedEventHandler(object sender, getDetallesAplicanteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getDetallesAplicanteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getDetallesAplicanteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

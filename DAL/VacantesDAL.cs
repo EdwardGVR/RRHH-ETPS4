@@ -60,6 +60,11 @@ namespace RRHH.DAL
             return ws.uniqueAplDui(dui);
         }
 
+        public DataSet getDetallesAplicante(int idApl)
+        {
+            return ws.getDetallesAplicante(idApl);
+        }
+
         // INSERTS
         public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {

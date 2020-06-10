@@ -68,6 +68,11 @@ namespace RRHH.BLL
             return oVacantesDAL.uniqueAplDui(dui);
         }
 
+        public DataSet getDetallesAplicante(int idApl)
+        {
+            return oVacantesDAL.getDetallesAplicante(idApl);
+        }
+
         // UPDATES
         public void updateVacante (string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo)
         {

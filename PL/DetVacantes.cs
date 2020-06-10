@@ -18,11 +18,6 @@ namespace RRHH.PL
 
         int idVac;
 
-        private void dgvAplicantes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         public DetVacantes(string codVac)
         {
             oVacantesBLL = new VacantesBLL();
@@ -86,6 +81,15 @@ namespace RRHH.PL
         {
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new AddAplicante(idVac, codVac));
+            Close();
+        }
+
+        private void dgvAplicantes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idApl = int.Parse(dgvAplicantes.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetAplicantes(idApl, codVac));
             Close();
         }
     }
