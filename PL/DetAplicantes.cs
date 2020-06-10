@@ -55,5 +55,12 @@ namespace RRHH.PL
             ControlUtils.abrirFormEnPanel(pnlContent, new DetVacantes(codVac));
             Close();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new EditAplicante(idApl, codVac));
+            Close();
+        }
     }
 }

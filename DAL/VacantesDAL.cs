@@ -65,6 +65,11 @@ namespace RRHH.DAL
             return ws.getDetallesAplicante(idApl);
         }
 
+        public DataSet getResultadosAplicaciones()
+        {
+            return ws.getResultadosAplicaciones();
+        }
+
         // INSERTS
         public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
@@ -97,6 +102,7 @@ namespace RRHH.DAL
             return ws.getIdVac(codVac);
         }
 
+        // UPDATES
         public void updateVacante (string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo)
         {
             ws.updateVacante(codVac, newCodVac, vacante, descripcion, idDpto, idEstado, cupo);
@@ -107,6 +113,12 @@ namespace RRHH.DAL
             ws.updateRequisito(idReq, requisito, detalles, idPrioridad);
         }
 
+        public void updateAplicante(int idApl, string nombres, string apellidos, string dui, string correo, string direccion, string telefono, int idTipo, int idResultado)
+        {
+            ws.updateAplicante(idApl, nombres, apellidos, dui, correo, direccion, telefono, idTipo, idResultado);
+        }
+
+        // DELETES
         public void deleteVacante (string codVac)
         {
             ws.deleteVacante(codVac);
@@ -115,6 +127,11 @@ namespace RRHH.DAL
         public void deleteRequisito (int idReq)
         {
             ws.deleteRequisito(idReq);
+        }
+
+        public void deleteAplicante(int idApl)
+        {
+            ws.deleteAplicante(idApl);
         }
     }
 }

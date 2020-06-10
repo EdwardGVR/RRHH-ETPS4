@@ -73,6 +73,11 @@ namespace RRHH.BLL
             return oVacantesDAL.getDetallesAplicante(idApl);
         }
 
+        public DataSet getResultadosAplicaciones()
+        {
+            return oVacantesDAL.getResultadosAplicaciones();
+        }
+
         // UPDATES
         public void updateVacante (string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo)
         {
@@ -82,6 +87,11 @@ namespace RRHH.BLL
         public void updateRequisito (int idReq, string requisito, string detalles, int idPrioridad)
         {
             oVacantesDAL.updateRequisito(idReq, requisito, detalles, idPrioridad);
+        }
+
+        public void updateAplicante(int idApl, string nombres, string apellidos, string dui, string correo, string direccion, string telefono, int idTipo, int idResultado)
+        {
+            oVacantesDAL.updateAplicante(idApl, nombres, apellidos, dui, correo, direccion, telefono, idTipo, idResultado);
         }
 
         // INSERTS
@@ -115,6 +125,11 @@ namespace RRHH.BLL
         public void deleteRequisito (int idReq)
         {
             oVacantesDAL.deleteRequisito(idReq);
+        }
+
+        public void deleteAplicante(int idApl)
+        {
+            oVacantesDAL.deleteAplicante(idApl);
         }
     }
 }
