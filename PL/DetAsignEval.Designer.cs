@@ -30,11 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetAsignEval));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblHoraEval = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblFechaEval = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblNombres = new System.Windows.Forms.Label();
@@ -43,12 +47,8 @@
             this.lblIdAsign = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblFechaEval = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblHoraEval = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.groupBox1.Controls.Add(this.lblTel);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblCorreo);
-            this.groupBox1.Controls.Add(this.btnEdit);
+            this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.lblNombres);
@@ -77,6 +77,46 @@
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 274);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 20);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Hora de Evaluacion";
+            // 
+            // lblHoraEval
+            // 
+            this.lblHoraEval.AutoSize = true;
+            this.lblHoraEval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraEval.Location = new System.Drawing.Point(26, 293);
+            this.lblHoraEval.Name = "lblHoraEval";
+            this.lblHoraEval.Size = new System.Drawing.Size(80, 20);
+            this.lblHoraEval.TabIndex = 40;
+            this.lblHoraEval.Text = "Prioridad";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 227);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 20);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Fecha de Evaluacion";
+            // 
+            // lblFechaEval
+            // 
+            this.lblFechaEval.AutoSize = true;
+            this.lblFechaEval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaEval.Location = new System.Drawing.Point(27, 246);
+            this.lblFechaEval.Name = "lblFechaEval";
+            this.lblFechaEval.Size = new System.Drawing.Size(80, 20);
+            this.lblFechaEval.TabIndex = 38;
+            this.lblFechaEval.Text = "Prioridad";
             // 
             // label9
             // 
@@ -118,16 +158,17 @@
             this.lblCorreo.TabIndex = 26;
             this.lblCorreo.Text = "Prioridad";
             // 
-            // btnEdit
+            // btnDelete
             // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(728, 19);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(30, 30);
-            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEdit.TabIndex = 24;
-            this.btnEdit.TabStop = false;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(728, 19);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(30, 39);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 24;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label2
             // 
@@ -211,46 +252,6 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Detalles de asignacion:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 227);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 20);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Fecha de Evaluacion";
-            // 
-            // lblFechaEval
-            // 
-            this.lblFechaEval.AutoSize = true;
-            this.lblFechaEval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaEval.Location = new System.Drawing.Point(27, 246);
-            this.lblFechaEval.Name = "lblFechaEval";
-            this.lblFechaEval.Size = new System.Drawing.Size(80, 20);
-            this.lblFechaEval.TabIndex = 38;
-            this.lblFechaEval.Text = "Prioridad";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 274);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 20);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Hora de Evaluacion";
-            // 
-            // lblHoraEval
-            // 
-            this.lblHoraEval.AutoSize = true;
-            this.lblHoraEval.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraEval.Location = new System.Drawing.Point(26, 293);
-            this.lblHoraEval.Name = "lblHoraEval";
-            this.lblHoraEval.Size = new System.Drawing.Size(80, 20);
-            this.lblHoraEval.TabIndex = 40;
-            this.lblHoraEval.Text = "Prioridad";
-            // 
             // DetAsignEval
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,7 +268,7 @@
             this.Text = "DetAsignEval";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,7 +286,7 @@
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblNombres;

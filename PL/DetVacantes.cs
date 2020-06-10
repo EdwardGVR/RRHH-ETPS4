@@ -17,14 +17,22 @@ namespace RRHH.PL
         string codVac, vacante, departamento, descripcion, fechaCreacion, estado, cupo;
 
         int idVac;
-        
+
+        private void dgvAplicantes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         public DetVacantes(string codVac)
         {
             oVacantesBLL = new VacantesBLL();
             InitializeComponent();
 
-            dgvReq.DataSource = oVacantesBLL.getReqVac(codVac).Tables[0];
             DataSet datosVacante = oVacantesBLL.getDetVac(codVac);
+            idVac = int.Parse(datosVacante.Tables[0].Rows[0][0].ToString());
+
+            dgvReq.DataSource = oVacantesBLL.getReqVac(codVac).Tables[0];
+            dgvAplicantes.DataSource = oVacantesBLL.getAplicantesVac(idVac).Tables[0];
 
             this.codVac = codVac;
             lblCodVac.Text = codVac;
@@ -71,6 +79,13 @@ namespace RRHH.PL
         {
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new AddRequisitoFromDetails(codVac));
+            Close();
+        }
+
+        private void btnAddAplicante_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new AddAplicante(idVac, codVac));
             Close();
         }
     }

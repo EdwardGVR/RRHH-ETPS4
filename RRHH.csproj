@@ -63,6 +63,12 @@
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="DAL\VacantesDAL.cs" />
+    <Compile Include="PL\AddAplicante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AddAplicante.Designer.cs">
+      <DependentUpon>AddAplicante.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\AddAsignCapacitacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,12 @@
       <DependentUpon>Capacitaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\ControlUtils.cs" />
+    <Compile Include="PL\DetAplicantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\DetAplicantes.Designer.cs">
+      <DependentUpon>DetAplicantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\DetAsignCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +251,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PL\AddAplicante.resx">
+      <DependentUpon>AddAplicante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\AddAsignCapacitacion.resx">
       <DependentUpon>AddAsignCapacitacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Capacitaciones.resx">
       <DependentUpon>Capacitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\DetAplicantes.resx">
+      <DependentUpon>DetAplicantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\DetAsignCap.resx">
       <DependentUpon>DetAsignCap.cs</DependentUpon>

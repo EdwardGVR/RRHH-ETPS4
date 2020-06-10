@@ -50,11 +50,16 @@
             this.dgvReq = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAgregarRequisito = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAddAplicante = new System.Windows.Forms.Button();
+            this.dgvAplicantes = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicantes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -64,7 +69,7 @@
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(16, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(772, 5);
+            this.panel2.Size = new System.Drawing.Size(858, 5);
             this.panel2.TabIndex = 7;
             // 
             // label1
@@ -133,7 +138,7 @@
             // 
             this.lblFechaCreacion.AutoSize = true;
             this.lblFechaCreacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaCreacion.Location = new System.Drawing.Point(29, 346);
+            this.lblFechaCreacion.Location = new System.Drawing.Point(29, 238);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
             this.lblFechaCreacion.Size = new System.Drawing.Size(157, 20);
             this.lblFechaCreacion.TabIndex = 14;
@@ -143,7 +148,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(29, 300);
+            this.lblEstado.Location = new System.Drawing.Point(29, 192);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(66, 20);
             this.lblEstado.TabIndex = 15;
@@ -166,10 +171,10 @@
             this.groupBox1.Controls.Add(this.lblCupos);
             this.groupBox1.Controls.Add(this.lblFechaCreacion);
             this.groupBox1.Controls.Add(this.lblEstado);
-            this.groupBox1.Location = new System.Drawing.Point(16, 80);
+            this.groupBox1.Location = new System.Drawing.Point(16, 71);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(392, 360);
+            this.groupBox1.Size = new System.Drawing.Size(392, 559);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -194,10 +199,10 @@
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(31, 201);
+            this.txtDescripcion.Location = new System.Drawing.Point(31, 291);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(347, 68);
+            this.txtDescripcion.Size = new System.Drawing.Size(347, 234);
             this.txtDescripcion.TabIndex = 22;
             this.txtDescripcion.Text = "Descripcion";
             // 
@@ -235,7 +240,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 177);
+            this.label5.Location = new System.Drawing.Point(18, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 19;
@@ -245,7 +250,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 327);
+            this.label6.Location = new System.Drawing.Point(18, 219);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 20);
             this.label6.TabIndex = 20;
@@ -255,7 +260,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 281);
+            this.label7.Location = new System.Drawing.Point(18, 173);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 20);
             this.label7.TabIndex = 21;
@@ -280,22 +285,21 @@
             this.dgvReq.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvReq.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReq.ShowEditingIcon = false;
-            this.dgvReq.Size = new System.Drawing.Size(350, 246);
+            this.dgvReq.Size = new System.Drawing.Size(437, 151);
             this.dgvReq.TabIndex = 7;
             this.dgvReq.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReq_CellClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btnAgregarRequisito);
             this.groupBox2.Controls.Add(this.dgvReq);
-            this.groupBox2.Location = new System.Drawing.Point(426, 80);
+            this.groupBox2.Location = new System.Drawing.Point(426, 71);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 20);
             this.groupBox2.MinimumSize = new System.Drawing.Size(345, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(362, 360);
+            this.groupBox2.Size = new System.Drawing.Size(449, 258);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Requisitos";
@@ -306,7 +310,7 @@
             this.btnAgregarRequisito.BackColor = System.Drawing.Color.Silver;
             this.btnAgregarRequisito.FlatAppearance.BorderSize = 0;
             this.btnAgregarRequisito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarRequisito.Location = new System.Drawing.Point(254, 322);
+            this.btnAgregarRequisito.Location = new System.Drawing.Point(324, 220);
             this.btnAgregarRequisito.Name = "btnAgregarRequisito";
             this.btnAgregarRequisito.Size = new System.Drawing.Size(102, 31);
             this.btnAgregarRequisito.TabIndex = 8;
@@ -314,13 +318,68 @@
             this.btnAgregarRequisito.UseVisualStyleBackColor = false;
             this.btnAgregarRequisito.Click += new System.EventHandler(this.btnAgregarRequisito_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox3.Controls.Add(this.btnAddAplicante);
+            this.groupBox3.Controls.Add(this.dgvAplicantes);
+            this.groupBox3.Location = new System.Drawing.Point(425, 371);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(20, 3, 3, 20);
+            this.groupBox3.MinimumSize = new System.Drawing.Size(345, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(450, 259);
+            this.groupBox3.TabIndex = 24;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Aplicantes";
+            // 
+            // btnAddAplicante
+            // 
+            this.btnAddAplicante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddAplicante.BackColor = System.Drawing.Color.Silver;
+            this.btnAddAplicante.FlatAppearance.BorderSize = 0;
+            this.btnAddAplicante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAplicante.Location = new System.Drawing.Point(325, 221);
+            this.btnAddAplicante.Name = "btnAddAplicante";
+            this.btnAddAplicante.Size = new System.Drawing.Size(102, 31);
+            this.btnAddAplicante.TabIndex = 8;
+            this.btnAddAplicante.Text = "Agregar aplicante";
+            this.btnAddAplicante.UseVisualStyleBackColor = false;
+            this.btnAddAplicante.Click += new System.EventHandler(this.btnAddAplicante_Click);
+            // 
+            // dgvAplicantes
+            // 
+            this.dgvAplicantes.AllowUserToAddRows = false;
+            this.dgvAplicantes.AllowUserToDeleteRows = false;
+            this.dgvAplicantes.AllowUserToResizeColumns = false;
+            this.dgvAplicantes.AllowUserToResizeRows = false;
+            this.dgvAplicantes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAplicantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAplicantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAplicantes.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dgvAplicantes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAplicantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAplicantes.Location = new System.Drawing.Point(6, 28);
+            this.dgvAplicantes.Name = "dgvAplicantes";
+            this.dgvAplicantes.ReadOnly = true;
+            this.dgvAplicantes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvAplicantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAplicantes.ShowEditingIcon = false;
+            this.dgvAplicantes.Size = new System.Drawing.Size(438, 166);
+            this.dgvAplicantes.TabIndex = 7;
+            this.dgvAplicantes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAplicantes_CellClick);
+            // 
             // DetVacantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(892, 640);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -337,6 +396,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAplicantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +426,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAgregarRequisito;
         private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnAddAplicante;
+        private System.Windows.Forms.DataGridView dgvAplicantes;
     }
 }

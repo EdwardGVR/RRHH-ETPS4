@@ -53,6 +53,21 @@ namespace RRHH.BLL
             return oVacantesDAL.getEstadosVacantes();
         }
 
+        public DataSet getAplicantesVac(int idVac)
+        {
+            return oVacantesDAL.getAplicantesVac(idVac);
+        }
+
+        public DataSet getTiposAplicantes()
+        {
+            return oVacantesDAL.getTiposAplicantes();
+        }
+
+        public Boolean uniqueAplDui(string dui)
+        {
+            return oVacantesDAL.uniqueAplDui(dui);
+        }
+
         // UPDATES
         public void updateVacante (string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo)
         {
@@ -73,6 +88,11 @@ namespace RRHH.BLL
         public void insertRequisito(int idVac, string codVac, string requisito, string detalles, int idPrioridad)
         {
             oVacantesDAL.insertRequisito(idVac, codVac, requisito, detalles, idPrioridad);
+        }
+
+        public void insertAplicante(int idVac, string nombre, string apellido, string correo, string telefono, string direccion, int idTipo, string dui)
+        {
+            oVacantesDAL.insertAplicante(idVac, nombre, apellido, correo, telefono, direccion, idTipo, dui);
         }
 
         // Crea el codigo de la vacante basado en parametros

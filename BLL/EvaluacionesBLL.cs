@@ -58,5 +58,11 @@ namespace RRHH.BLL
         {
             oEvalDAL.asignAplEval(idEval, idAplicante, fecha, hora);
         }
+
+        // DELETES
+        public void deleteAsignEval(int idAsign)
+        {
+            oEvalDAL.deleteAsignEval(idAsign);
+        }
     }
 }

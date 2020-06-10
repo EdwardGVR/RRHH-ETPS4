@@ -592,6 +592,44 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getAplicantesVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVac" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAplicantesVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAplicantesVacResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTiposAplicantes">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTiposAplicantesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTiposAplicantesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -734,6 +772,37 @@
       <s:element name="asignarAplEvalResponse">
         <s:complexType />
       </s:element>
+      <s:element name="uniqueAplDui">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uniqueAplDuiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="uniqueAplDuiResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertAplicante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVac" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="correo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="dui" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertAplicanteResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="deleteVacante">
         <s:complexType>
           <s:sequence>
@@ -752,6 +821,26 @@
         </s:complexType>
       </s:element>
       <s:element name="deleteRequisitoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteAsignCap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAsign" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAsignCapResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteAsigEval">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idAsign" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAsigEvalResponse">
         <s:complexType />
       </s:element>
     </s:schema>
@@ -948,6 +1037,18 @@
   <wsdl:message name="getDetallesAsignEvalSoapOut">
     <wsdl:part name="parameters" element="tns:getDetallesAsignEvalResponse" />
   </wsdl:message>
+  <wsdl:message name="getAplicantesVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getAplicantesVac" />
+  </wsdl:message>
+  <wsdl:message name="getAplicantesVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getAplicantesVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTiposAplicantesSoapIn">
+    <wsdl:part name="parameters" element="tns:getTiposAplicantes" />
+  </wsdl:message>
+  <wsdl:message name="getTiposAplicantesSoapOut">
+    <wsdl:part name="parameters" element="tns:getTiposAplicantesResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -1008,6 +1109,18 @@
   <wsdl:message name="asignarAplEvalSoapOut">
     <wsdl:part name="parameters" element="tns:asignarAplEvalResponse" />
   </wsdl:message>
+  <wsdl:message name="uniqueAplDuiSoapIn">
+    <wsdl:part name="parameters" element="tns:uniqueAplDui" />
+  </wsdl:message>
+  <wsdl:message name="uniqueAplDuiSoapOut">
+    <wsdl:part name="parameters" element="tns:uniqueAplDuiResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertAplicanteSoapIn">
+    <wsdl:part name="parameters" element="tns:insertAplicante" />
+  </wsdl:message>
+  <wsdl:message name="insertAplicanteSoapOut">
+    <wsdl:part name="parameters" element="tns:insertAplicanteResponse" />
+  </wsdl:message>
   <wsdl:message name="deleteVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:deleteVacante" />
   </wsdl:message>
@@ -1019,6 +1132,18 @@
   </wsdl:message>
   <wsdl:message name="deleteRequisitoSoapOut">
     <wsdl:part name="parameters" element="tns:deleteRequisitoResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAsignCapSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteAsignCap" />
+  </wsdl:message>
+  <wsdl:message name="deleteAsignCapSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteAsignCapResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAsigEvalSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteAsigEval" />
+  </wsdl:message>
+  <wsdl:message name="deleteAsigEvalSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteAsigEvalResponse" />
   </wsdl:message>
   <wsdl:portType name="webServRRHHSoap">
     <wsdl:operation name="getVacantes">
@@ -1149,6 +1274,14 @@
       <wsdl:input message="tns:getDetallesAsignEvalSoapIn" />
       <wsdl:output message="tns:getDetallesAsignEvalSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="getAplicantesVac">
+      <wsdl:input message="tns:getAplicantesVacSoapIn" />
+      <wsdl:output message="tns:getAplicantesVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTiposAplicantes">
+      <wsdl:input message="tns:getTiposAplicantesSoapIn" />
+      <wsdl:output message="tns:getTiposAplicantesSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
       <wsdl:output message="tns:updateVacanteSoapOut" />
@@ -1189,6 +1322,14 @@
       <wsdl:input message="tns:asignarAplEvalSoapIn" />
       <wsdl:output message="tns:asignarAplEvalSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="uniqueAplDui">
+      <wsdl:input message="tns:uniqueAplDuiSoapIn" />
+      <wsdl:output message="tns:uniqueAplDuiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertAplicante">
+      <wsdl:input message="tns:insertAplicanteSoapIn" />
+      <wsdl:output message="tns:insertAplicanteSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <wsdl:input message="tns:deleteVacanteSoapIn" />
       <wsdl:output message="tns:deleteVacanteSoapOut" />
@@ -1196,6 +1337,14 @@
     <wsdl:operation name="deleteRequisito">
       <wsdl:input message="tns:deleteRequisitoSoapIn" />
       <wsdl:output message="tns:deleteRequisitoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsignCap">
+      <wsdl:input message="tns:deleteAsignCapSoapIn" />
+      <wsdl:output message="tns:deleteAsignCapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsigEval">
+      <wsdl:input message="tns:deleteAsigEvalSoapIn" />
+      <wsdl:output message="tns:deleteAsigEvalSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
@@ -1488,6 +1637,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAplicantesVac">
+      <soap:operation soapAction="http://tempuri.org/getAplicantesVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTiposAplicantes">
+      <soap:operation soapAction="http://tempuri.org/getTiposAplicantes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1578,6 +1745,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="uniqueAplDui">
+      <soap:operation soapAction="http://tempuri.org/uniqueAplDui" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAplicante">
+      <soap:operation soapAction="http://tempuri.org/insertAplicante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <soap:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
       <wsdl:input>
@@ -1589,6 +1774,24 @@
     </wsdl:operation>
     <wsdl:operation name="deleteRequisito">
       <soap:operation soapAction="http://tempuri.org/deleteRequisito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsignCap">
+      <soap:operation soapAction="http://tempuri.org/deleteAsignCap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsigEval">
+      <soap:operation soapAction="http://tempuri.org/deleteAsigEval" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1887,6 +2090,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAplicantesVac">
+      <soap12:operation soapAction="http://tempuri.org/getAplicantesVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTiposAplicantes">
+      <soap12:operation soapAction="http://tempuri.org/getTiposAplicantes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <soap12:operation soapAction="http://tempuri.org/updateVacante" style="document" />
       <wsdl:input>
@@ -1977,6 +2198,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="uniqueAplDui">
+      <soap12:operation soapAction="http://tempuri.org/uniqueAplDui" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertAplicante">
+      <soap12:operation soapAction="http://tempuri.org/insertAplicante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="deleteVacante">
       <soap12:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
       <wsdl:input>
@@ -1988,6 +2227,24 @@
     </wsdl:operation>
     <wsdl:operation name="deleteRequisito">
       <soap12:operation soapAction="http://tempuri.org/deleteRequisito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsignCap">
+      <soap12:operation soapAction="http://tempuri.org/deleteAsignCap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAsigEval">
+      <soap12:operation soapAction="http://tempuri.org/deleteAsigEval" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

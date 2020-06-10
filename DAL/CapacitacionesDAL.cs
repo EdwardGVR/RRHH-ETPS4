@@ -57,5 +57,11 @@ namespace RRHH.DAL
         {
             ws.asignarEmpCap(idCap, idEmp, codigo);
         }
+
+        // DELETES
+        public void deleteAsignCap (int idAsign)
+        {
+            ws.deleteAsignCap(idAsign);
+        }
     }
 }

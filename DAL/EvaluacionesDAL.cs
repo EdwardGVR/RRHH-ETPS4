@@ -65,5 +65,11 @@ namespace RRHH.DAL
         {
             ws.asignarAplEval(idEval, idAplicante, fecha, hora);
         }
+
+        // DELETES
+        public void deleteAsignEval (int idAsign)
+        {
+            ws.deleteAsigEval(idAsign);
+        }
     }
 }

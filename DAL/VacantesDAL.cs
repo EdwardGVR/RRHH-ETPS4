@@ -19,6 +19,7 @@ namespace RRHH.DAL
             ws = conexion.conectarWS();
         }
 
+        // SELECTS
         public DataSet getVacantes (int top = 0)
         {
             return ws.getVacantes(top);
@@ -44,6 +45,22 @@ namespace RRHH.DAL
             return ws.getEstadosVacantes();
         }
 
+        public DataSet getAplicantesVac (int idVac)
+        {
+            return ws.getAplicantesVac(idVac);
+        }
+
+        public DataSet getTiposAplicantes()
+        {
+            return ws.getTiposAplicantes();
+        }
+
+        public Boolean uniqueAplDui(string dui)
+        {
+            return ws.uniqueAplDui(dui);
+        }
+
+        // INSERTS
         public void insertVacante (string codVac, string vacante, int idDpto, int cupo, string descripcion)
         {
             ws.insertVacante(codVac, vacante, idDpto, cupo, descripcion);
@@ -52,6 +69,11 @@ namespace RRHH.DAL
         public void insertRequisito(int idVac, string codVac, string requisito, string detalles, int idPrioridad)
         {
             ws.insertRequisito(idVac, codVac, requisito, detalles, idPrioridad);
+        }
+
+        public void insertAplicante (int idVac, string nombre, string apellido, string correo, string telefono, string direccion, int idTipo, string dui)
+        {
+            ws.insertAplicante(idVac, nombre, apellido, correo, telefono, direccion, idTipo, dui);
         }
 
         public DataSet getPrioridades ()

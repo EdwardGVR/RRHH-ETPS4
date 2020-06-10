@@ -1,6 +1,6 @@
 ﻿namespace RRHH.PL
 {
-    partial class DetAsignCap
+    partial class DetAplicantes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetAsignCap));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetAplicantes));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.lblDepartamento = new System.Windows.Forms.Label();
-            this.lblTel2 = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.lblTel1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblDUI = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.txtDireccion = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblNombres = new System.Windows.Forms.Label();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.lblIdAsign = new System.Windows.Forms.Label();
+            this.lblIdApl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,19 +64,23 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.lblFecha);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.lblDepartamento);
-            this.groupBox1.Controls.Add(this.lblTel2);
+            this.groupBox1.Controls.Add(this.lblTipo);
+            this.groupBox1.Controls.Add(this.lblResult);
+            this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.lblTel1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblDUI);
             this.groupBox1.Controls.Add(this.lblCorreo);
+            this.groupBox1.Controls.Add(this.btnEdit);
+            this.groupBox1.Controls.Add(this.txtDireccion);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.lblNombres);
             this.groupBox1.Controls.Add(this.lblApellidos);
@@ -84,71 +92,92 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
-            // label5
+            // label10
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 325);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 20);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Fecha de asignacion";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(474, 132);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 20);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Fecha de aplicacion";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(27, 344);
+            this.lblFecha.Location = new System.Drawing.Point(485, 151);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(80, 20);
+            this.lblFecha.Size = new System.Drawing.Size(85, 20);
             this.lblFecha.TabIndex = 36;
-            this.lblFecha.Text = "Prioridad";
+            this.lblFecha.Text = "Requisito";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(474, 38);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(129, 20);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "Tipo de aplicante";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 226);
+            this.label15.Location = new System.Drawing.Point(474, 84);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(112, 20);
+            this.label15.Size = new System.Drawing.Size(156, 20);
             this.label15.TabIndex = 35;
-            this.label15.Text = "Departamento";
+            this.label15.Text = "Resultado aplicacion";
             // 
-            // lblDepartamento
+            // lblTipo
             // 
-            this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(27, 245);
-            this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(80, 20);
-            this.lblDepartamento.TabIndex = 33;
-            this.lblDepartamento.Text = "Prioridad";
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Location = new System.Drawing.Point(485, 57);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(85, 20);
+            this.lblTipo.TabIndex = 32;
+            this.lblTipo.Text = "Requisito";
             // 
-            // lblTel2
+            // lblResult
             // 
-            this.lblTel2.AutoSize = true;
-            this.lblTel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTel2.Location = new System.Drawing.Point(192, 293);
-            this.lblTel2.Name = "lblTel2";
-            this.lblTel2.Size = new System.Drawing.Size(80, 20);
-            this.lblTel2.TabIndex = 31;
-            this.lblTel2.Text = "Prioridad";
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(485, 103);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(80, 20);
+            this.lblResult.TabIndex = 33;
+            this.lblResult.Text = "Prioridad";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(441, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 298);
+            this.panel1.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(16, 274);
+            this.label9.Location = new System.Drawing.Point(16, 226);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 20);
+            this.label9.Size = new System.Drawing.Size(71, 20);
             this.label9.TabIndex = 30;
-            this.label9.Text = "Telefonos";
+            this.label9.Text = "Telefono";
             // 
             // lblTel1
             // 
             this.lblTel1.AutoSize = true;
             this.lblTel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTel1.Location = new System.Drawing.Point(27, 293);
+            this.lblTel1.Location = new System.Drawing.Point(27, 245);
             this.lblTel1.Name = "lblTel1";
             this.lblTel1.Size = new System.Drawing.Size(80, 20);
             this.lblTel1.TabIndex = 29;
@@ -194,6 +223,32 @@
             this.lblCorreo.TabIndex = 26;
             this.lblCorreo.Text = "Prioridad";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(728, 19);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(30, 30);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 24;
+            this.btnEdit.TabStop = false;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDireccion.BackColor = System.Drawing.Color.DimGray;
+            this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDireccion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(31, 300);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.ReadOnly = true;
+            this.txtDireccion.Size = new System.Drawing.Size(404, 65);
+            this.txtDireccion.TabIndex = 22;
+            this.txtDireccion.Text = "Detalles";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -203,6 +258,16 @@
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Nombres";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 276);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Direccion";
             // 
             // label7
             // 
@@ -246,15 +311,15 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // lblIdAsign
+            // lblIdApl
             // 
-            this.lblIdAsign.AutoSize = true;
-            this.lblIdAsign.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdAsign.Location = new System.Drawing.Point(244, 16);
-            this.lblIdAsign.Name = "lblIdAsign";
-            this.lblIdAsign.Size = new System.Drawing.Size(84, 24);
-            this.lblIdAsign.TabIndex = 27;
-            this.lblIdAsign.Text = "IDASIGN";
+            this.lblIdApl.AutoSize = true;
+            this.lblIdApl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdApl.Location = new System.Drawing.Point(237, 16);
+            this.lblIdApl.Name = "lblIdApl";
+            this.lblIdApl.Size = new System.Drawing.Size(62, 24);
+            this.lblIdApl.TabIndex = 27;
+            this.lblIdApl.Text = "IDAPL";
             // 
             // panel2
             // 
@@ -272,23 +337,11 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(43, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 24);
+            this.label1.Size = new System.Drawing.Size(188, 24);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Detalles de asignacion:";
+            this.label1.Text = "Detalles de aplicante:";
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(727, 19);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(30, 39);
-            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDelete.TabIndex = 38;
-            this.btnDelete.TabStop = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // DetAsignCap
+            // DetAplicantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -296,16 +349,16 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lblIdAsign);
+            this.Controls.Add(this.lblIdApl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DetAsignCap";
-            this.Text = "DetAsignCap";
+            this.Name = "DetAplicantes";
+            this.Text = "DetAplicantes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,25 +367,29 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lblDepartamento;
-        private System.Windows.Forms.Label lblTel2;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblDUI;
         private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.RichTextBox txtDireccion;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblNombres;
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.PictureBox btnBack;
-        private System.Windows.Forms.Label lblIdAsign;
+        private System.Windows.Forms.Label lblIdApl;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.PictureBox btnDelete;
     }
 }

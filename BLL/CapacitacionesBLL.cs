@@ -50,5 +50,11 @@ namespace RRHH.BLL
 
             oCapsDAL.asignarEmpCap(idCap, idEmp, code);
         }
+
+        // DELETES
+        public void deleteAsignCap(int idAsign)
+        {
+            oCapsDAL.deleteAsignCap(idAsign);
+        }
     }
 }

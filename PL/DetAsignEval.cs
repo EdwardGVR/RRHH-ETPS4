@@ -44,6 +44,15 @@ namespace RRHH.PL
             lblHoraEval.Text = horaEval;
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            evaluaciones.deleteAsignEval(idAsign);
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetEvaluacion(idEval));
+            Close();
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];

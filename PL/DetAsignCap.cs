@@ -48,6 +48,15 @@ namespace RRHH.PL
             lblFecha.Text = fecha;
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            capacitaciones.deleteAsignCap(idAsign);
+
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new DetCapacitaciones(idCap));
+            Close();
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
