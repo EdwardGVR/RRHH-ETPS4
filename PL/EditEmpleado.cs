@@ -138,7 +138,7 @@ namespace RRHH.PL
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            empleados.deleteEmpleado(idEmp);
 
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new Empleados());

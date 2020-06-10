@@ -947,6 +947,16 @@
       <s:element name="deleteAplicanteResponse">
         <s:complexType />
       </s:element>
+      <s:element name="deleteEmpleado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEmp" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteEmpleadoResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="getVacantesSoapIn">
@@ -1285,6 +1295,12 @@
   <wsdl:message name="deleteAplicanteSoapOut">
     <wsdl:part name="parameters" element="tns:deleteAplicanteResponse" />
   </wsdl:message>
+  <wsdl:message name="deleteEmpleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="deleteEmpleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteEmpleadoResponse" />
+  </wsdl:message>
   <wsdl:portType name="webServRRHHSoap">
     <wsdl:operation name="getVacantes">
       <wsdl:input message="tns:getVacantesSoapIn" />
@@ -1509,6 +1525,10 @@
     <wsdl:operation name="deleteAplicante">
       <wsdl:input message="tns:deleteAplicanteSoapIn" />
       <wsdl:output message="tns:deleteAplicanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmpleado">
+      <wsdl:input message="tns:deleteEmpleadoSoapIn" />
+      <wsdl:output message="tns:deleteEmpleadoSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
@@ -2017,6 +2037,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="deleteEmpleado">
+      <soap:operation soapAction="http://tempuri.org/deleteEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="webServRRHHSoap12" type="tns:webServRRHHSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -2517,6 +2546,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteAplicante">
       <soap12:operation soapAction="http://tempuri.org/deleteAplicante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmpleado">
+      <soap12:operation soapAction="http://tempuri.org/deleteEmpleado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

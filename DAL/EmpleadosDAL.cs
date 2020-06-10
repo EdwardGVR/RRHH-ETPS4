@@ -53,5 +53,11 @@ namespace RRHH.DAL
         {
             ws.updateEmpleado(nombres, apellidos, dui, email, telefono1, telefono2, direccion, idDpto, idCargo, salario, idEstadoContrato, idEmp);
         }
+
+        // DELETES
+        public void deleteEmpleado(int idEmp)
+        {
+            ws.deleteEmpleado(idEmp);
+        }
     }
 }

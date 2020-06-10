@@ -40,11 +40,17 @@ namespace RRHH.BLL
             oEmpleadosDAL.insertEmpleado(nombres, apellidos, dui, email, telefono1, telefono2, direccion, idDpto, idCargo, salario);
         }
 
-        // DELETES
+        // UPDATES
         public void updateEmpleado(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2,
             string direccion, int idDpto, int idCargo, double salario, int idEstadoContrato, int idEmp)
         {
             oEmpleadosDAL.updateEmpleado(nombres, apellidos, dui, email, telefono1, telefono2, direccion, idDpto, idCargo, salario, idEstadoContrato, idEmp);
+        }
+
+        // DELETES
+        public void deleteEmpleado(int idEmp)
+        {
+            oEmpleadosDAL.deleteEmpleado(idEmp);
         }
     }
 }

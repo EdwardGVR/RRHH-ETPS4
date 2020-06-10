@@ -142,6 +142,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback deleteAplicanteOperationCompleted;
         
+        private System.Threading.SendOrPostCallback deleteEmpleadoOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -347,6 +349,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event deleteAplicanteCompletedEventHandler deleteAplicanteCompleted;
+        
+        /// <remarks/>
+        public event deleteEmpleadoCompletedEventHandler deleteEmpleadoCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getVacantes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -2073,6 +2078,34 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deleteEmpleado(int idEmp) {
+            this.Invoke("deleteEmpleado", new object[] {
+                        idEmp});
+        }
+        
+        /// <remarks/>
+        public void deleteEmpleadoAsync(int idEmp) {
+            this.deleteEmpleadoAsync(idEmp, null);
+        }
+        
+        /// <remarks/>
+        public void deleteEmpleadoAsync(int idEmp, object userState) {
+            if ((this.deleteEmpleadoOperationCompleted == null)) {
+                this.deleteEmpleadoOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteEmpleadoOperationCompleted);
+            }
+            this.InvokeAsync("deleteEmpleado", new object[] {
+                        idEmp}, this.deleteEmpleadoOperationCompleted, userState);
+        }
+        
+        private void OndeleteEmpleadoOperationCompleted(object arg) {
+            if ((this.deleteEmpleadoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteEmpleadoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -3150,6 +3183,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void deleteAplicanteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void deleteEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591
