@@ -36,10 +36,22 @@ namespace RRHH.DAL
             return ws.getDetallesEmpleado(id);
         }
 
+        public DataSet getEstadosContratos()
+        {
+            return ws.getEstadosContratos();
+        }
+
         // INSERTS
         public void insertEmpleado (string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario)
         {
             ws.insertEmpleado(nombres, apellidos, dui, email, telefono1, telefono2, direccion, idDpto, idCargo, salario);
+        }
+
+        // UPDATES
+        public void updateEmpleado(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2,
+            string direccion, int idDpto, int idCargo, double salario, int idEstadoContrato, int idEmp)
+        {
+            ws.updateEmpleado(nombres, apellidos, dui, email, telefono1, telefono2, direccion, idDpto, idCargo, salario, idEstadoContrato, idEmp);
         }
     }
 }

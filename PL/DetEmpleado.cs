@@ -14,12 +14,14 @@ namespace RRHH.PL
     public partial class DetEmpleado : Form
     {
         EmpleadosBLL empleados = new EmpleadosBLL();
+        int idEmp;
 
         public DetEmpleado(int idEmpleado)
         {
             InitializeComponent();
 
             lblIdEmp.Text = "EMP" + idEmpleado;
+            this.idEmp = idEmpleado;
             DataSet datosEmpleado = empleados.getDetallesEmpleado(idEmpleado);
 
             string nombres, apellidos, correo, direccion, telefono, telefono2, dui, puesto, departamento, fechaContrato, estadoContrato, salario;
@@ -55,6 +57,13 @@ namespace RRHH.PL
         {
             Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
             ControlUtils.abrirFormEnPanel(pnlContent, new Empleados());
+            Close();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+            ControlUtils.abrirFormEnPanel(pnlContent, new EditEmpleado(idEmp));
             Close();
         }
     }
