@@ -190,6 +190,12 @@
     <Compile Include="PL\EditAplicante.Designer.cs">
       <DependentUpon>EditAplicante.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\EditCapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\EditCapacitacion.Designer.cs">
+      <DependentUpon>EditCapacitacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\EditEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\EditAplicante.resx">
       <DependentUpon>EditAplicante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\EditCapacitacion.resx">
+      <DependentUpon>EditCapacitacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\EditEmpleado.resx">
       <DependentUpon>EditEmpleado.cs</DependentUpon>

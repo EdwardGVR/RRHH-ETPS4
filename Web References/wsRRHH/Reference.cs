@@ -104,6 +104,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getEstadosContratosOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getEstadosCapacitacionesOperationCompleted;
+        
         private System.Threading.SendOrPostCallback updateVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateRequisitoOperationCompleted;
@@ -111,6 +113,8 @@ namespace RRHH.wsRRHH {
         private System.Threading.SendOrPostCallback updateAplicanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateEmpleadoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback updateCapacitacionOperationCompleted;
         
         private System.Threading.SendOrPostCallback insertVacanteOperationCompleted;
         
@@ -143,6 +147,8 @@ namespace RRHH.wsRRHH {
         private System.Threading.SendOrPostCallback deleteAplicanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteEmpleadoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteCapacitacionOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -294,6 +300,9 @@ namespace RRHH.wsRRHH {
         public event getEstadosContratosCompletedEventHandler getEstadosContratosCompleted;
         
         /// <remarks/>
+        public event getEstadosCapacitacionesCompletedEventHandler getEstadosCapacitacionesCompleted;
+        
+        /// <remarks/>
         public event updateVacanteCompletedEventHandler updateVacanteCompleted;
         
         /// <remarks/>
@@ -304,6 +313,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event updateEmpleadoCompletedEventHandler updateEmpleadoCompleted;
+        
+        /// <remarks/>
+        public event updateCapacitacionCompletedEventHandler updateCapacitacionCompleted;
         
         /// <remarks/>
         public event insertVacanteCompletedEventHandler insertVacanteCompleted;
@@ -352,6 +364,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event deleteEmpleadoCompletedEventHandler deleteEmpleadoCompleted;
+        
+        /// <remarks/>
+        public event deleteCapacitacionCompletedEventHandler deleteCapacitacionCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getVacantes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1409,6 +1424,33 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getEstadosCapacitaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet getEstadosCapacitaciones() {
+            object[] results = this.Invoke("getEstadosCapacitaciones", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getEstadosCapacitacionesAsync() {
+            this.getEstadosCapacitacionesAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getEstadosCapacitacionesAsync(object userState) {
+            if ((this.getEstadosCapacitacionesOperationCompleted == null)) {
+                this.getEstadosCapacitacionesOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetEstadosCapacitacionesOperationCompleted);
+            }
+            this.InvokeAsync("getEstadosCapacitaciones", new object[0], this.getEstadosCapacitacionesOperationCompleted, userState);
+        }
+        
+        private void OngetEstadosCapacitacionesOperationCompleted(object arg) {
+            if ((this.getEstadosCapacitacionesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getEstadosCapacitacionesCompleted(this, new getEstadosCapacitacionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateVacante(string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo) {
             this.Invoke("updateVacante", new object[] {
@@ -1573,6 +1615,44 @@ namespace RRHH.wsRRHH {
             if ((this.updateEmpleadoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.updateEmpleadoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateCapacitacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void updateCapacitacion(int idCap, string tiutlo, string decripcion, int cupo, int idDpto, int idEstado) {
+            this.Invoke("updateCapacitacion", new object[] {
+                        idCap,
+                        tiutlo,
+                        decripcion,
+                        cupo,
+                        idDpto,
+                        idEstado});
+        }
+        
+        /// <remarks/>
+        public void updateCapacitacionAsync(int idCap, string tiutlo, string decripcion, int cupo, int idDpto, int idEstado) {
+            this.updateCapacitacionAsync(idCap, tiutlo, decripcion, cupo, idDpto, idEstado, null);
+        }
+        
+        /// <remarks/>
+        public void updateCapacitacionAsync(int idCap, string tiutlo, string decripcion, int cupo, int idDpto, int idEstado, object userState) {
+            if ((this.updateCapacitacionOperationCompleted == null)) {
+                this.updateCapacitacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateCapacitacionOperationCompleted);
+            }
+            this.InvokeAsync("updateCapacitacion", new object[] {
+                        idCap,
+                        tiutlo,
+                        decripcion,
+                        cupo,
+                        idDpto,
+                        idEstado}, this.updateCapacitacionOperationCompleted, userState);
+        }
+        
+        private void OnupdateCapacitacionOperationCompleted(object arg) {
+            if ((this.updateCapacitacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateCapacitacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2102,6 +2182,34 @@ namespace RRHH.wsRRHH {
             if ((this.deleteEmpleadoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.deleteEmpleadoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteCapacitacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deleteCapacitacion(int idCap) {
+            this.Invoke("deleteCapacitacion", new object[] {
+                        idCap});
+        }
+        
+        /// <remarks/>
+        public void deleteCapacitacionAsync(int idCap) {
+            this.deleteCapacitacionAsync(idCap, null);
+        }
+        
+        /// <remarks/>
+        public void deleteCapacitacionAsync(int idCap, object userState) {
+            if ((this.deleteCapacitacionOperationCompleted == null)) {
+                this.deleteCapacitacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteCapacitacionOperationCompleted);
+            }
+            this.InvokeAsync("deleteCapacitacion", new object[] {
+                        idCap}, this.deleteCapacitacionOperationCompleted, userState);
+        }
+        
+        private void OndeleteCapacitacionOperationCompleted(object arg) {
+            if ((this.deleteCapacitacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteCapacitacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3088,6 +3196,32 @@ namespace RRHH.wsRRHH {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getEstadosCapacitacionesCompletedEventHandler(object sender, getEstadosCapacitacionesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getEstadosCapacitacionesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getEstadosCapacitacionesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void updateVacanteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
@@ -3101,6 +3235,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void updateEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void updateCapacitacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
@@ -3187,6 +3325,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void deleteEmpleadoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void deleteCapacitacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

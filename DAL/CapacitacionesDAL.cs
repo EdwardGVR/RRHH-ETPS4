@@ -47,6 +47,11 @@ namespace RRHH.DAL
             return ws.getDetallesAsignCap(idAsign);
         }
 
+        public DataSet getEstadosCapacitaciones()
+        {
+            return ws.getEstadosCapacitaciones();
+        }
+
         // INSERTS
         public void insertCapacitacion (string titulo, string descripcion, int cupo, int idDpto)
         {
@@ -58,10 +63,21 @@ namespace RRHH.DAL
             ws.asignarEmpCap(idCap, idEmp, codigo);
         }
 
+        // UPDATES
+        public void updateCapacitacion(int idCap, string tiutlo, string decripcion, int cupo, int idDpto, int idEstado)
+        {
+            ws.updateCapacitacion(idCap, tiutlo, decripcion, cupo, idDpto, idEstado);
+        }
+
         // DELETES
         public void deleteAsignCap (int idAsign)
         {
             ws.deleteAsignCap(idAsign);
+        }
+
+        public void deleteCapacitacion(int idCap)
+        {
+            ws.deleteCapacitacion(idCap);
         }
     }
 }

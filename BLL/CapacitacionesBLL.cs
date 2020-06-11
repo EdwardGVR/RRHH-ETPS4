@@ -38,6 +38,11 @@ namespace RRHH.BLL
             return oCapsDAL.getDetallesAsignCap(idAsign);
         }
 
+        public DataSet getEstadosCapacitaciones()
+        {
+            return oCapsDAL.getEstadosCapacitaciones();
+        }
+
         // INSERTS
         public void insertCapacitacion (string titulo, string descripcion, int cupo, int idDpto)
         {
@@ -51,10 +56,21 @@ namespace RRHH.BLL
             oCapsDAL.asignarEmpCap(idCap, idEmp, code);
         }
 
+        // UPDATES
+        public void updateCapacitacion(int idCap, string tiutlo, string decripcion, int cupo, int idDpto, int idEstado)
+        {
+            oCapsDAL.updateCapacitacion(idCap, tiutlo, decripcion, cupo, idDpto, idEstado);
+        }
+
         // DELETES
         public void deleteAsignCap(int idAsign)
         {
             oCapsDAL.deleteAsignCap(idAsign);
+        }
+
+        public void deleteCapacitacion(int idCap)
+        {
+            oCapsDAL.deleteCapacitacion(idCap);
         }
     }
 }
