@@ -116,6 +116,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback updateCapacitacionOperationCompleted;
         
+        private System.Threading.SendOrPostCallback updateEvaluacionOperationCompleted;
+        
         private System.Threading.SendOrPostCallback insertVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback insertRequisitoOperationCompleted;
@@ -149,6 +151,8 @@ namespace RRHH.wsRRHH {
         private System.Threading.SendOrPostCallback deleteEmpleadoOperationCompleted;
         
         private System.Threading.SendOrPostCallback deleteCapacitacionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteEvaluacionOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -318,6 +322,9 @@ namespace RRHH.wsRRHH {
         public event updateCapacitacionCompletedEventHandler updateCapacitacionCompleted;
         
         /// <remarks/>
+        public event updateEvaluacionCompletedEventHandler updateEvaluacionCompleted;
+        
+        /// <remarks/>
         public event insertVacanteCompletedEventHandler insertVacanteCompleted;
         
         /// <remarks/>
@@ -367,6 +374,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event deleteCapacitacionCompletedEventHandler deleteCapacitacionCompleted;
+        
+        /// <remarks/>
+        public event deleteEvaluacionCompletedEventHandler deleteEvaluacionCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getVacantes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -1657,6 +1667,42 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateEvaluacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void updateEvaluacion(int idEval, string evaluacion, string objetivo, int idTipo, int maxScore) {
+            this.Invoke("updateEvaluacion", new object[] {
+                        idEval,
+                        evaluacion,
+                        objetivo,
+                        idTipo,
+                        maxScore});
+        }
+        
+        /// <remarks/>
+        public void updateEvaluacionAsync(int idEval, string evaluacion, string objetivo, int idTipo, int maxScore) {
+            this.updateEvaluacionAsync(idEval, evaluacion, objetivo, idTipo, maxScore, null);
+        }
+        
+        /// <remarks/>
+        public void updateEvaluacionAsync(int idEval, string evaluacion, string objetivo, int idTipo, int maxScore, object userState) {
+            if ((this.updateEvaluacionOperationCompleted == null)) {
+                this.updateEvaluacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnupdateEvaluacionOperationCompleted);
+            }
+            this.InvokeAsync("updateEvaluacion", new object[] {
+                        idEval,
+                        evaluacion,
+                        objetivo,
+                        idTipo,
+                        maxScore}, this.updateEvaluacionOperationCompleted, userState);
+        }
+        
+        private void OnupdateEvaluacionOperationCompleted(object arg) {
+            if ((this.updateEvaluacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.updateEvaluacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertVacante(string codVac, string vacante, int idDpto, int cupo, string descripcion) {
             this.Invoke("insertVacante", new object[] {
@@ -2210,6 +2256,34 @@ namespace RRHH.wsRRHH {
             if ((this.deleteCapacitacionCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.deleteCapacitacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteEvaluacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deleteEvaluacion(int idEval) {
+            this.Invoke("deleteEvaluacion", new object[] {
+                        idEval});
+        }
+        
+        /// <remarks/>
+        public void deleteEvaluacionAsync(int idEval) {
+            this.deleteEvaluacionAsync(idEval, null);
+        }
+        
+        /// <remarks/>
+        public void deleteEvaluacionAsync(int idEval, object userState) {
+            if ((this.deleteEvaluacionOperationCompleted == null)) {
+                this.deleteEvaluacionOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteEvaluacionOperationCompleted);
+            }
+            this.InvokeAsync("deleteEvaluacion", new object[] {
+                        idEval}, this.deleteEvaluacionOperationCompleted, userState);
+        }
+        
+        private void OndeleteEvaluacionOperationCompleted(object arg) {
+            if ((this.deleteEvaluacionCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteEvaluacionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3242,6 +3316,10 @@ namespace RRHH.wsRRHH {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void updateEvaluacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void insertVacanteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
@@ -3329,6 +3407,10 @@ namespace RRHH.wsRRHH {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void deleteCapacitacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void deleteEvaluacionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591

@@ -59,10 +59,21 @@ namespace RRHH.BLL
             oEvalDAL.asignAplEval(idEval, idAplicante, fecha, hora);
         }
 
+        // UPDATES
+        public void updateEvaluacion(int idEval, string evaluacion, string objetivo, int idTipo, int maxScore)
+        {
+            oEvalDAL.updateEvaluacion(idEval, evaluacion, objetivo, idTipo, maxScore);
+        }
+
         // DELETES
         public void deleteAsignEval(int idAsign)
         {
             oEvalDAL.deleteAsignEval(idAsign);
+        }
+
+        public void deleteEvaluacion(int idEval)
+        {
+            oEvalDAL.deleteEvaluacion(idEval);
         }
     }
 }

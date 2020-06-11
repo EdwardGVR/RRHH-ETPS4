@@ -785,6 +785,20 @@
       <s:element name="updateCapacitacionResponse">
         <s:complexType />
       </s:element>
+      <s:element name="updateEvaluacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEval" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="evaluacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objetivo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxScore" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateEvaluacionResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="insertVacante">
         <s:complexType>
           <s:sequence>
@@ -997,6 +1011,16 @@
         </s:complexType>
       </s:element>
       <s:element name="deleteCapacitacionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteEvaluacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idEval" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteEvaluacionResponse">
         <s:complexType />
       </s:element>
     </s:schema>
@@ -1259,6 +1283,12 @@
   <wsdl:message name="updateCapacitacionSoapOut">
     <wsdl:part name="parameters" element="tns:updateCapacitacionResponse" />
   </wsdl:message>
+  <wsdl:message name="updateEvaluacionSoapIn">
+    <wsdl:part name="parameters" element="tns:updateEvaluacion" />
+  </wsdl:message>
+  <wsdl:message name="updateEvaluacionSoapOut">
+    <wsdl:part name="parameters" element="tns:updateEvaluacionResponse" />
+  </wsdl:message>
   <wsdl:message name="insertVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:insertVacante" />
   </wsdl:message>
@@ -1360,6 +1390,12 @@
   </wsdl:message>
   <wsdl:message name="deleteCapacitacionSoapOut">
     <wsdl:part name="parameters" element="tns:deleteCapacitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteEvaluacionSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteEvaluacion" />
+  </wsdl:message>
+  <wsdl:message name="deleteEvaluacionSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteEvaluacionResponse" />
   </wsdl:message>
   <wsdl:portType name="webServRRHHSoap">
     <wsdl:operation name="getVacantes">
@@ -1534,6 +1570,10 @@
       <wsdl:input message="tns:updateCapacitacionSoapIn" />
       <wsdl:output message="tns:updateCapacitacionSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="updateEvaluacion">
+      <wsdl:input message="tns:updateEvaluacionSoapIn" />
+      <wsdl:output message="tns:updateEvaluacionSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <wsdl:input message="tns:insertVacanteSoapIn" />
       <wsdl:output message="tns:insertVacanteSoapOut" />
@@ -1601,6 +1641,10 @@
     <wsdl:operation name="deleteCapacitacion">
       <wsdl:input message="tns:deleteCapacitacionSoapIn" />
       <wsdl:output message="tns:deleteCapacitacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvaluacion">
+      <wsdl:input message="tns:deleteEvaluacionSoapIn" />
+      <wsdl:output message="tns:deleteEvaluacionSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
@@ -1992,6 +2036,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="updateEvaluacion">
+      <soap:operation soapAction="http://tempuri.org/updateEvaluacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <soap:operation soapAction="http://tempuri.org/insertVacante" style="document" />
       <wsdl:input>
@@ -2138,6 +2191,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteCapacitacion">
       <soap:operation soapAction="http://tempuri.org/deleteCapacitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvaluacion">
+      <soap:operation soapAction="http://tempuri.org/deleteEvaluacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2535,6 +2597,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="updateEvaluacion">
+      <soap12:operation soapAction="http://tempuri.org/updateEvaluacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="insertVacante">
       <soap12:operation soapAction="http://tempuri.org/insertVacante" style="document" />
       <wsdl:input>
@@ -2681,6 +2752,15 @@
     </wsdl:operation>
     <wsdl:operation name="deleteCapacitacion">
       <soap12:operation soapAction="http://tempuri.org/deleteCapacitacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEvaluacion">
+      <soap12:operation soapAction="http://tempuri.org/deleteEvaluacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

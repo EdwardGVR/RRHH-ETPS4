@@ -180,6 +180,7 @@
             this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEdit.TabIndex = 24;
             this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtObjetivo
             // 
@@ -256,6 +257,7 @@
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBack.TabIndex = 30;
             this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblIdEval
             // 

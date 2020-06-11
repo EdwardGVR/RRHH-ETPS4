@@ -66,10 +66,21 @@ namespace RRHH.DAL
             ws.asignarAplEval(idEval, idAplicante, fecha, hora);
         }
 
+        // UPDATES
+        public void updateEvaluacion(int idEval, string evaluacion, string objetivo, int idTipo, int maxScore)
+        {
+            ws.updateEvaluacion(idEval, evaluacion, objetivo, idTipo, maxScore);
+        }
+
         // DELETES
         public void deleteAsignEval (int idAsign)
         {
             ws.deleteAsigEval(idAsign);
+        }
+
+        public void deleteEvaluacion(int idEval)
+        {
+            ws.deleteEvaluacion(idEval);
         }
     }
 }
