@@ -35,8 +35,11 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.pnlErrorLogin = new System.Windows.Forms.Panel();
+            this.lblError = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
             this.pnlLogin.SuspendLayout();
+            this.pnlErrorLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -58,6 +61,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.White;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.Location = new System.Drawing.Point(87, 171);
@@ -107,12 +111,34 @@
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Black;
+            this.pnlLogin.Controls.Add(this.pnlErrorLogin);
             this.pnlLogin.Controls.Add(this.gbLogin);
             this.pnlLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLogin.Location = new System.Drawing.Point(0, 0);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(800, 450);
             this.pnlLogin.TabIndex = 1;
+            // 
+            // pnlErrorLogin
+            // 
+            this.pnlErrorLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlErrorLogin.BackColor = System.Drawing.Color.MistyRose;
+            this.pnlErrorLogin.Controls.Add(this.lblError);
+            this.pnlErrorLogin.Location = new System.Drawing.Point(600, 0);
+            this.pnlErrorLogin.Name = "pnlErrorLogin";
+            this.pnlErrorLogin.Size = new System.Drawing.Size(200, 35);
+            this.pnlErrorLogin.TabIndex = 1;
+            this.pnlErrorLogin.Visible = false;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblError.Location = new System.Drawing.Point(43, 12);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(123, 13);
+            this.lblError.TabIndex = 1;
+            this.lblError.Text = "Credenciales incorrectas";
             // 
             // Login
             // 
@@ -131,6 +157,8 @@
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.pnlLogin.ResumeLayout(false);
+            this.pnlErrorLogin.ResumeLayout(false);
+            this.pnlErrorLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -143,5 +171,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlLogin;
+        private System.Windows.Forms.Panel pnlErrorLogin;
+        private System.Windows.Forms.Label lblError;
     }
 }

@@ -28,6 +28,11 @@ namespace RRHH.BLL
             return oUsersDAL.getDetallesUsuario(idUsuario);
         }
 
+        public int getUserIdByUser(string user)
+        {
+            return oUsersDAL.getUserIdByUser(user);
+        }
+
         // INSERTS
         public void insertUsuario (string nombres, string apellidos, string email, string usuario, string password, int idNivel)
         {

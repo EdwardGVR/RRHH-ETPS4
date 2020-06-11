@@ -22,6 +22,7 @@ namespace RRHH.PL
         private void Login_Resize(object sender, EventArgs e)
         {
             ControlUtils.centrar(pnlLogin, gbLogin);
+            ControlUtils.centrar(pnlErrorLogin, lblError);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -32,13 +33,15 @@ namespace RRHH.PL
             LoginBLL oLoginBLL = new LoginBLL();
             if (oLoginBLL.validar(user, clave))
             {
-                ControlUtils.openMdi(ParentForm, new Home());
+                pnlErrorLogin.Visible = false;
+                ControlUtils.openMdi(ParentForm, new Home(user));
                 Close();
             }
             else {
                 txtUsuario.Text = "";
                 txtClave.Text = "";
                 txtUsuario.Focus();
+                pnlErrorLogin.Visible = true;
             }
         }
     }

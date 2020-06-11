@@ -702,6 +702,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getUserIdByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getUserIdByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getUserIdByUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -1253,6 +1267,12 @@
   <wsdl:message name="getEstadosCapacitacionesSoapOut">
     <wsdl:part name="parameters" element="tns:getEstadosCapacitacionesResponse" />
   </wsdl:message>
+  <wsdl:message name="getUserIdByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getUserIdByUser" />
+  </wsdl:message>
+  <wsdl:message name="getUserIdByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserIdByUserResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -1549,6 +1569,10 @@
     <wsdl:operation name="getEstadosCapacitaciones">
       <wsdl:input message="tns:getEstadosCapacitacionesSoapIn" />
       <wsdl:output message="tns:getEstadosCapacitacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserIdByUser">
+      <wsdl:input message="tns:getUserIdByUserSoapIn" />
+      <wsdl:output message="tns:getUserIdByUserSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
@@ -1984,6 +2008,15 @@
     </wsdl:operation>
     <wsdl:operation name="getEstadosCapacitaciones">
       <soap:operation soapAction="http://tempuri.org/getEstadosCapacitaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserIdByUser">
+      <soap:operation soapAction="http://tempuri.org/getUserIdByUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2545,6 +2578,15 @@
     </wsdl:operation>
     <wsdl:operation name="getEstadosCapacitaciones">
       <soap12:operation soapAction="http://tempuri.org/getEstadosCapacitaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserIdByUser">
+      <soap12:operation soapAction="http://tempuri.org/getUserIdByUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

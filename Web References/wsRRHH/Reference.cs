@@ -106,6 +106,8 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getEstadosCapacitacionesOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getUserIdByUserOperationCompleted;
+        
         private System.Threading.SendOrPostCallback updateVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateRequisitoOperationCompleted;
@@ -305,6 +307,9 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event getEstadosCapacitacionesCompletedEventHandler getEstadosCapacitacionesCompleted;
+        
+        /// <remarks/>
+        public event getUserIdByUserCompletedEventHandler getUserIdByUserCompleted;
         
         /// <remarks/>
         public event updateVacanteCompletedEventHandler updateVacanteCompleted;
@@ -1457,6 +1462,35 @@ namespace RRHH.wsRRHH {
             if ((this.getEstadosCapacitacionesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getEstadosCapacitacionesCompleted(this, new getEstadosCapacitacionesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getUserIdByUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getUserIdByUser(string user) {
+            object[] results = this.Invoke("getUserIdByUser", new object[] {
+                        user});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getUserIdByUserAsync(string user) {
+            this.getUserIdByUserAsync(user, null);
+        }
+        
+        /// <remarks/>
+        public void getUserIdByUserAsync(string user, object userState) {
+            if ((this.getUserIdByUserOperationCompleted == null)) {
+                this.getUserIdByUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetUserIdByUserOperationCompleted);
+            }
+            this.InvokeAsync("getUserIdByUser", new object[] {
+                        user}, this.getUserIdByUserOperationCompleted, userState);
+        }
+        
+        private void OngetUserIdByUserOperationCompleted(object arg) {
+            if ((this.getUserIdByUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getUserIdByUserCompleted(this, new getUserIdByUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3290,6 +3324,32 @@ namespace RRHH.wsRRHH {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getUserIdByUserCompletedEventHandler(object sender, getUserIdByUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getUserIdByUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getUserIdByUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }

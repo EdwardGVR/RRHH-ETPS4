@@ -35,6 +35,11 @@ namespace RRHH.DAL
             return ws.getDetallesUsuario(idUsuario);
         }
 
+        public int getUserIdByUser(string user)
+        {
+            return ws.getUserIdByUser(user);
+        }
+
         // INSERTS
         public void insertUsuario (string nombres, string apellidos, string email, string usuario, string password, int idNivel)
         {
