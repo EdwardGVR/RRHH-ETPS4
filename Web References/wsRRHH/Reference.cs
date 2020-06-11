@@ -27,7 +27,7 @@ namespace RRHH.wsRRHH {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="webServRRHHSoap", Namespace="http://tempuri.org/")]
+    [System.Web.Services.WebServiceBindingAttribute(Name="webServRRHHSoap", Namespace="http://etps4-rrhh.edu.sv/")]
     public partial class webServRRHH : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback getVacantesOperationCompleted;
@@ -384,7 +384,7 @@ namespace RRHH.wsRRHH {
         public event deleteEvaluacionCompletedEventHandler deleteEvaluacionCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getVacantes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getVacantes", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getVacantes(int top) {
             object[] results = this.Invoke("getVacantes", new object[] {
                         top});
@@ -413,7 +413,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getPrioridadesRequisitos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getPrioridadesRequisitos", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getPrioridadesRequisitos() {
             object[] results = this.Invoke("getPrioridadesRequisitos", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -440,7 +440,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getEstadosVacantes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getEstadosVacantes", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getEstadosVacantes() {
             object[] results = this.Invoke("getEstadosVacantes", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -467,7 +467,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesVacante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesVacante(string codVac) {
             object[] results = this.Invoke("getDetallesVacante", new object[] {
                         codVac});
@@ -496,7 +496,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getRequisitosVac", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getRequisitosVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getRequisitosVac(string codVac) {
             object[] results = this.Invoke("getRequisitosVac", new object[] {
                         codVac});
@@ -525,7 +525,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesRequisito", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesRequisito", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesRequisito(int idReq) {
             object[] results = this.Invoke("getDetallesRequisito", new object[] {
                         idReq});
@@ -554,7 +554,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getCorrVac", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCorrVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int getCorrVac(int idDpto) {
             object[] results = this.Invoke("getCorrVac", new object[] {
                         idDpto});
@@ -583,7 +583,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getIdVac", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getIdVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int getIdVac(string codVac) {
             object[] results = this.Invoke("getIdVac", new object[] {
                         codVac});
@@ -612,7 +612,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getCapacitaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCapacitaciones", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getCapacitaciones(int top) {
             object[] results = this.Invoke("getCapacitaciones", new object[] {
                         top});
@@ -641,7 +641,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getEmpleados", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getEmpleados", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getEmpleados() {
             object[] results = this.Invoke("getEmpleados", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -668,7 +668,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getEvaluaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getEvaluaciones", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getEvaluaciones(int top) {
             object[] results = this.Invoke("getEvaluaciones", new object[] {
                         top});
@@ -697,7 +697,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getUsuarios", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getUsuarios", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getUsuarios() {
             object[] results = this.Invoke("getUsuarios", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -724,7 +724,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDepartamentos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDepartamentos", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDepartamentos() {
             object[] results = this.Invoke("getDepartamentos", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -751,7 +751,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getNombresDepartamentos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getNombresDepartamentos", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getNombresDepartamentos() {
             object[] results = this.Invoke("getNombresDepartamentos", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -778,7 +778,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDptoID", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDptoID", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int getDptoID(string departamento) {
             object[] results = this.Invoke("getDptoID", new object[] {
                         departamento});
@@ -807,7 +807,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDptoAbv", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDptoAbv", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string getDptoAbv(int idDpto) {
             object[] results = this.Invoke("getDptoAbv", new object[] {
                         idDpto});
@@ -836,7 +836,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getPuestos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getPuestos", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getPuestos() {
             object[] results = this.Invoke("getPuestos", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -863,7 +863,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/validarLogin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/validarLogin", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool validarLogin(string user, string clave) {
             object[] results = this.Invoke("validarLogin", new object[] {
                         user,
@@ -894,7 +894,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesEmpleado", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesEmpleado(int id) {
             object[] results = this.Invoke("getDetallesEmpleado", new object[] {
                         id});
@@ -923,7 +923,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getTiposEvaluaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getTiposEvaluaciones", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getTiposEvaluaciones() {
             object[] results = this.Invoke("getTiposEvaluaciones", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -950,7 +950,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getNivelesUsuarios", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getNivelesUsuarios", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getNivelesUsuarios() {
             object[] results = this.Invoke("getNivelesUsuarios", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -977,7 +977,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesCapacitacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesCapacitacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesCapacitacion(int idCap) {
             object[] results = this.Invoke("getDetallesCapacitacion", new object[] {
                         idCap});
@@ -1006,7 +1006,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getAsignCapacitaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getAsignCapacitaciones", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getAsignCapacitaciones(int idCap) {
             object[] results = this.Invoke("getAsignCapacitaciones", new object[] {
                         idCap});
@@ -1035,7 +1035,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getEmpleadosByDpto", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getEmpleadosByDpto", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getEmpleadosByDpto(int idDpto) {
             object[] results = this.Invoke("getEmpleadosByDpto", new object[] {
                         idDpto});
@@ -1064,7 +1064,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/validateCapEmp", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/validateCapEmp", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool validateCapEmp(int idCap, int idEmp) {
             object[] results = this.Invoke("validateCapEmp", new object[] {
                         idCap,
@@ -1095,7 +1095,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesEvaluacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesEvaluacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesEvaluacion(int idEval) {
             object[] results = this.Invoke("getDetallesEvaluacion", new object[] {
                         idEval});
@@ -1124,7 +1124,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getAsignEvalApl", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getAsignEvalApl", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getAsignEvalApl(int idEval) {
             object[] results = this.Invoke("getAsignEvalApl", new object[] {
                         idEval});
@@ -1153,7 +1153,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getAplicantesByVac", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getAplicantesByVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getAplicantesByVac(int idEval) {
             object[] results = this.Invoke("getAplicantesByVac", new object[] {
                         idEval});
@@ -1182,7 +1182,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/validateEvApl", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/validateEvApl", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool validateEvApl(int idEval, int idApl) {
             object[] results = this.Invoke("validateEvApl", new object[] {
                         idEval,
@@ -1213,7 +1213,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesUsuario", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesUsuario(int idUsuario) {
             object[] results = this.Invoke("getDetallesUsuario", new object[] {
                         idUsuario});
@@ -1242,7 +1242,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesAsignCap", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesAsignCap", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesAsignCap(int idAsign) {
             object[] results = this.Invoke("getDetallesAsignCap", new object[] {
                         idAsign});
@@ -1271,7 +1271,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesAsignEval", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesAsignEval", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesAsignEval(int idAsign) {
             object[] results = this.Invoke("getDetallesAsignEval", new object[] {
                         idAsign});
@@ -1300,7 +1300,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getAplicantesVac", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getAplicantesVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getAplicantesVac(int idVac) {
             object[] results = this.Invoke("getAplicantesVac", new object[] {
                         idVac});
@@ -1329,7 +1329,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getTiposAplicantes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getTiposAplicantes", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getTiposAplicantes() {
             object[] results = this.Invoke("getTiposAplicantes", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -1356,7 +1356,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getDetallesAplicante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getDetallesAplicante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getDetallesAplicante(int idApl) {
             object[] results = this.Invoke("getDetallesAplicante", new object[] {
                         idApl});
@@ -1385,7 +1385,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getResultadosAplicaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getResultadosAplicaciones", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getResultadosAplicaciones() {
             object[] results = this.Invoke("getResultadosAplicaciones", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -1412,7 +1412,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getEstadosContratos", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getEstadosContratos", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getEstadosContratos() {
             object[] results = this.Invoke("getEstadosContratos", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -1439,7 +1439,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getEstadosCapacitaciones", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getEstadosCapacitaciones", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet getEstadosCapacitaciones() {
             object[] results = this.Invoke("getEstadosCapacitaciones", new object[0]);
             return ((System.Data.DataSet)(results[0]));
@@ -1466,7 +1466,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/getUserIdByUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getUserIdByUser", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public int getUserIdByUser(string user) {
             object[] results = this.Invoke("getUserIdByUser", new object[] {
                         user});
@@ -1495,7 +1495,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/updateVacante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateVacante(string codVac, string newCodVac, string vacante, string descripcion, int idDpto, int idEstado, int cupo) {
             this.Invoke("updateVacante", new object[] {
                         codVac,
@@ -1535,7 +1535,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateRequisito", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/updateRequisito", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateRequisito(int idReq, string requisito, string detalles, int idPrioridad) {
             this.Invoke("updateRequisito", new object[] {
                         idReq,
@@ -1569,7 +1569,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateAplicante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/updateAplicante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateAplicante(int idApl, string nombres, string apellidos, string dui, string correo, string direccion, string telefono, int idTipo, int idResultado) {
             this.Invoke("updateAplicante", new object[] {
                         idApl,
@@ -1613,7 +1613,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/updateEmpleado", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateEmpleado(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario, int idEstadoContrato, int idEmp) {
             this.Invoke("updateEmpleado", new object[] {
                         nombres,
@@ -1663,7 +1663,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateCapacitacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/updateCapacitacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateCapacitacion(int idCap, string tiutlo, string decripcion, int cupo, int idDpto, int idEstado) {
             this.Invoke("updateCapacitacion", new object[] {
                         idCap,
@@ -1701,7 +1701,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateEvaluacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/updateEvaluacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void updateEvaluacion(int idEval, string evaluacion, string objetivo, int idTipo, int maxScore) {
             this.Invoke("updateEvaluacion", new object[] {
                         idEval,
@@ -1737,7 +1737,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/insertVacante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertVacante(string codVac, string vacante, int idDpto, int cupo, string descripcion) {
             this.Invoke("insertVacante", new object[] {
                         codVac,
@@ -1773,7 +1773,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertRequisito", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/insertRequisito", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertRequisito(int idVac, string codVac, string requisito, string detalles, int idPrioridad) {
             this.Invoke("insertRequisito", new object[] {
                         idVac,
@@ -1809,7 +1809,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/insertEmpleado", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertEmpleado(string nombres, string apellidos, string dui, string email, string telefono1, string telefono2, string direccion, int idDpto, int idCargo, double salario) {
             this.Invoke("insertEmpleado", new object[] {
                         nombres,
@@ -1855,7 +1855,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertCapacitacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/insertCapacitacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertCapacitacion(string titulo, string descripcion, int cupo, int idDpto) {
             this.Invoke("insertCapacitacion", new object[] {
                         titulo,
@@ -1889,7 +1889,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertEvaluacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/insertEvaluacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertEvaluacion(string evaluacion, int idTipo, string objetivos, int maxScore) {
             this.Invoke("insertEvaluacion", new object[] {
                         evaluacion,
@@ -1923,7 +1923,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertUsuario", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/insertUsuario", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertUsuario(string nombres, string apellidos, string email, string usuario, string password, int idNivel) {
             this.Invoke("insertUsuario", new object[] {
                         nombres,
@@ -1961,7 +1961,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/asignarEmpCap", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/asignarEmpCap", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void asignarEmpCap(int idCap, int idEmp, string codigo) {
             this.Invoke("asignarEmpCap", new object[] {
                         idCap,
@@ -1993,7 +1993,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/asignarAplEval", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/asignarAplEval", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void asignarAplEval(int idEval, int idAplicante, string fechaEvaluacion, string horaEvaluacion) {
             this.Invoke("asignarAplEval", new object[] {
                         idEval,
@@ -2027,7 +2027,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/uniqueAplDui", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/uniqueAplDui", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public bool uniqueAplDui(string dui) {
             object[] results = this.Invoke("uniqueAplDui", new object[] {
                         dui});
@@ -2056,7 +2056,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/insertAplicante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/insertAplicante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void insertAplicante(int idVac, string nombre, string apellido, string correo, string telefono, string direccion, int idTipo, string dui) {
             this.Invoke("insertAplicante", new object[] {
                         idVac,
@@ -2098,7 +2098,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteVacante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteVacante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteVacante(string vacCode) {
             this.Invoke("deleteVacante", new object[] {
                         vacCode});
@@ -2126,7 +2126,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteRequisito", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteRequisito", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteRequisito(int idReq) {
             this.Invoke("deleteRequisito", new object[] {
                         idReq});
@@ -2154,7 +2154,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteAsignCap", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteAsignCap", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteAsignCap(int idAsign) {
             this.Invoke("deleteAsignCap", new object[] {
                         idAsign});
@@ -2182,7 +2182,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteAsigEval", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteAsigEval", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteAsigEval(int idAsign) {
             this.Invoke("deleteAsigEval", new object[] {
                         idAsign});
@@ -2210,7 +2210,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteAplicante", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteAplicante", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteAplicante(int idApl) {
             this.Invoke("deleteAplicante", new object[] {
                         idApl});
@@ -2238,7 +2238,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteEmpleado", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteEmpleado", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteEmpleado(int idEmp) {
             this.Invoke("deleteEmpleado", new object[] {
                         idEmp});
@@ -2266,7 +2266,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteCapacitacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteCapacitacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteCapacitacion(int idCap) {
             this.Invoke("deleteCapacitacion", new object[] {
                         idCap});
@@ -2294,7 +2294,7 @@ namespace RRHH.wsRRHH {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/deleteEvaluacion", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/deleteEvaluacion", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void deleteEvaluacion(int idEval) {
             this.Invoke("deleteEvaluacion", new object[] {
                         idEval});

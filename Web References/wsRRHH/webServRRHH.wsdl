@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://etps4-rrhh.edu.sv/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://etps4-rrhh.edu.sv/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://etps4-rrhh.edu.sv/">
       <s:element name="getVacantes">
         <s:complexType>
           <s:sequence>
@@ -1674,7 +1674,7 @@
   <wsdl:binding name="webServRRHHSoap" type="tns:webServRRHHSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="getVacantes">
-      <soap:operation soapAction="http://tempuri.org/getVacantes" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getVacantes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1683,7 +1683,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPrioridadesRequisitos">
-      <soap:operation soapAction="http://tempuri.org/getPrioridadesRequisitos" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getPrioridadesRequisitos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1692,7 +1692,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEstadosVacantes">
-      <soap:operation soapAction="http://tempuri.org/getEstadosVacantes" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getEstadosVacantes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1701,7 +1701,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesVacante">
-      <soap:operation soapAction="http://tempuri.org/getDetallesVacante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesVacante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1710,7 +1710,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getRequisitosVac">
-      <soap:operation soapAction="http://tempuri.org/getRequisitosVac" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getRequisitosVac" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1719,7 +1719,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesRequisito">
-      <soap:operation soapAction="http://tempuri.org/getDetallesRequisito" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesRequisito" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1728,7 +1728,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getCorrVac">
-      <soap:operation soapAction="http://tempuri.org/getCorrVac" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCorrVac" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1737,7 +1737,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getIdVac">
-      <soap:operation soapAction="http://tempuri.org/getIdVac" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getIdVac" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1746,7 +1746,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getCapacitaciones">
-      <soap:operation soapAction="http://tempuri.org/getCapacitaciones" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCapacitaciones" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1755,7 +1755,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEmpleados">
-      <soap:operation soapAction="http://tempuri.org/getEmpleados" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getEmpleados" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1764,7 +1764,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEvaluaciones">
-      <soap:operation soapAction="http://tempuri.org/getEvaluaciones" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getEvaluaciones" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1773,7 +1773,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getUsuarios">
-      <soap:operation soapAction="http://tempuri.org/getUsuarios" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getUsuarios" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1782,7 +1782,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDepartamentos">
-      <soap:operation soapAction="http://tempuri.org/getDepartamentos" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDepartamentos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1791,7 +1791,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getNombresDepartamentos">
-      <soap:operation soapAction="http://tempuri.org/getNombresDepartamentos" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getNombresDepartamentos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1800,7 +1800,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDptoID">
-      <soap:operation soapAction="http://tempuri.org/getDptoID" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDptoID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1809,7 +1809,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDptoAbv">
-      <soap:operation soapAction="http://tempuri.org/getDptoAbv" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDptoAbv" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1818,7 +1818,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPuestos">
-      <soap:operation soapAction="http://tempuri.org/getPuestos" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getPuestos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1827,7 +1827,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="validarLogin">
-      <soap:operation soapAction="http://tempuri.org/validarLogin" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/validarLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1836,7 +1836,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesEmpleado">
-      <soap:operation soapAction="http://tempuri.org/getDetallesEmpleado" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesEmpleado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1845,7 +1845,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getTiposEvaluaciones">
-      <soap:operation soapAction="http://tempuri.org/getTiposEvaluaciones" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getTiposEvaluaciones" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1854,7 +1854,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getNivelesUsuarios">
-      <soap:operation soapAction="http://tempuri.org/getNivelesUsuarios" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getNivelesUsuarios" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1863,7 +1863,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesCapacitacion">
-      <soap:operation soapAction="http://tempuri.org/getDetallesCapacitacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesCapacitacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1872,7 +1872,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAsignCapacitaciones">
-      <soap:operation soapAction="http://tempuri.org/getAsignCapacitaciones" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getAsignCapacitaciones" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1881,7 +1881,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEmpleadosByDpto">
-      <soap:operation soapAction="http://tempuri.org/getEmpleadosByDpto" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getEmpleadosByDpto" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1890,7 +1890,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="validateCapEmp">
-      <soap:operation soapAction="http://tempuri.org/validateCapEmp" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/validateCapEmp" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1899,7 +1899,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesEvaluacion">
-      <soap:operation soapAction="http://tempuri.org/getDetallesEvaluacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesEvaluacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1908,7 +1908,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAsignEvalApl">
-      <soap:operation soapAction="http://tempuri.org/getAsignEvalApl" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getAsignEvalApl" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1917,7 +1917,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAplicantesByVac">
-      <soap:operation soapAction="http://tempuri.org/getAplicantesByVac" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getAplicantesByVac" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1926,7 +1926,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="validateEvApl">
-      <soap:operation soapAction="http://tempuri.org/validateEvApl" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/validateEvApl" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1935,7 +1935,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesUsuario">
-      <soap:operation soapAction="http://tempuri.org/getDetallesUsuario" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1944,7 +1944,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesAsignCap">
-      <soap:operation soapAction="http://tempuri.org/getDetallesAsignCap" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesAsignCap" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1953,7 +1953,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesAsignEval">
-      <soap:operation soapAction="http://tempuri.org/getDetallesAsignEval" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesAsignEval" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1962,7 +1962,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAplicantesVac">
-      <soap:operation soapAction="http://tempuri.org/getAplicantesVac" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getAplicantesVac" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1971,7 +1971,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getTiposAplicantes">
-      <soap:operation soapAction="http://tempuri.org/getTiposAplicantes" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getTiposAplicantes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1980,7 +1980,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesAplicante">
-      <soap:operation soapAction="http://tempuri.org/getDetallesAplicante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesAplicante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1989,7 +1989,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getResultadosAplicaciones">
-      <soap:operation soapAction="http://tempuri.org/getResultadosAplicaciones" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getResultadosAplicaciones" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1998,7 +1998,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEstadosContratos">
-      <soap:operation soapAction="http://tempuri.org/getEstadosContratos" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getEstadosContratos" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2007,7 +2007,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEstadosCapacitaciones">
-      <soap:operation soapAction="http://tempuri.org/getEstadosCapacitaciones" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getEstadosCapacitaciones" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2016,7 +2016,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getUserIdByUser">
-      <soap:operation soapAction="http://tempuri.org/getUserIdByUser" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getUserIdByUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2025,7 +2025,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateVacante">
-      <soap:operation soapAction="http://tempuri.org/updateVacante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/updateVacante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2034,7 +2034,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateRequisito">
-      <soap:operation soapAction="http://tempuri.org/updateRequisito" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/updateRequisito" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2043,7 +2043,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateAplicante">
-      <soap:operation soapAction="http://tempuri.org/updateAplicante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/updateAplicante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2052,7 +2052,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateEmpleado">
-      <soap:operation soapAction="http://tempuri.org/updateEmpleado" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/updateEmpleado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2061,7 +2061,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateCapacitacion">
-      <soap:operation soapAction="http://tempuri.org/updateCapacitacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/updateCapacitacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2070,7 +2070,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateEvaluacion">
-      <soap:operation soapAction="http://tempuri.org/updateEvaluacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/updateEvaluacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2079,7 +2079,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertVacante">
-      <soap:operation soapAction="http://tempuri.org/insertVacante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/insertVacante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2088,7 +2088,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertRequisito">
-      <soap:operation soapAction="http://tempuri.org/insertRequisito" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/insertRequisito" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2097,7 +2097,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertEmpleado">
-      <soap:operation soapAction="http://tempuri.org/insertEmpleado" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/insertEmpleado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2106,7 +2106,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertCapacitacion">
-      <soap:operation soapAction="http://tempuri.org/insertCapacitacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/insertCapacitacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2115,7 +2115,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertEvaluacion">
-      <soap:operation soapAction="http://tempuri.org/insertEvaluacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/insertEvaluacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2124,7 +2124,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertUsuario">
-      <soap:operation soapAction="http://tempuri.org/insertUsuario" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/insertUsuario" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2133,7 +2133,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="asignarEmpCap">
-      <soap:operation soapAction="http://tempuri.org/asignarEmpCap" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/asignarEmpCap" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2142,7 +2142,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="asignarAplEval">
-      <soap:operation soapAction="http://tempuri.org/asignarAplEval" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/asignarAplEval" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2151,7 +2151,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="uniqueAplDui">
-      <soap:operation soapAction="http://tempuri.org/uniqueAplDui" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/uniqueAplDui" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2160,7 +2160,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertAplicante">
-      <soap:operation soapAction="http://tempuri.org/insertAplicante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/insertAplicante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2169,7 +2169,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
-      <soap:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteVacante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2178,7 +2178,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteRequisito">
-      <soap:operation soapAction="http://tempuri.org/deleteRequisito" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteRequisito" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2187,7 +2187,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteAsignCap">
-      <soap:operation soapAction="http://tempuri.org/deleteAsignCap" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteAsignCap" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2196,7 +2196,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteAsigEval">
-      <soap:operation soapAction="http://tempuri.org/deleteAsigEval" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteAsigEval" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2205,7 +2205,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteAplicante">
-      <soap:operation soapAction="http://tempuri.org/deleteAplicante" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteAplicante" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2214,7 +2214,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteEmpleado">
-      <soap:operation soapAction="http://tempuri.org/deleteEmpleado" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteEmpleado" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2223,7 +2223,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteCapacitacion">
-      <soap:operation soapAction="http://tempuri.org/deleteCapacitacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteCapacitacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2232,7 +2232,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteEvaluacion">
-      <soap:operation soapAction="http://tempuri.org/deleteEvaluacion" style="document" />
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/deleteEvaluacion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2244,7 +2244,7 @@
   <wsdl:binding name="webServRRHHSoap12" type="tns:webServRRHHSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="getVacantes">
-      <soap12:operation soapAction="http://tempuri.org/getVacantes" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getVacantes" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2253,7 +2253,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPrioridadesRequisitos">
-      <soap12:operation soapAction="http://tempuri.org/getPrioridadesRequisitos" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getPrioridadesRequisitos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2262,7 +2262,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEstadosVacantes">
-      <soap12:operation soapAction="http://tempuri.org/getEstadosVacantes" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getEstadosVacantes" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2271,7 +2271,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesVacante">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesVacante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesVacante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2280,7 +2280,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getRequisitosVac">
-      <soap12:operation soapAction="http://tempuri.org/getRequisitosVac" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getRequisitosVac" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2289,7 +2289,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesRequisito">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesRequisito" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesRequisito" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2298,7 +2298,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getCorrVac">
-      <soap12:operation soapAction="http://tempuri.org/getCorrVac" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCorrVac" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2307,7 +2307,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getIdVac">
-      <soap12:operation soapAction="http://tempuri.org/getIdVac" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getIdVac" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2316,7 +2316,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getCapacitaciones">
-      <soap12:operation soapAction="http://tempuri.org/getCapacitaciones" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCapacitaciones" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2325,7 +2325,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEmpleados">
-      <soap12:operation soapAction="http://tempuri.org/getEmpleados" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getEmpleados" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2334,7 +2334,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEvaluaciones">
-      <soap12:operation soapAction="http://tempuri.org/getEvaluaciones" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getEvaluaciones" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2343,7 +2343,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getUsuarios">
-      <soap12:operation soapAction="http://tempuri.org/getUsuarios" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getUsuarios" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2352,7 +2352,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDepartamentos">
-      <soap12:operation soapAction="http://tempuri.org/getDepartamentos" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDepartamentos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2361,7 +2361,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getNombresDepartamentos">
-      <soap12:operation soapAction="http://tempuri.org/getNombresDepartamentos" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getNombresDepartamentos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2370,7 +2370,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDptoID">
-      <soap12:operation soapAction="http://tempuri.org/getDptoID" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDptoID" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2379,7 +2379,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDptoAbv">
-      <soap12:operation soapAction="http://tempuri.org/getDptoAbv" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDptoAbv" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2388,7 +2388,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPuestos">
-      <soap12:operation soapAction="http://tempuri.org/getPuestos" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getPuestos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2397,7 +2397,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="validarLogin">
-      <soap12:operation soapAction="http://tempuri.org/validarLogin" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/validarLogin" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2406,7 +2406,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesEmpleado">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesEmpleado" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesEmpleado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2415,7 +2415,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getTiposEvaluaciones">
-      <soap12:operation soapAction="http://tempuri.org/getTiposEvaluaciones" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getTiposEvaluaciones" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2424,7 +2424,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getNivelesUsuarios">
-      <soap12:operation soapAction="http://tempuri.org/getNivelesUsuarios" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getNivelesUsuarios" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2433,7 +2433,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesCapacitacion">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesCapacitacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesCapacitacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2442,7 +2442,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAsignCapacitaciones">
-      <soap12:operation soapAction="http://tempuri.org/getAsignCapacitaciones" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getAsignCapacitaciones" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2451,7 +2451,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEmpleadosByDpto">
-      <soap12:operation soapAction="http://tempuri.org/getEmpleadosByDpto" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getEmpleadosByDpto" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2460,7 +2460,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="validateCapEmp">
-      <soap12:operation soapAction="http://tempuri.org/validateCapEmp" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/validateCapEmp" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2469,7 +2469,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesEvaluacion">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesEvaluacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesEvaluacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2478,7 +2478,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAsignEvalApl">
-      <soap12:operation soapAction="http://tempuri.org/getAsignEvalApl" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getAsignEvalApl" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2487,7 +2487,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAplicantesByVac">
-      <soap12:operation soapAction="http://tempuri.org/getAplicantesByVac" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getAplicantesByVac" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2496,7 +2496,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="validateEvApl">
-      <soap12:operation soapAction="http://tempuri.org/validateEvApl" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/validateEvApl" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2505,7 +2505,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesUsuario">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesUsuario" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesUsuario" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2514,7 +2514,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesAsignCap">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesAsignCap" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesAsignCap" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2523,7 +2523,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesAsignEval">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesAsignEval" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesAsignEval" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2532,7 +2532,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAplicantesVac">
-      <soap12:operation soapAction="http://tempuri.org/getAplicantesVac" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getAplicantesVac" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2541,7 +2541,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getTiposAplicantes">
-      <soap12:operation soapAction="http://tempuri.org/getTiposAplicantes" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getTiposAplicantes" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2550,7 +2550,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getDetallesAplicante">
-      <soap12:operation soapAction="http://tempuri.org/getDetallesAplicante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getDetallesAplicante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2559,7 +2559,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getResultadosAplicaciones">
-      <soap12:operation soapAction="http://tempuri.org/getResultadosAplicaciones" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getResultadosAplicaciones" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2568,7 +2568,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEstadosContratos">
-      <soap12:operation soapAction="http://tempuri.org/getEstadosContratos" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getEstadosContratos" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2577,7 +2577,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getEstadosCapacitaciones">
-      <soap12:operation soapAction="http://tempuri.org/getEstadosCapacitaciones" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getEstadosCapacitaciones" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2586,7 +2586,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getUserIdByUser">
-      <soap12:operation soapAction="http://tempuri.org/getUserIdByUser" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getUserIdByUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2595,7 +2595,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateVacante">
-      <soap12:operation soapAction="http://tempuri.org/updateVacante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/updateVacante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2604,7 +2604,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateRequisito">
-      <soap12:operation soapAction="http://tempuri.org/updateRequisito" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/updateRequisito" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2613,7 +2613,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateAplicante">
-      <soap12:operation soapAction="http://tempuri.org/updateAplicante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/updateAplicante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2622,7 +2622,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateEmpleado">
-      <soap12:operation soapAction="http://tempuri.org/updateEmpleado" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/updateEmpleado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2631,7 +2631,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateCapacitacion">
-      <soap12:operation soapAction="http://tempuri.org/updateCapacitacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/updateCapacitacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2640,7 +2640,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateEvaluacion">
-      <soap12:operation soapAction="http://tempuri.org/updateEvaluacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/updateEvaluacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2649,7 +2649,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertVacante">
-      <soap12:operation soapAction="http://tempuri.org/insertVacante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/insertVacante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2658,7 +2658,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertRequisito">
-      <soap12:operation soapAction="http://tempuri.org/insertRequisito" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/insertRequisito" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2667,7 +2667,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertEmpleado">
-      <soap12:operation soapAction="http://tempuri.org/insertEmpleado" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/insertEmpleado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2676,7 +2676,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertCapacitacion">
-      <soap12:operation soapAction="http://tempuri.org/insertCapacitacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/insertCapacitacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2685,7 +2685,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertEvaluacion">
-      <soap12:operation soapAction="http://tempuri.org/insertEvaluacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/insertEvaluacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2694,7 +2694,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertUsuario">
-      <soap12:operation soapAction="http://tempuri.org/insertUsuario" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/insertUsuario" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2703,7 +2703,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="asignarEmpCap">
-      <soap12:operation soapAction="http://tempuri.org/asignarEmpCap" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/asignarEmpCap" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2712,7 +2712,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="asignarAplEval">
-      <soap12:operation soapAction="http://tempuri.org/asignarAplEval" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/asignarAplEval" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2721,7 +2721,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="uniqueAplDui">
-      <soap12:operation soapAction="http://tempuri.org/uniqueAplDui" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/uniqueAplDui" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2730,7 +2730,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="insertAplicante">
-      <soap12:operation soapAction="http://tempuri.org/insertAplicante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/insertAplicante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2739,7 +2739,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteVacante">
-      <soap12:operation soapAction="http://tempuri.org/deleteVacante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteVacante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2748,7 +2748,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteRequisito">
-      <soap12:operation soapAction="http://tempuri.org/deleteRequisito" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteRequisito" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2757,7 +2757,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteAsignCap">
-      <soap12:operation soapAction="http://tempuri.org/deleteAsignCap" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteAsignCap" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2766,7 +2766,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteAsigEval">
-      <soap12:operation soapAction="http://tempuri.org/deleteAsigEval" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteAsigEval" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2775,7 +2775,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteAplicante">
-      <soap12:operation soapAction="http://tempuri.org/deleteAplicante" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteAplicante" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2784,7 +2784,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteEmpleado">
-      <soap12:operation soapAction="http://tempuri.org/deleteEmpleado" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteEmpleado" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2793,7 +2793,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteCapacitacion">
-      <soap12:operation soapAction="http://tempuri.org/deleteCapacitacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteCapacitacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -2802,7 +2802,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteEvaluacion">
-      <soap12:operation soapAction="http://tempuri.org/deleteEvaluacion" style="document" />
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/deleteEvaluacion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
