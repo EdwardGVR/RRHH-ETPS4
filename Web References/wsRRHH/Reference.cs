@@ -108,6 +108,42 @@ namespace RRHH.wsRRHH {
         
         private System.Threading.SendOrPostCallback getUserIdByUserOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getCountEmpsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountVacsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountCapsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountEvalsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountEmpsByDptoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountVacsByDptoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountCapsByDptoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountAsignsCapsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountAsignsByCapsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountEmpsByCapOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountReqsByVacOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountAplicsByVacOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountExternAplsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountEmpAplsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountExternAplsByVacOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountEmpAplsByVacOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountEvalsByTypeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getCountAsingEvalsOperationCompleted;
+        
         private System.Threading.SendOrPostCallback updateVacanteOperationCompleted;
         
         private System.Threading.SendOrPostCallback updateRequisitoOperationCompleted;
@@ -310,6 +346,60 @@ namespace RRHH.wsRRHH {
         
         /// <remarks/>
         public event getUserIdByUserCompletedEventHandler getUserIdByUserCompleted;
+        
+        /// <remarks/>
+        public event getCountEmpsCompletedEventHandler getCountEmpsCompleted;
+        
+        /// <remarks/>
+        public event getCountVacsCompletedEventHandler getCountVacsCompleted;
+        
+        /// <remarks/>
+        public event getCountCapsCompletedEventHandler getCountCapsCompleted;
+        
+        /// <remarks/>
+        public event getCountEvalsCompletedEventHandler getCountEvalsCompleted;
+        
+        /// <remarks/>
+        public event getCountEmpsByDptoCompletedEventHandler getCountEmpsByDptoCompleted;
+        
+        /// <remarks/>
+        public event getCountVacsByDptoCompletedEventHandler getCountVacsByDptoCompleted;
+        
+        /// <remarks/>
+        public event getCountCapsByDptoCompletedEventHandler getCountCapsByDptoCompleted;
+        
+        /// <remarks/>
+        public event getCountAsignsCapsCompletedEventHandler getCountAsignsCapsCompleted;
+        
+        /// <remarks/>
+        public event getCountAsignsByCapsCompletedEventHandler getCountAsignsByCapsCompleted;
+        
+        /// <remarks/>
+        public event getCountEmpsByCapCompletedEventHandler getCountEmpsByCapCompleted;
+        
+        /// <remarks/>
+        public event getCountReqsByVacCompletedEventHandler getCountReqsByVacCompleted;
+        
+        /// <remarks/>
+        public event getCountAplicsByVacCompletedEventHandler getCountAplicsByVacCompleted;
+        
+        /// <remarks/>
+        public event getCountExternAplsCompletedEventHandler getCountExternAplsCompleted;
+        
+        /// <remarks/>
+        public event getCountEmpAplsCompletedEventHandler getCountEmpAplsCompleted;
+        
+        /// <remarks/>
+        public event getCountExternAplsByVacCompletedEventHandler getCountExternAplsByVacCompleted;
+        
+        /// <remarks/>
+        public event getCountEmpAplsByVacCompletedEventHandler getCountEmpAplsByVacCompleted;
+        
+        /// <remarks/>
+        public event getCountEvalsByTypeCompletedEventHandler getCountEvalsByTypeCompleted;
+        
+        /// <remarks/>
+        public event getCountAsingEvalsCompletedEventHandler getCountAsingEvalsCompleted;
         
         /// <remarks/>
         public event updateVacanteCompletedEventHandler updateVacanteCompleted;
@@ -1491,6 +1581,512 @@ namespace RRHH.wsRRHH {
             if ((this.getUserIdByUserCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getUserIdByUserCompleted(this, new getUserIdByUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountEmps", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountEmps() {
+            object[] results = this.Invoke("getCountEmps", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountEmpsAsync() {
+            this.getCountEmpsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountEmpsAsync(object userState) {
+            if ((this.getCountEmpsOperationCompleted == null)) {
+                this.getCountEmpsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountEmpsOperationCompleted);
+            }
+            this.InvokeAsync("getCountEmps", new object[0], this.getCountEmpsOperationCompleted, userState);
+        }
+        
+        private void OngetCountEmpsOperationCompleted(object arg) {
+            if ((this.getCountEmpsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountEmpsCompleted(this, new getCountEmpsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountVacs", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountVacs() {
+            object[] results = this.Invoke("getCountVacs", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountVacsAsync() {
+            this.getCountVacsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountVacsAsync(object userState) {
+            if ((this.getCountVacsOperationCompleted == null)) {
+                this.getCountVacsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountVacsOperationCompleted);
+            }
+            this.InvokeAsync("getCountVacs", new object[0], this.getCountVacsOperationCompleted, userState);
+        }
+        
+        private void OngetCountVacsOperationCompleted(object arg) {
+            if ((this.getCountVacsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountVacsCompleted(this, new getCountVacsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountCaps", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountCaps() {
+            object[] results = this.Invoke("getCountCaps", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountCapsAsync() {
+            this.getCountCapsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountCapsAsync(object userState) {
+            if ((this.getCountCapsOperationCompleted == null)) {
+                this.getCountCapsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountCapsOperationCompleted);
+            }
+            this.InvokeAsync("getCountCaps", new object[0], this.getCountCapsOperationCompleted, userState);
+        }
+        
+        private void OngetCountCapsOperationCompleted(object arg) {
+            if ((this.getCountCapsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountCapsCompleted(this, new getCountCapsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountEvals", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountEvals() {
+            object[] results = this.Invoke("getCountEvals", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountEvalsAsync() {
+            this.getCountEvalsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountEvalsAsync(object userState) {
+            if ((this.getCountEvalsOperationCompleted == null)) {
+                this.getCountEvalsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountEvalsOperationCompleted);
+            }
+            this.InvokeAsync("getCountEvals", new object[0], this.getCountEvalsOperationCompleted, userState);
+        }
+        
+        private void OngetCountEvalsOperationCompleted(object arg) {
+            if ((this.getCountEvalsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountEvalsCompleted(this, new getCountEvalsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountEmpsByDpto", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountEmpsByDpto(int idDpto) {
+            object[] results = this.Invoke("getCountEmpsByDpto", new object[] {
+                        idDpto});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountEmpsByDptoAsync(int idDpto) {
+            this.getCountEmpsByDptoAsync(idDpto, null);
+        }
+        
+        /// <remarks/>
+        public void getCountEmpsByDptoAsync(int idDpto, object userState) {
+            if ((this.getCountEmpsByDptoOperationCompleted == null)) {
+                this.getCountEmpsByDptoOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountEmpsByDptoOperationCompleted);
+            }
+            this.InvokeAsync("getCountEmpsByDpto", new object[] {
+                        idDpto}, this.getCountEmpsByDptoOperationCompleted, userState);
+        }
+        
+        private void OngetCountEmpsByDptoOperationCompleted(object arg) {
+            if ((this.getCountEmpsByDptoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountEmpsByDptoCompleted(this, new getCountEmpsByDptoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountVacsByDpto", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountVacsByDpto(int idDpto) {
+            object[] results = this.Invoke("getCountVacsByDpto", new object[] {
+                        idDpto});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountVacsByDptoAsync(int idDpto) {
+            this.getCountVacsByDptoAsync(idDpto, null);
+        }
+        
+        /// <remarks/>
+        public void getCountVacsByDptoAsync(int idDpto, object userState) {
+            if ((this.getCountVacsByDptoOperationCompleted == null)) {
+                this.getCountVacsByDptoOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountVacsByDptoOperationCompleted);
+            }
+            this.InvokeAsync("getCountVacsByDpto", new object[] {
+                        idDpto}, this.getCountVacsByDptoOperationCompleted, userState);
+        }
+        
+        private void OngetCountVacsByDptoOperationCompleted(object arg) {
+            if ((this.getCountVacsByDptoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountVacsByDptoCompleted(this, new getCountVacsByDptoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountCapsByDpto", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountCapsByDpto(int idDpto) {
+            object[] results = this.Invoke("getCountCapsByDpto", new object[] {
+                        idDpto});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountCapsByDptoAsync(int idDpto) {
+            this.getCountCapsByDptoAsync(idDpto, null);
+        }
+        
+        /// <remarks/>
+        public void getCountCapsByDptoAsync(int idDpto, object userState) {
+            if ((this.getCountCapsByDptoOperationCompleted == null)) {
+                this.getCountCapsByDptoOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountCapsByDptoOperationCompleted);
+            }
+            this.InvokeAsync("getCountCapsByDpto", new object[] {
+                        idDpto}, this.getCountCapsByDptoOperationCompleted, userState);
+        }
+        
+        private void OngetCountCapsByDptoOperationCompleted(object arg) {
+            if ((this.getCountCapsByDptoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountCapsByDptoCompleted(this, new getCountCapsByDptoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountAsignsCaps", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountAsignsCaps() {
+            object[] results = this.Invoke("getCountAsignsCaps", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountAsignsCapsAsync() {
+            this.getCountAsignsCapsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountAsignsCapsAsync(object userState) {
+            if ((this.getCountAsignsCapsOperationCompleted == null)) {
+                this.getCountAsignsCapsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountAsignsCapsOperationCompleted);
+            }
+            this.InvokeAsync("getCountAsignsCaps", new object[0], this.getCountAsignsCapsOperationCompleted, userState);
+        }
+        
+        private void OngetCountAsignsCapsOperationCompleted(object arg) {
+            if ((this.getCountAsignsCapsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountAsignsCapsCompleted(this, new getCountAsignsCapsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountAsignsByCaps", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountAsignsByCaps(int idCap) {
+            object[] results = this.Invoke("getCountAsignsByCaps", new object[] {
+                        idCap});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountAsignsByCapsAsync(int idCap) {
+            this.getCountAsignsByCapsAsync(idCap, null);
+        }
+        
+        /// <remarks/>
+        public void getCountAsignsByCapsAsync(int idCap, object userState) {
+            if ((this.getCountAsignsByCapsOperationCompleted == null)) {
+                this.getCountAsignsByCapsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountAsignsByCapsOperationCompleted);
+            }
+            this.InvokeAsync("getCountAsignsByCaps", new object[] {
+                        idCap}, this.getCountAsignsByCapsOperationCompleted, userState);
+        }
+        
+        private void OngetCountAsignsByCapsOperationCompleted(object arg) {
+            if ((this.getCountAsignsByCapsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountAsignsByCapsCompleted(this, new getCountAsignsByCapsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountEmpsByCap", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountEmpsByCap(int idCap) {
+            object[] results = this.Invoke("getCountEmpsByCap", new object[] {
+                        idCap});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountEmpsByCapAsync(int idCap) {
+            this.getCountEmpsByCapAsync(idCap, null);
+        }
+        
+        /// <remarks/>
+        public void getCountEmpsByCapAsync(int idCap, object userState) {
+            if ((this.getCountEmpsByCapOperationCompleted == null)) {
+                this.getCountEmpsByCapOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountEmpsByCapOperationCompleted);
+            }
+            this.InvokeAsync("getCountEmpsByCap", new object[] {
+                        idCap}, this.getCountEmpsByCapOperationCompleted, userState);
+        }
+        
+        private void OngetCountEmpsByCapOperationCompleted(object arg) {
+            if ((this.getCountEmpsByCapCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountEmpsByCapCompleted(this, new getCountEmpsByCapCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountReqsByVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountReqsByVac(int idVac) {
+            object[] results = this.Invoke("getCountReqsByVac", new object[] {
+                        idVac});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountReqsByVacAsync(int idVac) {
+            this.getCountReqsByVacAsync(idVac, null);
+        }
+        
+        /// <remarks/>
+        public void getCountReqsByVacAsync(int idVac, object userState) {
+            if ((this.getCountReqsByVacOperationCompleted == null)) {
+                this.getCountReqsByVacOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountReqsByVacOperationCompleted);
+            }
+            this.InvokeAsync("getCountReqsByVac", new object[] {
+                        idVac}, this.getCountReqsByVacOperationCompleted, userState);
+        }
+        
+        private void OngetCountReqsByVacOperationCompleted(object arg) {
+            if ((this.getCountReqsByVacCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountReqsByVacCompleted(this, new getCountReqsByVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountAplicsByVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountAplicsByVac(int idVac) {
+            object[] results = this.Invoke("getCountAplicsByVac", new object[] {
+                        idVac});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountAplicsByVacAsync(int idVac) {
+            this.getCountAplicsByVacAsync(idVac, null);
+        }
+        
+        /// <remarks/>
+        public void getCountAplicsByVacAsync(int idVac, object userState) {
+            if ((this.getCountAplicsByVacOperationCompleted == null)) {
+                this.getCountAplicsByVacOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountAplicsByVacOperationCompleted);
+            }
+            this.InvokeAsync("getCountAplicsByVac", new object[] {
+                        idVac}, this.getCountAplicsByVacOperationCompleted, userState);
+        }
+        
+        private void OngetCountAplicsByVacOperationCompleted(object arg) {
+            if ((this.getCountAplicsByVacCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountAplicsByVacCompleted(this, new getCountAplicsByVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountExternApls", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountExternApls() {
+            object[] results = this.Invoke("getCountExternApls", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountExternAplsAsync() {
+            this.getCountExternAplsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountExternAplsAsync(object userState) {
+            if ((this.getCountExternAplsOperationCompleted == null)) {
+                this.getCountExternAplsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountExternAplsOperationCompleted);
+            }
+            this.InvokeAsync("getCountExternApls", new object[0], this.getCountExternAplsOperationCompleted, userState);
+        }
+        
+        private void OngetCountExternAplsOperationCompleted(object arg) {
+            if ((this.getCountExternAplsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountExternAplsCompleted(this, new getCountExternAplsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountEmpApls", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountEmpApls() {
+            object[] results = this.Invoke("getCountEmpApls", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountEmpAplsAsync() {
+            this.getCountEmpAplsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountEmpAplsAsync(object userState) {
+            if ((this.getCountEmpAplsOperationCompleted == null)) {
+                this.getCountEmpAplsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountEmpAplsOperationCompleted);
+            }
+            this.InvokeAsync("getCountEmpApls", new object[0], this.getCountEmpAplsOperationCompleted, userState);
+        }
+        
+        private void OngetCountEmpAplsOperationCompleted(object arg) {
+            if ((this.getCountEmpAplsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountEmpAplsCompleted(this, new getCountEmpAplsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountExternAplsByVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountExternAplsByVac(int idVac) {
+            object[] results = this.Invoke("getCountExternAplsByVac", new object[] {
+                        idVac});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountExternAplsByVacAsync(int idVac) {
+            this.getCountExternAplsByVacAsync(idVac, null);
+        }
+        
+        /// <remarks/>
+        public void getCountExternAplsByVacAsync(int idVac, object userState) {
+            if ((this.getCountExternAplsByVacOperationCompleted == null)) {
+                this.getCountExternAplsByVacOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountExternAplsByVacOperationCompleted);
+            }
+            this.InvokeAsync("getCountExternAplsByVac", new object[] {
+                        idVac}, this.getCountExternAplsByVacOperationCompleted, userState);
+        }
+        
+        private void OngetCountExternAplsByVacOperationCompleted(object arg) {
+            if ((this.getCountExternAplsByVacCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountExternAplsByVacCompleted(this, new getCountExternAplsByVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountEmpAplsByVac", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountEmpAplsByVac(int idVac) {
+            object[] results = this.Invoke("getCountEmpAplsByVac", new object[] {
+                        idVac});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountEmpAplsByVacAsync(int idVac) {
+            this.getCountEmpAplsByVacAsync(idVac, null);
+        }
+        
+        /// <remarks/>
+        public void getCountEmpAplsByVacAsync(int idVac, object userState) {
+            if ((this.getCountEmpAplsByVacOperationCompleted == null)) {
+                this.getCountEmpAplsByVacOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountEmpAplsByVacOperationCompleted);
+            }
+            this.InvokeAsync("getCountEmpAplsByVac", new object[] {
+                        idVac}, this.getCountEmpAplsByVacOperationCompleted, userState);
+        }
+        
+        private void OngetCountEmpAplsByVacOperationCompleted(object arg) {
+            if ((this.getCountEmpAplsByVacCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountEmpAplsByVacCompleted(this, new getCountEmpAplsByVacCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountEvalsByType", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountEvalsByType(int idTipo) {
+            object[] results = this.Invoke("getCountEvalsByType", new object[] {
+                        idTipo});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountEvalsByTypeAsync(int idTipo) {
+            this.getCountEvalsByTypeAsync(idTipo, null);
+        }
+        
+        /// <remarks/>
+        public void getCountEvalsByTypeAsync(int idTipo, object userState) {
+            if ((this.getCountEvalsByTypeOperationCompleted == null)) {
+                this.getCountEvalsByTypeOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountEvalsByTypeOperationCompleted);
+            }
+            this.InvokeAsync("getCountEvalsByType", new object[] {
+                        idTipo}, this.getCountEvalsByTypeOperationCompleted, userState);
+        }
+        
+        private void OngetCountEvalsByTypeOperationCompleted(object arg) {
+            if ((this.getCountEvalsByTypeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountEvalsByTypeCompleted(this, new getCountEvalsByTypeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://etps4-rrhh.edu.sv/getCountAsingEvals", RequestNamespace="http://etps4-rrhh.edu.sv/", ResponseNamespace="http://etps4-rrhh.edu.sv/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public int getCountAsingEvals() {
+            object[] results = this.Invoke("getCountAsingEvals", new object[0]);
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getCountAsingEvalsAsync() {
+            this.getCountAsingEvalsAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getCountAsingEvalsAsync(object userState) {
+            if ((this.getCountAsingEvalsOperationCompleted == null)) {
+                this.getCountAsingEvalsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetCountAsingEvalsOperationCompleted);
+            }
+            this.InvokeAsync("getCountAsingEvals", new object[0], this.getCountAsingEvalsOperationCompleted, userState);
+        }
+        
+        private void OngetCountAsingEvalsOperationCompleted(object arg) {
+            if ((this.getCountAsingEvalsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getCountAsingEvalsCompleted(this, new getCountAsingEvalsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3341,6 +3937,474 @@ namespace RRHH.wsRRHH {
         private object[] results;
         
         internal getUserIdByUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountEmpsCompletedEventHandler(object sender, getCountEmpsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountEmpsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountEmpsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountVacsCompletedEventHandler(object sender, getCountVacsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountVacsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountVacsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountCapsCompletedEventHandler(object sender, getCountCapsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountCapsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountCapsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountEvalsCompletedEventHandler(object sender, getCountEvalsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountEvalsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountEvalsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountEmpsByDptoCompletedEventHandler(object sender, getCountEmpsByDptoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountEmpsByDptoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountEmpsByDptoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountVacsByDptoCompletedEventHandler(object sender, getCountVacsByDptoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountVacsByDptoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountVacsByDptoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountCapsByDptoCompletedEventHandler(object sender, getCountCapsByDptoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountCapsByDptoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountCapsByDptoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountAsignsCapsCompletedEventHandler(object sender, getCountAsignsCapsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountAsignsCapsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountAsignsCapsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountAsignsByCapsCompletedEventHandler(object sender, getCountAsignsByCapsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountAsignsByCapsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountAsignsByCapsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountEmpsByCapCompletedEventHandler(object sender, getCountEmpsByCapCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountEmpsByCapCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountEmpsByCapCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountReqsByVacCompletedEventHandler(object sender, getCountReqsByVacCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountReqsByVacCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountReqsByVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountAplicsByVacCompletedEventHandler(object sender, getCountAplicsByVacCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountAplicsByVacCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountAplicsByVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountExternAplsCompletedEventHandler(object sender, getCountExternAplsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountExternAplsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountExternAplsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountEmpAplsCompletedEventHandler(object sender, getCountEmpAplsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountEmpAplsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountEmpAplsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountExternAplsByVacCompletedEventHandler(object sender, getCountExternAplsByVacCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountExternAplsByVacCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountExternAplsByVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountEmpAplsByVacCompletedEventHandler(object sender, getCountEmpAplsByVacCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountEmpAplsByVacCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountEmpAplsByVacCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountEvalsByTypeCompletedEventHandler(object sender, getCountEvalsByTypeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountEvalsByTypeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountEvalsByTypeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void getCountAsingEvalsCompletedEventHandler(object sender, getCountAsingEvalsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCountAsingEvalsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCountAsingEvalsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

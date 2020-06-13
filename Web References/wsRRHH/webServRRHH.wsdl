@@ -716,6 +716,226 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getCountEmps">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountEmpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountEmpsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountVacs">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountVacsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountVacsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountCaps">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountCapsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountCapsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEvals">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountEvalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountEvalsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEmpsByDpto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEmpsByDptoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountEmpsByDptoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountVacsByDpto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountVacsByDptoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountVacsByDptoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountCapsByDpto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idDpto" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountCapsByDptoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountCapsByDptoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountAsignsCaps">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountAsignsCapsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountAsignsCapsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountAsignsByCaps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCap" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountAsignsByCapsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountAsignsByCapsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEmpsByCap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCap" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEmpsByCapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountEmpsByCapResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountReqsByVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVac" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountReqsByVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountReqsByVacResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountAplicsByVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVac" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountAplicsByVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountAplicsByVacResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountExternApls">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountExternAplsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountExternAplsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEmpApls">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountEmpAplsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountEmpAplsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountExternAplsByVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVac" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountExternAplsByVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountExternAplsByVacResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEmpAplsByVac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idVac" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEmpAplsByVacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountEmpAplsByVacResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEvalsByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountEvalsByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountEvalsByTypeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCountAsingEvals">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCountAsingEvalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getCountAsingEvalsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="updateVacante">
         <s:complexType>
           <s:sequence>
@@ -1273,6 +1493,114 @@
   <wsdl:message name="getUserIdByUserSoapOut">
     <wsdl:part name="parameters" element="tns:getUserIdByUserResponse" />
   </wsdl:message>
+  <wsdl:message name="getCountEmpsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountEmps" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountEmpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountVacsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountVacs" />
+  </wsdl:message>
+  <wsdl:message name="getCountVacsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountVacsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountCapsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountCaps" />
+  </wsdl:message>
+  <wsdl:message name="getCountCapsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountCapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountEvalsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountEvals" />
+  </wsdl:message>
+  <wsdl:message name="getCountEvalsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountEvalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpsByDptoSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountEmpsByDpto" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpsByDptoSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountEmpsByDptoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountVacsByDptoSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountVacsByDpto" />
+  </wsdl:message>
+  <wsdl:message name="getCountVacsByDptoSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountVacsByDptoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountCapsByDptoSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountCapsByDpto" />
+  </wsdl:message>
+  <wsdl:message name="getCountCapsByDptoSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountCapsByDptoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountAsignsCapsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountAsignsCaps" />
+  </wsdl:message>
+  <wsdl:message name="getCountAsignsCapsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountAsignsCapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountAsignsByCapsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountAsignsByCaps" />
+  </wsdl:message>
+  <wsdl:message name="getCountAsignsByCapsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountAsignsByCapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpsByCapSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountEmpsByCap" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpsByCapSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountEmpsByCapResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountReqsByVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountReqsByVac" />
+  </wsdl:message>
+  <wsdl:message name="getCountReqsByVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountReqsByVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountAplicsByVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountAplicsByVac" />
+  </wsdl:message>
+  <wsdl:message name="getCountAplicsByVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountAplicsByVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountExternAplsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountExternApls" />
+  </wsdl:message>
+  <wsdl:message name="getCountExternAplsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountExternAplsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpAplsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountEmpApls" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpAplsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountEmpAplsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountExternAplsByVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountExternAplsByVac" />
+  </wsdl:message>
+  <wsdl:message name="getCountExternAplsByVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountExternAplsByVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpAplsByVacSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountEmpAplsByVac" />
+  </wsdl:message>
+  <wsdl:message name="getCountEmpAplsByVacSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountEmpAplsByVacResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountEvalsByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountEvalsByType" />
+  </wsdl:message>
+  <wsdl:message name="getCountEvalsByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountEvalsByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountAsingEvalsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCountAsingEvals" />
+  </wsdl:message>
+  <wsdl:message name="getCountAsingEvalsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCountAsingEvalsResponse" />
+  </wsdl:message>
   <wsdl:message name="updateVacanteSoapIn">
     <wsdl:part name="parameters" element="tns:updateVacante" />
   </wsdl:message>
@@ -1573,6 +1901,78 @@
     <wsdl:operation name="getUserIdByUser">
       <wsdl:input message="tns:getUserIdByUserSoapIn" />
       <wsdl:output message="tns:getUserIdByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmps">
+      <wsdl:input message="tns:getCountEmpsSoapIn" />
+      <wsdl:output message="tns:getCountEmpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountVacs">
+      <wsdl:input message="tns:getCountVacsSoapIn" />
+      <wsdl:output message="tns:getCountVacsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountCaps">
+      <wsdl:input message="tns:getCountCapsSoapIn" />
+      <wsdl:output message="tns:getCountCapsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountEvals">
+      <wsdl:input message="tns:getCountEvalsSoapIn" />
+      <wsdl:output message="tns:getCountEvalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpsByDpto">
+      <wsdl:input message="tns:getCountEmpsByDptoSoapIn" />
+      <wsdl:output message="tns:getCountEmpsByDptoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountVacsByDpto">
+      <wsdl:input message="tns:getCountVacsByDptoSoapIn" />
+      <wsdl:output message="tns:getCountVacsByDptoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountCapsByDpto">
+      <wsdl:input message="tns:getCountCapsByDptoSoapIn" />
+      <wsdl:output message="tns:getCountCapsByDptoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsignsCaps">
+      <wsdl:input message="tns:getCountAsignsCapsSoapIn" />
+      <wsdl:output message="tns:getCountAsignsCapsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsignsByCaps">
+      <wsdl:input message="tns:getCountAsignsByCapsSoapIn" />
+      <wsdl:output message="tns:getCountAsignsByCapsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpsByCap">
+      <wsdl:input message="tns:getCountEmpsByCapSoapIn" />
+      <wsdl:output message="tns:getCountEmpsByCapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountReqsByVac">
+      <wsdl:input message="tns:getCountReqsByVacSoapIn" />
+      <wsdl:output message="tns:getCountReqsByVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountAplicsByVac">
+      <wsdl:input message="tns:getCountAplicsByVacSoapIn" />
+      <wsdl:output message="tns:getCountAplicsByVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountExternApls">
+      <wsdl:input message="tns:getCountExternAplsSoapIn" />
+      <wsdl:output message="tns:getCountExternAplsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpApls">
+      <wsdl:input message="tns:getCountEmpAplsSoapIn" />
+      <wsdl:output message="tns:getCountEmpAplsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountExternAplsByVac">
+      <wsdl:input message="tns:getCountExternAplsByVacSoapIn" />
+      <wsdl:output message="tns:getCountExternAplsByVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpAplsByVac">
+      <wsdl:input message="tns:getCountEmpAplsByVacSoapIn" />
+      <wsdl:output message="tns:getCountEmpAplsByVacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountEvalsByType">
+      <wsdl:input message="tns:getCountEvalsByTypeSoapIn" />
+      <wsdl:output message="tns:getCountEvalsByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsingEvals">
+      <wsdl:input message="tns:getCountAsingEvalsSoapIn" />
+      <wsdl:output message="tns:getCountAsingEvalsSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="updateVacante">
       <wsdl:input message="tns:updateVacanteSoapIn" />
@@ -2017,6 +2417,168 @@
     </wsdl:operation>
     <wsdl:operation name="getUserIdByUser">
       <soap:operation soapAction="http://etps4-rrhh.edu.sv/getUserIdByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmps">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountVacs">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountVacs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountCaps">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountCaps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEvals">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountEvals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpsByDpto">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpsByDpto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountVacsByDpto">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountVacsByDpto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountCapsByDpto">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountCapsByDpto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsignsCaps">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountAsignsCaps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsignsByCaps">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountAsignsByCaps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpsByCap">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpsByCap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountReqsByVac">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountReqsByVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAplicsByVac">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountAplicsByVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountExternApls">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountExternApls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpApls">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpApls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountExternAplsByVac">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountExternAplsByVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpAplsByVac">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpAplsByVac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEvalsByType">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountEvalsByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsingEvals">
+      <soap:operation soapAction="http://etps4-rrhh.edu.sv/getCountAsingEvals" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -2587,6 +3149,168 @@
     </wsdl:operation>
     <wsdl:operation name="getUserIdByUser">
       <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getUserIdByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmps">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountVacs">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountVacs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountCaps">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountCaps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEvals">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountEvals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpsByDpto">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpsByDpto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountVacsByDpto">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountVacsByDpto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountCapsByDpto">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountCapsByDpto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsignsCaps">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountAsignsCaps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsignsByCaps">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountAsignsByCaps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpsByCap">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpsByCap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountReqsByVac">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountReqsByVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAplicsByVac">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountAplicsByVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountExternApls">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountExternApls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpApls">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpApls" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountExternAplsByVac">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountExternAplsByVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEmpAplsByVac">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountEmpAplsByVac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountEvalsByType">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountEvalsByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountAsingEvals">
+      <soap12:operation soapAction="http://etps4-rrhh.edu.sv/getCountAsingEvals" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
