@@ -15,6 +15,8 @@ namespace RRHH.PL
     {
         EvaluacionesBLL evaluaciones = new EvaluacionesBLL();
 
+        Boolean emptyFields = false;
+
         public AddEvaluacion()
         {
             InitializeComponent();
@@ -31,16 +33,39 @@ namespace RRHH.PL
             string evaluacion, objetivo;
             int maxScore, idTipo;
 
-            evaluacion = txtEvaluacion.Text;
-            objetivo = txtObjetivo.Text;
-            maxScore = int.Parse(txtMaxScore.Value.ToString());
-            idTipo = int.Parse(cmbTipoEval.SelectedValue.ToString());
+            if (string.IsNullOrEmpty(txtEvaluacion.Text))
+            {
+                emptyFields = true;
+            }
+            else if (string.IsNullOrEmpty(txtObjetivo.Text))
+            {
+                emptyFields = true;
+            }
+            else if (txtMaxScore.Value == 0)
+            {
+                emptyFields = true;
+            }
+            else
+            {
+                emptyFields = false;
+            }
 
-            evaluaciones.insertEvaluacion(evaluacion, idTipo, objetivo, maxScore);
+            if (emptyFields)
+            {
+                MessageBox.Show("Debe llenar todos los campos, el puntaje maximo no puede ser cero");
+            } else
+            {
+                evaluacion = txtEvaluacion.Text;
+                objetivo = txtObjetivo.Text;
+                maxScore = int.Parse(txtMaxScore.Value.ToString());
+                idTipo = int.Parse(cmbTipoEval.SelectedValue.ToString());
 
-            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-            ControlUtils.abrirFormEnPanel(pnlContent, new Evaluaciones());
-            Close();
+                evaluaciones.insertEvaluacion(evaluacion, idTipo, objetivo, maxScore);
+
+                Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                ControlUtils.abrirFormEnPanel(pnlContent, new Evaluaciones());
+                Close();
+            }
         }
 
         private void btnCancelarVacante_Click(object sender, EventArgs e)

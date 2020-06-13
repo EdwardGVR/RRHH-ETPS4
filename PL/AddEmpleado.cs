@@ -16,6 +16,8 @@ namespace RRHH.PL
         DepartamentosBLL departamentos = new DepartamentosBLL();
         EmpleadosBLL empleados = new EmpleadosBLL();
 
+        Boolean emptyFields = false;
+
         public AddEmpleado()
         {
             InitializeComponent();
@@ -37,23 +39,67 @@ namespace RRHH.PL
             int idPuesto, idDpto;
             double salario;
 
-            nombres = txtNombres.Text;
-            apellidos = txtApellidos.Text;
-            dui = txtDUI.Text;
-            email = txtEmail.Text;
-            direccion = txtDireccion.Text;
-            tel1 = txtTelefono1.Text;
-            tel2 = txtTelefono2.Text;
-            idPuesto = int.Parse(cmbPuesto.SelectedValue.ToString());
-            idDpto = int.Parse(cmbDepartamento.SelectedValue.ToString());
-            fechaContrato = txtFechaContrato.Text;
-            salario = double.Parse(txtSalario.Text);
+            if (string.IsNullOrEmpty(txtNombres.Text)) {
+                emptyFields = true;
+            } else if (string.IsNullOrEmpty(txtApellidos.Text)) {
+                emptyFields = true;
+            }
+            else if (string.IsNullOrEmpty(txtApellidos.Text))
+            {
+                emptyFields = true;
+            }
+            else if (string.IsNullOrEmpty(txtDUI.Text))
+            {
+                emptyFields = true;
+            }
+            else if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                emptyFields = true;
+            }
+            else if (string.IsNullOrEmpty(txtDireccion.Text))
+            {
+                emptyFields = true;
+            }
+            else if (string.IsNullOrEmpty(txtTelefono1.Text))
+            {
+                emptyFields = true;
+            }
+            else if (string.IsNullOrEmpty(txtTelefono2.Text))
+            {
+                emptyFields = true;
+            }
+            else if (txtSalario.Value == 0)
+            {
+                emptyFields = true;
+            }
+            else
+            {
+                emptyFields = false;
+            }
 
-            empleados.insertEmpleado(nombres, apellidos, dui, email, tel1, tel2, direccion, idDpto, idPuesto, salario);
+            if (emptyFields)
+            {
+                MessageBox.Show("Debe llenar todos los campos");
+            } else
+            {
+                nombres = txtNombres.Text;
+                apellidos = txtApellidos.Text;
+                dui = txtDUI.Text;
+                email = txtEmail.Text;
+                direccion = txtDireccion.Text;
+                tel1 = txtTelefono1.Text;
+                tel2 = txtTelefono2.Text;
+                idPuesto = int.Parse(cmbPuesto.SelectedValue.ToString());
+                idDpto = int.Parse(cmbDepartamento.SelectedValue.ToString());
+                fechaContrato = txtFechaContrato.Text;
+                salario = double.Parse(txtSalario.Text);
 
-            Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
-            ControlUtils.abrirFormEnPanel(pnlContent, new Empleados());
-            Close();
+                empleados.insertEmpleado(nombres, apellidos, dui, email, tel1, tel2, direccion, idDpto, idPuesto, salario);
+
+                Control pnlContent = ParentForm.Controls.Find("pnlContent", true)[0];
+                ControlUtils.abrirFormEnPanel(pnlContent, new Empleados());
+                Close();
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
