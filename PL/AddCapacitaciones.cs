@@ -72,11 +72,11 @@ namespace RRHH.PL
 
             if (string.IsNullOrEmpty(txtTitulo.Text))
             {
-                emptyFields = true
+                emptyFields = true;
             }
             else if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
-                emptyFields = true
+                emptyFields = true;
             }
             else if (txtCupo.Value == 0)
             {
